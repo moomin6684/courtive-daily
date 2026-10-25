@@ -1,0 +1,46 @@
+# 승인(머지)된 데일리 브리프를 인스타그램에 발행한다.
+# - main 에 posts/**/manifest.json 이 들어오면 실행 → 발행 시각(15:00 KST) 전이면 기다린다
+# - 매일 15:00 KST(06:00 UTC) 예약 실행이 기다리던 게시물을 올린다 (GitHub 예약 실행은 몇 분 늦을 수 있음)
+name: publish
+
+on:
+  push:
+    branches: [main]
+    paths: ["posts/**/manifest.json"]
+  schedule:
+    - cron: "0 6 * * *"
+    - cron: "40 6 * * *"   # 첫 실행이 실패했을 때 한 번 더
+  workflow_dispatch:
+
+concurrency:
+  group: publish
+  cancel-in-progress: false
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Publish pending posts
+        id: run
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          PUBLISH_BRANCH: main
+        run: python3 tools/publish.py
+        continue-on-error: true
+      - name: Save status to manifests
+        run: |
+          git config user.name "courtive-bot"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add posts
+          git diff --cached --quiet || { git commit -m "publish: update post status [skip ci]" && git push; }
+      - name: Fail if publishing failed
+        if: steps.run.outcome == 'failure'
+        run: exit 1

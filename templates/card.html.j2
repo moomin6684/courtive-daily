@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>COURTIVE Daily Brief {{ page }}</title>
+<style>
+@font-face{font-family:"Anton";font-weight:400;src:url("{{ fonts }}/anton-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-weight:700;src:url("{{ fonts }}/barlow-condensed-latin-700-normal.woff2") format("woff2")}
+{% for w in [400,700,900] %}
+@font-face{font-family:"Noto Sans KR";font-weight:{{ w }};src:url("{{ fonts }}/noto-sans-kr-korean-{{ w }}-normal.woff2") format("woff2");unicode-range:U+1100-11FF,U+3000-303F,U+3130-318F,U+A960-A97F,U+AC00-D7A3,U+D7B0-D7FF,U+FF00-FFEF}
+@font-face{font-family:"Noto Sans KR";font-weight:{{ w }};src:url("{{ fonts }}/noto-sans-kr-latin-{{ w }}-normal.woff2") format("woff2");unicode-range:U+0000-024F,U+2000-206F,U+2190-21FF,U+2212}
+{% endfor %}
+:root{
+  --blue:#146BFF; --navy:#0A2147; --ice:#EAF4FF; --white:#FFFFFF; --cyan:#4DDCFF;
+  --kr:"Noto Sans KR","Noto Sans CJK KR",sans-serif;
+  --num:"Barlow Condensed","Noto Sans KR",sans-serif;
+  --display:"Anton","Noto Sans KR",sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;background:#000}
+body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{position:relative;width:1080px;height:1350px;overflow:hidden;padding:52px 56px 40px;display:flex;flex-direction:column}
+.card.blue{background:var(--blue);color:var(--white)}
+.card.ice{background:var(--ice);color:var(--navy)}
+.card.navy{background:var(--navy);color:var(--white)}
+.deco{position:absolute;pointer-events:none}
+.content{position:relative;height:1050px;display:flex;flex-direction:column;flex:none}
+.sp{flex:none}
+.kr{font-family:var(--kr)} .num{font-family:var(--num);font-weight:700} .disp{font-family:var(--display);font-weight:400}
+.r{text-align:right} .c{text-align:center}
+.one{white-space:nowrap;overflow:hidden}
+/* header & footer */
+.header{position:relative;height:58px;flex:none}
+.brand{display:flex;align-items:flex-start;justify-content:space-between;height:32px}
+.brand svg{display:block}
+.series{font:700 25px/30px var(--num)}
+.rule{height:2px;margin-top:24px}
+.light .brand svg path{fill:var(--blue)} .light .series{color:var(--blue)} .light .rule{background:var(--ice)}
+.dark .brand svg path{fill:var(--white)} .dark .series{color:var(--white)} .dark .rule{background:var(--white)}
+.footer{position:relative;height:96px;flex:none;display:flex;flex-direction:column;gap:12px}
+.footer .row{display:flex;gap:24px;height:30px;align-items:flex-start}
+.footer .source{width:480px;font:400 21px/30px var(--kr)}
+.footer .ts{width:464px;font:700 24px/30px var(--num);text-align:right}
+.footer .disc{width:800px;font:400 21px/30px var(--kr)}
+.footer .folio{width:144px;font:700 28px/30px var(--num);text-align:right}
+.footer .rule2{height:2px;flex:none}
+.footer.light{color:var(--navy)} .footer.light .folio{color:var(--blue)} .footer.light .rule2{background:var(--ice)}
+.footer.dark{color:var(--white)} .footer.dark .rule2{background:var(--white)}
+/* category rows */
+.cat{display:flex;gap:24px;align-items:center;flex:none}
+.cat .disp{flex:none}
+.cat .ctx{flex:1;min-width:0;font:700 28px/40px var(--kr);text-align:right}
+/* score rows */
+.games{height:836px;display:flex;flex-direction:column;flex:none}
+.games.sparse{gap:20px;justify-content:center}
+.games.dense{gap:12px;justify-content:flex-start}
+.srow{display:flex;align-items:center;background:var(--white);flex:none;padding:24px}
+.sparse .srow{height:160px} .dense .srow{height:94px;padding:12px 24px}
+.side{width:300px;display:flex;flex-direction:column;gap:4px}
+.ab{display:flex;gap:8px;height:32px}
+.ab .t{width:196px;font:700 28px/32px var(--num)}
+.ab .res{width:96px;font:700 24px/32px var(--num);text-align:right}
+.side .ko{font:400 26px/40px var(--kr)} .dense .side .ko{font-size:22px;line-height:28px}
+.score{width:320px;display:flex;align-items:center}
+.score .pts{width:130px;font:700 96px/104px var(--num);text-align:center}
+.dense .score .pts{font-size:64px;line-height:70px}
+.sep{width:60px;height:60px;display:flex;flex-direction:column;text-align:center}
+.sep .dash{font:700 30px/32px var(--num)} .sep .ot{font:700 20px/28px var(--num)}
+.win{color:var(--blue)} .lose{color:var(--navy)}
+/* score strip */
+.strip{height:328px;background:var(--navy);padding:32px;display:flex;gap:16px;align-items:center;flex:none}
+.strip .s{width:360px;height:264px;display:flex;flex-direction:column;gap:8px}
+.strip .tr{display:flex;height:48px}
+.strip .tr .t{width:288px;font:700 40px/48px var(--num)}
+.strip .tr .res{width:72px;font:700 24px/48px var(--num);text-align:right}
+.strip .big{font:700 192px/208px var(--num)}
+.strip .mid{width:152px;text-align:center;font:700 28px/36px var(--num);color:var(--cyan)}
+.strip .w{color:var(--cyan)} .strip .l{color:var(--white)}
+.headline68{font:900 68px/92px var(--kr)}
+.leaders{display:flex;flex-direction:column;gap:16px;flex:none}
+.leaders .lab{font:700 24px/34px var(--kr);color:var(--ice)}
+.scorers{display:flex;gap:24px}
+.scorer{width:472px;display:flex;flex-direction:column}
+.scorer .id{display:flex;gap:16px;height:44px;align-items:flex-start}
+.scorer .id .tm{width:72px;flex:none;font:700 28px/44px var(--num)}
+.scorer .id .nm{width:384px;font:700 32px/44px var(--kr)}
+.stats{display:flex;gap:20px;margin-top:24px}
+.stat{width:144px;text-align:center}
+.stat .v{font:700 64px/72px var(--num)} .stat .k{font:400 22px/28px var(--kr);color:var(--ice)}
+/* news */
+.status-row{display:flex;gap:24px;height:56px;align-items:center;flex:none}
+.pill{padding:10px 20px;font:700 26px/36px var(--kr);color:var(--white);flex:none}
+.pill.official{background:var(--blue)} .pill.report,.pill.injury{background:var(--navy)}
+.verif{font:700 26px/36px var(--kr);color:var(--navy)}
+.ntitle{font:900 88px/116px var(--kr)}
+.nbody{width:880px;font:400 36px/56px var(--kr)}
+/* standings */
+.confs{display:flex;gap:24px;height:874px;flex:none}
+.conf{width:472px;display:flex;flex-direction:column}
+.conf .hd{height:68px;background:var(--navy);color:var(--white);padding:16px;display:flex;gap:24px}
+.conf .hd .en{width:300px;font:700 34px/36px var(--num)} .conf .hd .krn{width:116px;font:700 24px/36px var(--kr)}
+.trow{display:flex;gap:8px;background:var(--white);padding:7px 16px;height:46px;flex:none}
+.trow.th{height:42px;padding:6px 16px;margin-top:12px;margin-bottom:6px}
+.trow .rk{width:32px;text-align:right;font:700 28px/32px var(--num)}
+.trow .tm{width:60px;font:700 30px/32px var(--num)}
+.trow .ko{width:204px;font:400 24px/32px var(--kr)}
+.trow .n{width:56px;text-align:right;font:700 30px/32px var(--num)}
+.trow.th > *{font-size:22px;line-height:30px}
+.trow.th .k{font-family:var(--kr);font-weight:700}
+.rows{display:flex;flex-direction:column;gap:4px}
+/* team color accents — 팀 컬러는 바·칩으로만, 배경·글자색으로 쓰지 않는다 */
+.srow{position:relative}
+.tbar{position:absolute;top:0;bottom:0;width:8px} .tbar.a{left:0} .tbar.h{right:0}
+.strip{position:relative}
+.band{position:absolute;left:0;right:0;top:0;height:10px;display:flex} .band i{flex:1}
+.scorer .id .tm{border-left:6px solid transparent;padding-left:10px}
+.trow{position:relative} .trow .bar{position:absolute;left:0;top:0;bottom:0;width:6px}
+.tags{display:flex;gap:12px;justify-content:flex-end;flex:1;min-width:0}
+.ttag{display:flex;align-items:center;gap:10px;height:40px;background:var(--white);padding-right:14px}
+.ttag i{width:8px;height:40px;flex:none}
+.ttag .tab{font:700 28px/40px var(--num);color:var(--navy)} .ttag .ko{font:400 22px/40px var(--kr);color:var(--navy)}
+/* team logos — NBA 공식 SVG 원본, 비율·색 변형 금지 */
+.logo{display:block;object-fit:contain;flex:none}
+.side{flex-direction:row;align-items:center;gap:14px}
+.side .txt{display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.side .logo{width:56px;height:56px} .sparse .side .logo{width:76px;height:76px}
+.side .ab .t{width:auto;flex:1} .side .ab .res{width:40px}
+.strip .s{gap:4px}
+.strip .tr{height:72px;align-items:center;gap:16px}
+.strip .tr .t{width:auto;flex:1}
+.strip .disc{width:72px;height:72px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;flex:none}
+.strip .disc .logo{width:54px;height:54px}
+.strip .big{font-size:176px;line-height:188px}
+.trow .lg{width:30px;height:32px;display:flex;align-items:center;justify-content:center;flex:none}
+.trow .lg .logo{width:28px;height:28px}
+.trow .ko{width:166px}
+.trow.th .lg{visibility:hidden}
+.ttag .logo{width:30px;height:30px}
+/* photo slot — 사용 권한이 있는 사진만, 크레딧 필수 */
+.photo{position:relative;flex:none;overflow:hidden;background:var(--navy)}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+.photo .credit{position:absolute;right:0;bottom:0;padding:6px 12px;font:400 18px/24px var(--kr);color:var(--white);background:rgba(10,33,71,.72)}
+/* mixed meta line */
+.meta{font:400 23px/34px var(--kr)} .meta b{font:700 23px/34px var(--num)}
+</style>
+</head>
+<body>
+{% macro wordmark() %}<svg width="230" height="31" viewBox="0 0 230 31" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.812 0H32.5388L26.2985 7.57752C25.9389 8.0139 25.3639 8.24612 24.7384 8.24612H14.9322L12.4806 10.2519L10.4748 19.3895C10.15 20.8696 10.4018 22.064 11.812 22.064H23.4012C24.0861 22.064 24.4694 22.2653 24.7384 22.7326L28.0814 30.3101H5.75C2.39583 30.3101 0 28.1111 0 24.7569C0 23.7986 0.0958333 22.8722 0.2875 21.9778L3.61611 6.44319C4.47478 2.43864 7.86888 0 11.812 0ZM39.2248 0H56.5417C60.3431 0 62.5472 2.42778 61.7345 6.46318L58.1686 24.1819C57.4486 27.7597 55.0403 30.3101 51.3667 30.3101H34.3403C30.3472 30.3101 28.4168 27.584 29.1957 23.6389L32.5833 6.46332C33.305 2.81111 35.65 0 39.2248 0ZM65.5233 0H74.8837L71.3178 19.6124C71.0946 20.8406 71.1083 22.064 72.2093 22.064H80.0097C81.0431 22.064 81.2347 21.1108 81.3469 20.5039L85.1357 0H94.719L90.4845 23.1783C89.6709 27.6319 86.3299 30.3101 82.0653 30.3101H66.6361C62.6111 30.3101 60.2897 27.4722 61.0659 23.4012L65.5233 0ZM97.6163 0H117.875C121.708 0 124.264 2.5875 123.469 6.46318L121.686 15.155C121.165 17.6937 118.961 19.2306 115.669 19.6124L120.572 30.3101H109.651L104.971 19.1667L105.64 14.2636H111.434L112.771 13.1492L113.44 9.8062L112.771 8.24612H105.417L101.405 30.3101H91.8217L97.6163 0ZM126.366 0H152.665L151.105 8.24612H141.744L137.955 30.3101H128.149L132.384 8.24612H124.806L126.366 0ZM155.339 0H164.7L159.128 30.3101H149.767L155.339 0ZM166.705 0H176.734L178.295 17.8295L186.764 24.9612L183.643 30.3101H171.386L166.705 0ZM191.89 0H203.033L186.986 24.5155L181.638 17.8295L191.89 0ZM207.045 0H230L226.88 8.24612H211.502L210.61 11.5891H223.76L222.2 18.7209H209.05L208.41 22.064H225.543L223.76 30.3101H203.167C199.525 30.3101 196.635 27.8153 197.461 24.0698L201.196 7.13178C202.083 3.105 204.25 0 207.045 0ZM42.9653 8.24612H50.2167C51.2868 8.24612 51.6024 8.74064 51.4242 9.66319L49.4767 19.7417C49.028 22.064 49.0156 22.064 47.4375 22.064H40.5694C39.4035 22.064 39.1843 21.5791 39.3556 20.6681L41.2306 10.5417C41.6556 8.24612 41.6556 8.24612 42.9653 8.24612Z"/></svg>{% endmacro %}
+
+{% macro header(tone) %}<div class="header {{ tone }}"><div class="brand">{{ wordmark() }}<div class="series">NOW / DAILY BRIEF</div></div><div class="rule"></div></div>{% endmacro %}
+
+{% macro footer(tone, source) %}<div class="footer {{ tone }}">
+  <div class="row"><div class="source one" data-fit="1" data-slot="source">{{ source }}</div><div class="ts">{{ d.timestamp }}</div></div>
+  <div class="rule2"></div>
+  <div class="row"><div class="disc one" data-fit="1" data-slot="disclaimer">{{ d.disclaimer }}</div><div class="folio">{{ page }}</div></div>
+</div>{% endmacro %}
+
+{% macro meta(parts) %}{% for p in parts %}{% if p.n %}<b>{{ p.t }}</b>{% else %}{{ p.t }}{% endif %}{% endfor %}{% endmacro %}
+
+{% macro srow(g, dense) %}<div class="srow"><i class="tbar a" style="background:{{ g.away.c.white }}"></i><i class="tbar h" style="background:{{ g.home.c.white }}"></i>
+  <div class="side">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="">{% endif %}<div class="txt"><div class="ab"><div class="t">{{ g.away.abbr }}</div><div class="res {{ 'win' if g.away.win else 'lose' }}">{{ 'W' if g.away.win else 'L' }}</div></div><div class="ko one" data-fit="1" data-slot="team_ko">{{ g.away.ko }}</div></div></div>
+  <div class="score"><div class="pts {{ 'win' if g.away.win else 'lose' }}">{{ g.away.score }}</div><div class="sep lose"><div class="dash">–</div><div class="ot">{{ g.ot_label }}</div></div><div class="pts {{ 'win' if g.home.win else 'lose' }}">{{ g.home.score }}</div></div>
+  <div class="side">{% if g.home.logo %}<img class="logo" src="{{ g.home.logo }}" alt="">{% endif %}<div class="txt"><div class="ab"><div class="t">{{ g.home.abbr }}</div><div class="res {{ 'win' if g.home.win else 'lose' }}">{{ 'W' if g.home.win else 'L' }}</div></div><div class="ko one" data-fit="1" data-slot="team_ko">{{ g.home.ko }}</div></div></div>
+</div>{% endmacro %}
+
+{% macro scorer(p) %}<div class="scorer"><div class="id"><div class="tm" style="border-left-color:{{ p.c.blue }}">{{ p.team }}</div><div class="nm one" data-fit="1" data-steps="32,28,26" data-slot="player_name">{{ p.name }}</div></div>
+  <div class="stats"><div class="stat"><div class="v">{{ p.pts }}</div><div class="k">득점</div></div><div class="stat"><div class="v">{{ p.reb }}</div><div class="k">리바운드</div></div><div class="stat"><div class="v">{{ p.ast }}</div><div class="k">어시스트</div></div></div></div>{% endmacro %}
+
+{% if card.kind == 'cover' %}
+<div class="card blue">
+  <svg class="deco" style="left:690px;top:530px;opacity:.055" width="960" height="686" viewBox="0 0 960 686"><path fill="#fff" fill-rule="evenodd" d="M384 0H960L328.226 273.933C311.4 281.226 299.22 297.84 294.54 317.46L268.997 424.473C262.86 450.18 271.02 471.362 301.08 471.362H577.481C588 471.362 596.1 475.242 604.627 481.234L804.524 621.902L792.185 656.452C785.436 675.336 762.84 686.067 742.828 686.067H160.411C64.5 686.067 0 621.6 0 527.4C0 507 3.6 492 7.2 475.2L48.21 283.8C57.81 238.77 80.1 204.12 115.99 172.751L254.19 51.8252C292.5 18.3 327.6 0 384 0ZM927.918 130.797L826.735 547.866L602.159 387.455L629.306 286.272C631.548 277.914 640.2 272.13 646.581 268.997L927.918 130.797Z"/></svg>
+  {{ header('dark') }}
+  <div class="sp" style="height:30px"></div>
+  <div class="content">
+    <div class="disp" style="font-size:48px;line-height:60px">DAILY BRIEF.</div>
+    <div class="sp" style="height:16px"></div>
+    <div class="num" style="font-size:52px;line-height:64px">{{ d.date_kst }} KST</div>
+    <div class="sp" style="height:140px"></div>
+    <div class="kr" style="font-weight:900;font-size:96px;line-height:126px;white-space:pre-line" data-fit="2" data-steps="96,84,72" data-lh="1.3125" data-slot="cover.headline">{{ d.cover.headline }}</div>
+    {% if d.cover.photo %}<div class="sp" style="height:40px"></div><div class="photo" style="height:400px"><img src="{{ d.cover.photo }}" alt=""><div class="credit">{{ d.cover.photo_credit }}</div></div>{% endif %}
+    <div style="flex:1"></div>
+    <div class="meta">{{ meta(d.coverage_parts) }}</div>
+  </div>
+  <div class="sp" style="height:24px"></div>
+  {{ footer('dark', d.data_source) }}
+</div>
+
+{% elif card.kind == 'scoreboard' %}
+<div class="card ice">
+  {{ header('light') }}
+  <div class="sp" style="height:30px"></div>
+  <div class="content">
+    <div class="cat" style="height:60px"><div class="disp" style="font-size:48px;line-height:60px;color:var(--blue)">FINAL SCORES</div><div class="ctx one" data-fit="1" data-slot="scoreboard_summary">{{ card.summary }}</div></div>
+    <div class="sp" style="height:56px"></div>
+    <div class="games {{ 'dense' if card.dense else 'sparse' }}">
+      {% for g in card.games %}{{ srow(g, card.dense) }}{% endfor %}
+    </div>
+  </div>
+  <div class="sp" style="height:24px"></div>
+  {{ footer('light', d.data_source) }}
+</div>
+
+{% elif card.kind == 'game' %}
+{% set g = card.game %}
+<div class="card blue">
+  {{ header('dark') }}
+  <div class="sp" style="height:30px"></div>
+  <div class="content">
+    <div class="cat" style="height:40px"><div class="disp" style="font-size:32px;line-height:40px">GAME REPORT</div><div class="ctx one" style="font-size:26px" data-fit="1" data-slot="game_label">{{ card.label }}</div></div>
+    <div class="sp" style="height:48px"></div>
+    <div class="strip"><div class="band"><i style="background:{{ g.away.c.navy }}"></i><i style="background:{{ g.home.c.navy }}"></i></div>
+      <div class="s"><div class="tr">{% if g.away.logo %}<div class="disc"><img class="logo" src="{{ g.away.logo }}" alt=""></div>{% endif %}<div class="t">{{ g.away.abbr }}</div><div class="res {{ 'w' if g.away.win else 'l' }}">{{ 'W' if g.away.win else 'L' }}</div></div><div class="big {{ 'w' if g.away.win else 'l' }}">{{ g.away.score }}</div></div>
+      <div class="mid">{{ g.status_label }}</div>
+      <div class="s"><div class="tr"><div class="t r">{{ g.home.abbr }}</div>{% if g.home.logo %}<div class="disc"><img class="logo" src="{{ g.home.logo }}" alt=""></div>{% endif %}<div class="res {{ 'w' if g.home.win else 'l' }}">{{ 'W' if g.home.win else 'L' }}</div></div><div class="big r {{ 'w' if g.home.win else 'l' }}">{{ g.home.score }}</div></div>
+    </div>
+    <div class="sp" style="height:40px"></div>
+    <div class="headline68" data-fit="2" data-slot="games[].headline">{{ card.headline }}</div>
+    <div class="sp" style="height:56px"></div>
+    <div class="leaders"><div class="lab">양 팀 최다 득점</div><div class="scorers">{{ scorer(card.away_leader) }}{{ scorer(card.home_leader) }}</div></div>
+  </div>
+  <div class="sp" style="height:24px"></div>
+  {{ footer('dark', d.data_source) }}
+</div>
+
+{% elif card.kind == 'news' %}
+{% set n = card.news %}
+<div class="card ice">
+  {{ header('light') }}
+  <div class="sp" style="height:30px"></div>
+  <div class="content">
+    <div class="cat" style="height:40px"><div class="disp" style="font-size:32px;line-height:40px;color:var(--blue)">ROSTER WATCH</div>{% if n.tags %}<div class="tags">{% for t in n.tags %}<div class="ttag"><i style="background:{{ t.c.white }}"></i>{% if t.logo %}<img class="logo" src="{{ t.logo }}" alt="">{% endif %}<span class="tab">{{ t.abbr }}</span><span class="ko">{{ t.ko }}</span></div>{% endfor %}</div>{% endif %}</div>
+    <div class="sp" style="height:48px"></div>
+    <div class="status-row"><div class="pill {{ n.status_class }}">{{ n.status }}</div>{% if n.verification %}<div class="verif one" data-fit="1" data-slot="news[].verification">{{ n.verification }}</div>{% endif %}</div>
+    <div class="sp" style="height:80px"></div>
+    <div class="ntitle" style="white-space:pre-line" data-fit="3" data-steps="88,80,72" data-lh="1.318" data-slot="news[].title">{{ n.title }}</div>
+    <div class="sp" style="height:40px"></div>
+    <div class="nbody" style="white-space:pre-line" data-fit="3" data-slot="news[].body">{{ n.body }}</div>
+    {% if n.photo %}<div class="sp" style="height:48px"></div><div class="photo" style="height:380px"><img src="{{ n.photo }}" alt=""><div class="credit">{{ n.photo_credit }}</div></div>{% endif %}
+  </div>
+  <div class="sp" style="height:24px"></div>
+  {{ footer('light', n.source) }}
+</div>
+
+{% elif card.kind == 'standings' %}
+<div class="card ice">
+  {{ header('light') }}
+  <div class="sp" style="height:30px"></div>
+  <div class="content">
+    <div class="cat" style="height:40px"><div class="disp" style="font-size:32px;line-height:40px;color:var(--blue)">STANDINGS</div><div class="ctx">동부 · 서부 컨퍼런스 순위</div></div>
+    <div class="sp" style="height:20px"></div>
+    <div class="meta" style="font-size:26px;line-height:36px">{{ meta(d.standings.as_of_parts) }}</div>
+    <div class="sp" style="height:40px"></div>
+    <div class="confs">
+      {% for key, en, kr in [('east','EAST','동부'),('west','WEST','서부')] %}
+      <div class="conf">
+        <div class="hd"><div class="en">{{ en }}</div><div class="krn">{{ kr }}</div></div>
+        <div class="trow th"><div class="rk num">#</div><div class="lg"></div><div class="tm k">팀</div><div class="ko"></div><div class="n k">승</div><div class="n k">패</div></div>
+        <div class="rows">{% for t in d.standings[key] %}<div class="trow"><i class="bar" style="background:{{ t.c.white }}"></i><div class="rk">{{ '%02d' % t.rank }}</div><div class="lg">{% if t.logo %}<img class="logo" src="{{ t.logo }}" alt="">{% endif %}</div><div class="tm">{{ t.abbr }}</div><div class="ko one" data-fit="1" data-slot="standings.team_ko">{{ t.ko }}</div><div class="n">{{ t.w }}</div><div class="n">{{ t.l }}</div></div>{% endfor %}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="sp" style="height:24px"></div>
+  {{ footer('light', d.data_source) }}
+</div>
+
+{% elif card.kind == 'closing' %}
+<div class="card navy">
+  <svg class="deco" style="left:869px;top:144px;opacity:.14" width="676" height="646" viewBox="0 0 676 646"><path fill="none" stroke="#4DDCFF" stroke-width="2" d="M1 0V73.1C1 162.282 36.4273 247.811 99.4883 310.872C162.549 373.933 248.078 409.36 337.26 409.36C426.442 409.36 511.971 373.933 575.032 310.872C638.093 247.811 673.52 162.282 673.52 73.1V0M1 643.28V570.18C1 480.998 36.4273 395.469 99.4883 332.408C162.549 269.347 248.078 233.92 337.26 233.92C426.442 233.92 511.971 269.347 575.032 332.408C638.093 395.469 673.52 480.998 673.52 570.18V643.28"/></svg>
+  {{ header('dark') }}
+  <div class="sp" style="height:30px"></div>
+  <div class="content">
+    <div class="disp" style="font-size:32px;line-height:40px">STAY COURTIVE.</div>
+    <div class="sp" style="height:132px"></div>
+    <div class="kr" style="font-weight:900;font-size:96px;line-height:126px;white-space:pre-line" data-fit="2" data-slot="closing.title">{{ d.closing.title }}</div>
+    <div class="sp" style="height:48px"></div>
+    <div class="kr one" style="width:920px;font-weight:700;font-size:40px;line-height:56px" data-fit="1" data-slot="closing.follow_cta">{{ d.closing.follow_cta }}</div>
+    <div class="sp" style="height:16px"></div>
+    <div class="kr one" style="width:920px;font-weight:700;font-size:30px;line-height:44px;color:var(--ice)" data-fit="1" data-slot="closing.save_cta">{{ d.closing.save_cta }}</div>
+    <div style="flex:1"></div>
+    <div class="kr" style="font-weight:700;font-size:24px;line-height:34px">참고 출처</div>
+    <div class="sp" style="height:12px"></div>
+    <div class="kr" style="font-size:26px;line-height:40px;white-space:pre-line" data-fit="2" data-slot="closing.references">{{ d.closing.references }}</div>
+  </div>
+  <div class="sp" style="height:24px"></div>
+  {{ footer('dark', d.data_source) }}
+</div>
+{% endif %}
+</body>
+</html>

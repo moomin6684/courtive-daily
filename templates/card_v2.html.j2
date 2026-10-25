@@ -1,0 +1,235 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<title>COURTIVE Daily Brief v2 {{ page }}</title>
+<style>
+/* Hallmark · redesign: full · brand: COURTIVE (locked: blue/navy/ice/cyan, Anton + Barlow Condensed + Noto Sans KR) · medium: 1080×1350 social card · signature: the logo's one-way diagonal cutting each photograph, striped in the two teams' colours */
+/* critique: v1 read as a data sheet; every card was a box of text on a flat field. v2 leads with the real photograph or the real logos, one idea per card, numbers set huge */
+/* waive 54 (tracked caps): brand display labels are Anton capitals by the COURTIVE guideline · waive 63 (middle dots): the brand's own label grammar */
+@font-face{font-family:"Anton";font-weight:400;src:url("{{ fonts }}/anton-latin-400-normal.woff2") format("woff2")}
+@font-face{font-family:"Barlow Condensed";font-weight:700;src:url("{{ fonts }}/barlow-condensed-latin-700-normal.woff2") format("woff2")}
+{% for w in [400,700,900] %}
+@font-face{font-family:"Noto Sans KR";font-weight:{{ w }};src:url("{{ fonts }}/noto-sans-kr-korean-{{ w }}-normal.woff2") format("woff2");unicode-range:U+1100-11FF,U+3000-303F,U+3130-318F,U+A960-A97F,U+AC00-D7A3,U+D7B0-D7FF,U+FF00-FFEF}
+@font-face{font-family:"Noto Sans KR";font-weight:{{ w }};src:url("{{ fonts }}/noto-sans-kr-latin-{{ w }}-normal.woff2") format("woff2");unicode-range:U+0000-024F,U+2000-206F,U+2190-21FF,U+2212}
+{% endfor %}
+:root{
+  --blue:#146BFF; --navy:#0A2147; --ice:#EAF4FF; --white:#FFFFFF; --cyan:#4DDCFF;
+  --mute-on-white:#5E6F8C; --mute-on-navy:#8FA3C7; --line-on-ice:#D3E3F7; --scrim:rgba(10,33,71,.78); --scrim-top:rgba(10,33,71,.9); --scrim-mid:rgba(10,33,71,.6);
+  --kr:"Noto Sans KR","Noto Sans CJK KR",sans-serif; --num:"Barlow Condensed","Noto Sans KR",sans-serif; --display:"Anton","Noto Sans KR",sans-serif;
+  --pad:56px; --cut:100px; --stripe:14px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{width:1080px;height:1350px;overflow-x:clip;background:var(--navy)}
+body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
+.card{position:relative;width:1080px;height:1350px;overflow:hidden;color:var(--white);background:var(--navy)}
+.card.ice{background:var(--ice);color:var(--navy)}
+.layer{position:absolute;left:0;right:0}
+.pad{padding:0 var(--pad)}
+.one{white-space:nowrap;overflow:hidden}
+.r{text-align:right}
+/* photo: luminosity over brand blue = one tone for every source, then a navy scrim for type */
+.photo{position:absolute;left:0;top:0;width:1080px;background:var(--blue);overflow:hidden}
+.photo img{width:100%;height:100%;object-fit:cover;display:block}
+/* photos stay in natural colour: CC BY-SA sources are cropped, never recoloured */
+.photo .shade{position:absolute;inset:0;background:linear-gradient(180deg,var(--scrim-top) 0%,var(--scrim-mid) 20%,rgba(10,33,71,0) 36%,rgba(10,33,71,0) 62%,rgba(10,33,71,.6) 100%)}
+.stripe{position:absolute;left:0;width:1080px;display:flex}
+.stripe i{flex:1;display:block}
+.credit{position:absolute;right:var(--pad);font:400 17px/22px var(--kr);color:var(--white);text-align:right;max-width:640px;padding:4px 10px;background:var(--scrim)}
+/* header & footer */
+.header{position:absolute;left:var(--pad);right:var(--pad);top:52px;height:32px;display:flex;justify-content:space-between;align-items:flex-start;z-index:3}
+.header svg{display:block} .header svg path{fill:currentColor}
+.header.light{color:var(--blue)} .header.dark{color:var(--white)}
+.footer{position:absolute;left:var(--pad);right:var(--pad);bottom:40px;height:28px;z-index:3}
+.footer .note{font:400 21px/28px var(--kr)}
+.footer.dark .note{color:var(--mute-on-navy)} .footer.light .note{color:var(--mute-on-white)}
+/* type */
+.disp{font-family:var(--display);font-weight:400;line-height:1}
+.kicker{display:flex;align-items:center;gap:16px}
+.chip{display:inline-block;padding:8px 18px;background:var(--blue);color:var(--white);font:700 26px/34px var(--kr)}
+.chip.dark{background:var(--navy)}
+.h-xl{font:900 104px/128px var(--kr);letter-spacing:-.01em}
+.h-l{font:900 72px/94px var(--kr);letter-spacing:-.01em}
+.h-news{font:900 84px/108px var(--kr);letter-spacing:-.01em}
+.body{font:400 34px/52px var(--kr)}
+.logo{display:block;object-fit:contain;flex:none}
+/* score head (game card) */
+.duel{display:grid;grid-template-columns:minmax(0,1fr) 120px minmax(0,1fr);align-items:end}
+.side{display:flex;align-items:flex-end;gap:22px}
+.side.home{flex-direction:row-reverse}
+.team{display:flex;flex-direction:column;align-items:center;gap:10px;flex:none;width:112px}
+.disc{width:112px;height:112px;border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center}
+.disc .logo{width:84px;height:84px}
+.team .ab{font:700 30px/32px var(--num)}
+.pts{font:700 200px/164px var(--num);letter-spacing:-.01em}
+.pts.win{color:var(--cyan)} .pts.lose{color:var(--white)}
+.mid{text-align:center;font:700 28px/34px var(--num);color:var(--cyan);padding-bottom:18px}
+.leaders{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;border-top:2px solid rgba(255,255,255,.18);padding-top:22px}
+.leader .who{display:flex;gap:12px;align-items:center;height:40px}
+.leader .who .logo{width:34px;height:34px}
+.leader .nm{font:700 30px/40px var(--kr)}
+.leader .line{display:grid;grid-template-columns:repeat(3,96px);gap:18px;margin-top:8px}
+.leader .v{font:700 56px/60px var(--num)} .leader .k{font:400 20px/26px var(--kr);color:var(--mute-on-navy)}
+/* scoreboard */
+.rows{display:flex;flex-direction:column}
+.rows.sparse{gap:20px} .rows.dense{gap:10px}
+.srow{display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);align-items:center;background:var(--white);padding:0 28px}
+.sparse .srow{height:170px;grid-template-columns:minmax(0,1fr) 380px minmax(0,1fr);padding:0 24px} .dense .srow{height:96px}
+.sside{display:flex;align-items:center;gap:18px;min-width:0}
+.sside.home{flex-direction:row-reverse;text-align:right}
+.sside .logo{width:62px;height:62px} .sparse .sside .logo{width:96px;height:96px}
+.sside .t{display:flex;flex-direction:column;min-width:0}
+.sside .ab{font:700 30px/32px var(--num)}
+.sside .ko{font:400 22px/30px var(--kr);color:var(--mute-on-white)}
+.score{display:flex;justify-content:center;align-items:center;gap:14px}
+.score .p{font:700 70px/76px var(--num);width:116px;text-align:center}
+.sparse .score{gap:12px} .sparse .score .p{font-size:104px;line-height:110px;width:156px} .sparse .score .sep{width:32px}
+.score .p.win{color:var(--blue)} .score .p.lose{color:var(--mute-on-white)}
+.score .sep{width:34px;text-align:center;font:700 22px/26px var(--num);color:var(--mute-on-white)}
+/* standings */
+.confs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.conf .hd{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px 12px;border-bottom:3px solid var(--navy)}
+.conf .hd .en{font:400 44px/48px var(--display)} .conf .hd .krn{font:700 24px/30px var(--kr)}
+.trow{display:grid;grid-template-columns:40px 36px 64px minmax(0,1fr) 44px 44px;gap:8px;align-items:center;height:51px;border-bottom:1px solid var(--line-on-ice)}
+.trow .rk{font:700 26px/32px var(--num);color:var(--mute-on-white);text-align:right}
+.trow .logo{width:32px;height:32px}
+.trow .tm{font:700 28px/32px var(--num)}
+.trow .ko{font:400 22px/32px var(--kr)}
+.trow .n{font:700 30px/32px var(--num);text-align:right}
+.trow.th{height:40px;border-bottom:none} .trow.th *{font:700 20px/28px var(--kr);color:var(--mute-on-white)}
+</style>
+</head>
+<body>
+{% macro wordmark() %}<svg width="230" height="31" viewBox="0 0 230 31" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11.812 0H32.5388L26.2985 7.57752C25.9389 8.0139 25.3639 8.24612 24.7384 8.24612H14.9322L12.4806 10.2519L10.4748 19.3895C10.15 20.8696 10.4018 22.064 11.812 22.064H23.4012C24.0861 22.064 24.4694 22.2653 24.7384 22.7326L28.0814 30.3101H5.75C2.39583 30.3101 0 28.1111 0 24.7569C0 23.7986 0.0958333 22.8722 0.2875 21.9778L3.61611 6.44319C4.47478 2.43864 7.86888 0 11.812 0ZM39.2248 0H56.5417C60.3431 0 62.5472 2.42778 61.7345 6.46318L58.1686 24.1819C57.4486 27.7597 55.0403 30.3101 51.3667 30.3101H34.3403C30.3472 30.3101 28.4168 27.584 29.1957 23.6389L32.5833 6.46332C33.305 2.81111 35.65 0 39.2248 0ZM65.5233 0H74.8837L71.3178 19.6124C71.0946 20.8406 71.1083 22.064 72.2093 22.064H80.0097C81.0431 22.064 81.2347 21.1108 81.3469 20.5039L85.1357 0H94.719L90.4845 23.1783C89.6709 27.6319 86.3299 30.3101 82.0653 30.3101H66.6361C62.6111 30.3101 60.2897 27.4722 61.0659 23.4012L65.5233 0ZM97.6163 0H117.875C121.708 0 124.264 2.5875 123.469 6.46318L121.686 15.155C121.165 17.6937 118.961 19.2306 115.669 19.6124L120.572 30.3101H109.651L104.971 19.1667L105.64 14.2636H111.434L112.771 13.1492L113.44 9.8062L112.771 8.24612H105.417L101.405 30.3101H91.8217L97.6163 0ZM126.366 0H152.665L151.105 8.24612H141.744L137.955 30.3101H128.149L132.384 8.24612H124.806L126.366 0ZM155.339 0H164.7L159.128 30.3101H149.767L155.339 0ZM166.705 0H176.734L178.295 17.8295L186.764 24.9612L183.643 30.3101H171.386L166.705 0ZM191.89 0H203.033L186.986 24.5155L181.638 17.8295L191.89 0ZM207.045 0H230L226.88 8.24612H211.502L210.61 11.5891H223.76L222.2 18.7209H209.05L208.41 22.064H225.543L223.76 30.3101H203.167C199.525 30.3101 196.635 27.8153 197.461 24.0698L201.196 7.13178C202.083 3.105 204.25 0 207.045 0ZM42.9653 8.24612H50.2167C51.2868 8.24612 51.6024 8.74064 51.4242 9.66319L49.4767 19.7417C49.028 22.064 49.0156 22.064 47.4375 22.064H40.5694C39.4035 22.064 39.1843 21.5791 39.3556 20.6681L41.2306 10.5417C41.6556 8.24612 41.6556 8.24612 42.9653 8.24612Z"/></svg>{% endmacro %}
+{% macro header(tone='dark') %}<div class="header {{ 'light' if tone == 'light' else 'dark' }}">{{ wordmark() }}</div>{% endmacro %}
+{% macro footer(tone, source, credit='') %}{% set note = credit or d.disclaimer %}{% if note %}<div class="footer {{ tone }}"><div class="note one" data-fit="1" data-slot="photo_credit">{{ note }}</div></div>{% endif %}{% endmacro %}
+{% macro symbol(left, top, w, h, fill, opacity) %}<svg class="layer" style="left:{{ left }}px;top:{{ top }}px;opacity:{{ opacity }}" width="{{ w }}" height="{{ h }}" viewBox="0 0 960 686" preserveAspectRatio="none"><path fill="{{ fill }}" fill-rule="evenodd" d="M384 0H960L328.226 273.933C311.4 281.226 299.22 297.84 294.54 317.46L268.997 424.473C262.86 450.18 271.02 471.362 301.08 471.362H577.481C588 471.362 596.1 475.242 604.627 481.234L804.524 621.902L792.185 656.452C785.436 675.336 762.84 686.067 742.828 686.067H160.411C64.5 686.067 0 621.6 0 527.4C0 507 3.6 492 7.2 475.2L48.21 283.8C57.81 238.77 80.1 204.12 115.99 172.751L254.19 51.8252C292.5 18.3 327.6 0 384 0ZM927.918 130.797L826.735 547.866L602.159 387.455L629.306 286.272C631.548 277.914 640.2 272.13 646.581 268.997L927.918 130.797Z"/></svg>{% endmacro %}
+{% macro photo(src, h, credit, stripe, pos='50% 40%', zoom=1) %}
+  {# h = height at the left edge; the cut rises by --cut toward the right #}
+  <div class="photo" style="height:{{ h }}px;clip-path:polygon(0 0,100% 0,100% {{ h - 100 }}px,0 {{ h }}px)"><img src="{{ src }}" alt="" style="object-position:{{ pos }};transform:scale({{ zoom }});transform-origin:{{ pos }}"><div class="shade"></div></div>
+  <div class="stripe" style="top:{{ h - 100 }}px;height:114px;clip-path:polygon(0 100px,100% 0,100% 14px,0 114px)">{% for c in stripe %}<i style="background:{{ c }}"></i>{% endfor %}</div>
+{% endmacro %}
+{% macro cut(h, stripe) %}
+  <div class="stripe" style="top:{{ h - 100 }}px;height:114px;clip-path:polygon(0 100px,100% 0,100% 14px,0 114px)">{% for c in stripe %}<i style="background:{{ c }}"></i>{% endfor %}</div>
+{% endmacro %}
+
+{% if card.kind == 'cover' %}
+<div class="card">
+  {% if d.cover.photo %}{{ photo(d.cover.photo, 900, d.cover.photo_credit, ['var(--blue)'], d.cover.photo_pos or '50% 45%') }}{% else %}
+  <svg class="layer" style="left:520px;top:300px;opacity:.07" width="960" height="686" viewBox="0 0 960 686"><path fill="#fff" fill-rule="evenodd" d="M384 0H960L328.226 273.933C311.4 281.226 299.22 297.84 294.54 317.46L268.997 424.473C262.86 450.18 271.02 471.362 301.08 471.362H577.481C588 471.362 596.1 475.242 604.627 481.234L804.524 621.902L792.185 656.452C785.436 675.336 762.84 686.067 742.828 686.067H160.411C64.5 686.067 0 621.6 0 527.4C0 507 3.6 492 7.2 475.2L48.21 283.8C57.81 238.77 80.1 204.12 115.99 172.751L254.19 51.8252C292.5 18.3 327.6 0 384 0ZM927.918 130.797L826.735 547.866L602.159 387.455L629.306 286.272C631.548 277.914 640.2 272.13 646.581 268.997L927.918 130.797Z"/></svg>
+  {{ cut(900, ['var(--blue)']) }}{% endif %}
+  {{ header() }}
+  <div class="layer pad" style="top:132px;z-index:3">
+    <div class="disp" style="font-size:64px">DAILY BRIEF.</div>
+    <div style="font:700 40px/48px var(--num);margin-top:10px">{{ d.date_kst }}</div>
+  </div>
+  <div class="layer pad" style="top:930px">
+    <div class="h-xl" style="white-space:pre-line" data-fit="2" data-steps="104,92,80" data-lh="1.23" data-slot="cover.headline">{{ d.cover.headline }}</div>
+  </div>
+  {{ footer('dark', d.data_source, d.cover.photo_credit if d.cover.photo else '') }}
+</div>
+
+{% elif card.kind == 'scoreboard' %}
+<div class="card ice">
+  {{ header('light') }}
+  <div class="layer pad" style="top:136px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div class="disp" style="font-size:96px;color:var(--blue)">FINAL<br>SCORES</div>
+      <div class="r" style="font:700 28px/40px var(--kr)" data-slot="scoreboard_summary">{{ card.summary }}<br><span style="font-weight:400;font-size:22px;color:var(--mute-on-white)">원정 왼쪽, 홈 오른쪽</span></div>
+    </div>
+  </div>
+  <div class="layer pad" style="top:{{ 372 if card.dense else 420 }}px">
+    <div class="rows {{ 'dense' if card.dense else 'sparse' }}">
+    {% for g in card.games %}
+      <div class="srow">
+        <div class="sside">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="">{% endif %}<div class="t"><span class="ab">{{ g.away.abbr }}</span><span class="ko one" data-fit="1" data-slot="team_ko">{{ g.away.ko }}</span></div></div>
+        <div class="score"><span class="p one {{ 'win' if g.away.win else 'lose' }}" data-fit="1" data-slot="score">{{ g.away.score }}</span><span class="sep">{{ g.ot_label or '–' }}</span><span class="p one {{ 'win' if g.home.win else 'lose' }}" data-fit="1" data-slot="score">{{ g.home.score }}</span></div>
+        <div class="sside home">{% if g.home.logo %}<img class="logo" src="{{ g.home.logo }}" alt="">{% endif %}<div class="t"><span class="ab">{{ g.home.abbr }}</span><span class="ko one" data-fit="1" data-slot="team_ko">{{ g.home.ko }}</span></div></div>
+      </div>
+    {% endfor %}
+    </div>
+  </div>
+  {{ footer('light', d.data_source) }}
+</div>
+
+{% elif card.kind == 'game' %}
+{% set g = card.game %}
+<div class="card">
+  {% if card.photo %}{{ photo(card.photo, 600, card.photo_credit, [g.away.c.navy, g.home.c.navy], card.photo_pos or '50% 30%', card.photo_zoom or 1) }}{% else %}{{ cut(300, [g.away.c.navy, g.home.c.navy]) }}{% endif %}
+  {{ header() }}
+  <div class="layer pad" style="top:128px;z-index:3">
+    <div class="kicker"><span class="disp" style="font-size:40px">GAME REPORT</span><span class="chip one" data-fit="1" data-slot="game_label">{{ card.label }}</span></div>
+  </div>
+  <div class="layer pad" style="top:{{ 640 if card.photo else 360 }}px">
+    <div class="duel">
+      <div class="side"><div class="team"><div class="disc">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="">{% endif %}</div><span class="ab">{{ g.away.abbr }}</span></div><span class="pts {{ 'win' if g.away.win else 'lose' }}">{{ g.away.score }}</span></div>
+      <div class="mid">{{ g.status_label }}</div>
+      <div class="side home"><div class="team"><div class="disc">{% if g.home.logo %}<img class="logo" src="{{ g.home.logo }}" alt="">{% endif %}</div><span class="ab">{{ g.home.abbr }}</span></div><span class="pts {{ 'win' if g.home.win else 'lose' }}">{{ g.home.score }}</span></div>
+    </div>
+    <div class="h-l" style="margin-top:34px" data-fit="2" data-slot="games[].headline">{{ card.headline }}</div>
+    <div class="leaders" style="margin-top:30px">
+      {% for p in [card.away_leader, card.home_leader] %}
+      <div class="leader"><div class="who">{% if p.logo %}<img class="logo" src="{{ p.logo }}" alt="">{% endif %}<span class="nm one" data-fit="1" data-steps="30,27,24" data-slot="player_name">{{ p.name }}</span></div>
+        <div class="line"><div><div class="v">{{ p.pts }}</div><div class="k">득점</div></div><div><div class="v">{{ p.reb }}</div><div class="k">리바운드</div></div><div><div class="v">{{ p.ast }}</div><div class="k">어시스트</div></div></div></div>
+      {% endfor %}
+    </div>
+  </div>
+  {{ footer('dark', d.data_source, card.photo_credit if card.photo else '') }}
+</div>
+
+{% elif card.kind == 'news' %}
+{% set n = card.news %}
+<div class="card ice">
+  {% if n.photo %}{{ photo(n.photo, 540, n.photo_credit, [n.tags[0].c.navy if n.tags else 'var(--blue)'], n.photo_pos or '50% 35%') }}{{ header() }}
+  {% elif n.tags %}
+  <div class="photo" style="height:540px;background:var(--navy);clip-path:polygon(0 0,100% 0,100% 440px,0 540px)"></div>
+  {% if n.tags[0].logo %}<img class="logo" src="{{ n.tags[0].logo }}" alt="" style="position:absolute;right:56px;top:130px;width:340px;height:300px"><div class="layer pad" style="top:300px;z-index:3"><span style="font:700 34px/40px var(--num);color:var(--white)">{{ n.tags[0].abbr }}</span><br><span style="font:400 26px/36px var(--kr);color:var(--mute-on-navy)">{{ n.tags[0].ko }}</span></div>{% endif %}
+  {{ cut(540, [n.tags[0].c.navy]) }}{{ header() }}
+  {% else %}{{ header('light') }}{% endif %}
+  {{ symbol(430, 620, 960, 686, 'var(--white)', 0.5) }}
+  <div class="layer pad" style="top:{{ 704 if (n.photo or n.tags) else 150 }}px">
+    <div class="kicker"><span class="chip {{ '' if n.status_class == 'official' else 'dark' }}">{{ n.status }}</span>{% if n.verification %}<span class="one" style="font:700 26px/34px var(--kr)" data-fit="1" data-slot="news[].verification">{{ n.verification }}</span>{% endif %}</div>
+    <div class="h-news" style="margin-top:30px;white-space:pre-line" data-fit="3" data-steps="84,76,68" data-lh="1.286" data-slot="news[].title">{{ n.title }}</div>
+    <div class="body" style="margin-top:26px;white-space:pre-line" data-fit="3" data-slot="news[].body">{{ n.body }}</div>
+  </div>
+  {{ footer('light', n.source, n.photo_credit if n.photo else '') }}
+</div>
+
+{% elif card.kind == 'standings' %}
+<div class="card ice">
+  {{ symbol(140, 526, 800, 574, 'var(--blue)', 0.06) }}
+  {{ header('light') }}
+  <div class="layer pad" style="top:136px">
+    <div style="display:flex;justify-content:space-between;align-items:flex-end">
+      <div class="disp" style="font-size:96px;color:var(--blue)">STANDINGS</div>
+      <div class="r" style="font:400 22px/30px var(--kr);color:var(--mute-on-white)">기준 {{ d.standings.as_of or d.timestamp }}<br>{{ d.standings.note }}</div>
+    </div>
+  </div>
+  <div class="layer pad" style="top:339px">
+    <div class="confs">
+      {% for key, en, kr in [('east','EAST','동부'),('west','WEST','서부')] %}
+      <div class="conf">
+        <div class="hd"><span class="en">{{ en }}</span><span class="krn">{{ kr }}</span></div>
+        <div class="trow th"><span class="rk">#</span><span></span><span>팀</span><span></span><span class="n">승</span><span class="n">패</span></div>
+        {% for t in d.standings[key] %}<div class="trow"><span class="rk">{{ t.rank }}</span>{% if t.logo %}<img class="logo" src="{{ t.logo }}" alt="">{% else %}<span></span>{% endif %}<span class="tm">{{ t.abbr }}</span><span class="ko one" data-fit="1" data-slot="standings.team_ko">{{ t.ko }}</span><span class="n">{{ t.w }}</span><span class="n">{{ t.l }}</span></div>{% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% elif card.kind == 'closing' %}
+<div class="card">
+  <svg class="layer" style="left:430px;top:620px;opacity:.09" width="960" height="686" viewBox="0 0 960 686"><path fill="#fff" fill-rule="evenodd" d="M384 0H960L328.226 273.933C311.4 281.226 299.22 297.84 294.54 317.46L268.997 424.473C262.86 450.18 271.02 471.362 301.08 471.362H577.481C588 471.362 596.1 475.242 604.627 481.234L804.524 621.902L792.185 656.452C785.436 675.336 762.84 686.067 742.828 686.067H160.411C64.5 686.067 0 621.6 0 527.4C0 507 3.6 492 7.2 475.2L48.21 283.8C57.81 238.77 80.1 204.12 115.99 172.751L254.19 51.8252C292.5 18.3 327.6 0 384 0ZM927.918 130.797L826.735 547.866L602.159 387.455L629.306 286.272C631.548 277.914 640.2 272.13 646.581 268.997L927.918 130.797Z"/></svg>
+  {{ cut(640, ['var(--blue)']) }}
+  {{ header() }}
+  <div class="layer pad" style="top:220px">
+    <div class="h-xl" style="white-space:pre-line;color:var(--cyan)" data-fit="2" data-slot="closing.title">{{ d.closing.title }}</div>
+  </div>
+  <div class="layer pad" style="top:1214px">
+    <div class="one" style="font:700 40px/56px var(--kr)" data-fit="1" data-slot="closing.follow_cta">{{ d.closing.follow_cta }}</div>
+  </div>
+</div>
+{% endif %}
+</body>
+</html>

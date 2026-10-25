@@ -1,0 +1,16 @@
+# 연결 확인용: 토큰으로 계정 이름만 읽는다 (아무것도 올리지 않음). Actions 탭에서 "Run workflow" 로 실행.
+name: check-token
+on:
+  workflow_dispatch:
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Who am I
+        env:
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+        run: |
+          set -euo pipefail
+          test -n "$IG_ACCESS_TOKEN" || { echo "IG_ACCESS_TOKEN secret is missing"; exit 1; }
+          curl -sS --fail-with-body -H "Authorization: Bearer $IG_ACCESS_TOKEN" \
+            "https://graph.instagram.com/v26.0/me?fields=user_id,username,account_type" | python3 -c "import json,sys; d=json.load(sys.stdin); print('connected:', d.get('username'), d.get('account_type'))"

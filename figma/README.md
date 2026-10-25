@@ -1,0 +1,51 @@
+# 피그마 ↔ 카드 생성기 동기화
+
+피그마 파일 `Lah0vPR16klwJSmKtHljcI`, 페이지 `02 · Instagram & Daily Brief`(55:54), 섹션 `G · Daily Brief v2 · 편집용 템플릿`(106:3621).
+
+## 흐름
+
+1. 사용자가 ① 마스터 또는 ② 부품을 고친다.
+2. `snapshot.js`의 `__MODE__`를 `diff`로 바꿔 use_figma로 실행 → 처음 그린 상태(숨긴 `_sync` 노드에 저장된 기준값)와 비교해 **바뀐 속성만** 돌려준다.
+3. 아래 대응표로 `templates/card_v2.html.j2`의 CSS·마크업을 고치고 `render.py`로 다시 그린다. 렌더 결과와 피그마 스크린샷을 나란히 비교한다.
+4. 반영이 끝나면 `__MODE__`를 `baseline`으로 실행해 기준값을 새로 저장한다.
+
+## 노드
+
+| 마스터 (발행 순서) | id | 템플릿 분기 |
+|---|---|---|
+| v2/Card/01 Cover | 108:3881 | `card.kind == 'cover'` (사진 있음) |
+| v2/Card/02 Game Report | 108:4174 | `game` (사진 있음) |
+| v2/Card/03 News · Photo | 110:4771 | `news`, 사진 있음 (기본) |
+| v2/Card/04 Scoreboard · Dense | 109:5169 | `scoreboard`, `card.dense` |
+| v2/Card/04b Scoreboard · Sparse | 109:5548 | `scoreboard`, sparse |
+| v2/Card/05 Standings | 111:6238 | `standings` |
+| v2/Card/06 Closing | 110:4797 | `closing` |
+| v2/Card/99 News · Logo Panel (예비) | 110:4744 | `news`, 사진 없음 + `allow_logo_panel` |
+
+| 부품 | id | CSS |
+|---|---|---|
+| v2/Header (Tone=Dark/Light) | 107:3628 | `.header`, `.header.dark/.light` (워드마크만) |
+| v2/Footer (Tone=Dark/Light) | 107:3645 | `.footer .note` (크레딧 한 줄, 비면 안 그림) |
+| v2/Score Row (Density) | 107:3864 | `.srow`, `.sside`, `.score .p/.sep` (+ `.sparse`) |
+| v2/Standing Row | 107:3894 | `.trow` |
+| v2/Leader | 107:3928 | `.leader .who/.nm/.line/.v/.k` |
+| v2/Duel Team | 107:3952 | `.team`, `.disc`, `.team .ab` |
+
+미리보기(③, 마스터의 인스턴스): 112:5793 … 112:7955. 그리지 않은 변형: 사진 없는 표지(심벌), 사진 없는 게임 리포트(사선만) — 마스터가 바뀌면 같은 규칙으로 맞춘다.
+
+## 대응 규칙
+
+- 카드 직속 레이어의 `x, y` = CSS `left`(56 = `--pad`)와 `top`. 예: Cover `Lede` y=930 → `.layer` `top:930px`.
+- 오토 레이아웃 `gap` = 형제 사이 `margin-top`(세로) 또는 `gap`(가로). `padding` = CSS padding.
+- 글자: Figma `size / lh` = CSS `font-size / line-height`, `ls -1%` = `letter-spacing:-.01em`. 글꼴 Noto Sans KR Regular/Bold/Black = 400/700/900, Barlow Condensed Bold = `--num` 700, Anton = `--display`.
+- 색: `var:Color/Blue` → `var(--blue)`, Navy/Ice/White/Cyan 동일, `Color/Mute On Light` → `--mute-on-white`, `Color/Mute On Dark` → `--mute-on-navy`, `Color/Line Ice` → `--line-on-ice`. `var:Team/ABBR/Role`는 데이터(`accent()`)가 고르므로 템플릿에 고정하지 않는다.
+- `Photo` 높이 = `photo(src, h)`의 h, `Cut mask` 오른쪽 높이 차 = `--cut`(100). `Stripe` 두께 = `--stripe`(14).
+- 로고 슬롯 `{{…logo}}` 프레임 크기 = CSS 로고 너비·높이. 안의 Team Logo 인스턴스는 슬롯 크기 ÷ 0.85로 그려 보이는 크기를 맞춘다.
+- `{{ }}` 레이어의 글자 내용은 데이터라서 반영하지 않는다. 스타일·위치·크기만 반영한다.
+- 이긴 팀 점수 색(스코어 행 Blue, 게임 리포트 Cyan)은 인스턴스 덮어쓰기로 칠한 규칙이다. 마스터의 승패 예시 색을 바꾸면 그 규칙을 바꾼 것으로 본다.
+
+## 반영 기록
+
+- 10/26 1차 수정: 헤더는 워드마크만 · 푸터는 사진 크레딧 한 줄(출처·시각·쪽 번호 삭제) · 표지 '미국 현지 … 경기' 줄 삭제 · 뉴스 본문 top 704 + 흰 심벌 워터마크 50% · 순위 표 top 339 + 블루 심벌 6% · 마무리는 시안 제목(top 220) + 하단 한 줄 안내(top 1214), STAY COURTIVE·저장 안내·참고 출처 삭제. 함께 고친 것: 1–4경기 스코어 점수 칸 300 → 380(숫자 156), 뉴스는 사진 기본(로고 패널은 예비). 사진 카드에서는 라이선스 때문에 크레딧 줄을 지우지 않는다.
+- 인스턴스 안에서 숨기거나 지운 글자도 잡도록 스냅샷에 `kids`를 추가했다.
+- 10/26 확정(v2.0): 발행 순서를 표지 → 게임 리포트(최대 3) → 뉴스 → 스코어보드 → 순위 → 마무리로 바꿨다(`build_cards`).

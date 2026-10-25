@@ -1,0 +1,335 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "courtive/daily-brief.schema.json",
+  "title": "COURTIVE Daily Brief — 하루치 카드 데이터",
+  "description": "maxLength는 피그마 슬롯 폭·글자 크기로 계산한 권장 상한(한글 기준)이다. 최종 판정은 render.py의 실측 검사(줄 수·가로 넘침)가 한다. 넘치면 data-steps에 정의된 크기까지만 줄이고, 그래도 넘치면 렌더를 실패시켜 사람이 문장을 고치게 한다.",
+  "type": "object",
+  "required": [
+    "date_kst",
+    "us_game_date",
+    "cover",
+    "games",
+    "news",
+    "standings",
+    "closing"
+  ],
+  "properties": {
+    "date_kst": {
+      "type": "string",
+      "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}$",
+      "description": "발행일(한국). 표지 {{date}}"
+    },
+    "us_game_date": {
+      "type": "string",
+      "pattern": "^\\d{4}\\.\\d{2}\\.\\d{2}$",
+      "description": "미국 현지 경기일(ET). 표지 {{coverage}}"
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "모든 카드 푸터 {{timestamp}}. 'auto'면 렌더 시각(KST)"
+    },
+    "disclaimer": {
+      "type": "string",
+      "maxLength": 38,
+      "description": "푸터 {{disclaimer}}. 실제 발행은 빈 문자열, 템플릿 예시는 '템플릿 예시 · 실제 경기 데이터 아님'"
+    },
+    "data_source": {
+      "type": "string",
+      "maxLength": 22,
+      "description": "경기·순위 카드 푸터 {{source}}"
+    },
+    "cover": {
+      "type": "object",
+      "required": [
+        "headline"
+      ],
+      "properties": {
+        "mode": {
+          "enum": [
+            "game_day",
+            "no_games"
+          ]
+        },
+        "headline": {
+          "type": "string",
+          "maxLength": 22,
+          "description": "{{headline}} · 2줄 · 96px(→84→72px까지 축소) · 줄바꿈은 \\n로 직접 지정 권장"
+        },
+        "photo": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "description": "표지 사진(데이터 파일 기준 상대 경로). 사용 권한이 있는 사진만. 파일이 없으면 사진 없이 렌더"
+        },
+        "photo_credit": {
+          "type": "string",
+          "maxLength": 40,
+          "description": "사진 크레딧. 사진이 있으면 필수"
+        }
+      }
+    },
+    "games": {
+      "type": "array",
+      "maxItems": 15,
+      "description": "전 경기 최종 스코어(경기 시작 순). 0경기면 경기 없는 날 구성. 1–4경기 160px 행, 5–8경기 94px 행, 9–15경기 94px 행 2장(ceil/floor 분할)",
+      "items": {
+        "type": "object",
+        "required": [
+          "away",
+          "home"
+        ],
+        "properties": {
+          "away": {
+            "$ref": "#/$defs/team_score"
+          },
+          "home": {
+            "$ref": "#/$defs/team_score"
+          },
+          "ot": {
+            "type": "integer",
+            "minimum": 0,
+            "description": "연장 횟수. 1 → {{overtime_label}} 'OT', 2 → '2OT'"
+          }
+        }
+      }
+    },
+    "featured": {
+      "type": "array",
+      "maxItems": 3,
+      "description": "주목할 경기 카드(GAME REPORT). games[]에 있는 경기만 지정 가능",
+      "items": {
+        "type": "object",
+        "required": [
+          "away",
+          "home",
+          "headline",
+          "away_leader",
+          "home_leader"
+        ],
+        "properties": {
+          "away": {
+            "$ref": "#/$defs/abbr"
+          },
+          "home": {
+            "$ref": "#/$defs/abbr"
+          },
+          "type": {
+            "enum": [
+              "일반",
+              "접전",
+              "연장",
+              "대역전"
+            ],
+            "description": "생략하면 자동 판정: 연장 > 대역전(최대 열세 20점 이상) > 접전(5점 차 이내) > 일반"
+          },
+          "max_deficit_overcome": {
+            "type": "integer",
+            "description": "승리 팀이 뒤집은 최대 점수 차. 데이터가 없으면 생략 → 대역전 판정 안 함"
+          },
+          "label": {
+            "type": "string",
+            "maxLength": 18,
+            "description": "{{game_label}} 오른쪽 상단. 생략 시 유형별 기본 문구"
+          },
+          "headline": {
+            "type": "string",
+            "maxLength": 28,
+            "description": "{{headline}} · 68px · 1줄 권장(약 14자), 최대 2줄"
+          },
+          "away_leader": {
+            "$ref": "#/$defs/leader"
+          },
+          "home_leader": {
+            "$ref": "#/$defs/leader"
+          }
+        }
+      }
+    },
+    "news": {
+      "type": "array",
+      "maxItems": 2,
+      "items": {
+        "type": "object",
+        "required": [
+          "status",
+          "title",
+          "body",
+          "source"
+        ],
+        "properties": {
+          "status": {
+            "enum": [
+              "공식 발표",
+              "보도",
+              "부상 업데이트"
+            ],
+            "description": "{{news_status}} 라벨. 공식 발표 = 블루, 나머지 = 네이비"
+          },
+          "verification": {
+            "type": "string",
+            "maxLength": 29,
+            "description": "{{verification}} 라벨 옆 보조 문구. 비우면 숨김. 예: '감독 발언 · 정밀 진단 전', '복귀 일정 미정'"
+          },
+          "title": {
+            "type": "string",
+            "maxLength": 33,
+            "description": "{{news_title}} · 3줄 · 88px(→80→72px까지 축소)"
+          },
+          "body": {
+            "type": "string",
+            "maxLength": 72,
+            "description": "{{news_body}} · 36px · 최대 3줄(줄당 약 24자)"
+          },
+          "source": {
+            "type": "string",
+            "maxLength": 22,
+            "description": "이 카드 푸터 {{source}}. 매체명"
+          },
+          "teams": {
+            "type": "array",
+            "maxItems": 2,
+            "items": {
+              "$ref": "#/$defs/abbr"
+            },
+            "description": "관련 구단. 제목 줄 오른쪽에 팀 컬러 태그로 표시"
+          },
+          "photo": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "photo_credit": {
+            "type": "string",
+            "maxLength": 40
+          }
+        }
+      }
+    },
+    "standings": {
+      "type": "object",
+      "required": [
+        "east",
+        "west"
+      ],
+      "properties": {
+        "as_of": {
+          "type": "string",
+          "description": "{{standings_as_of}} 기준 시각. 생략 시 timestamp"
+        },
+        "note": {
+          "type": "string",
+          "maxLength": 16
+        },
+        "east": {
+          "$ref": "#/$defs/conference"
+        },
+        "west": {
+          "$ref": "#/$defs/conference"
+        }
+      }
+    },
+    "closing": {
+      "type": "object",
+      "properties": {
+        "title": {
+          "type": "string",
+          "maxLength": 20,
+          "description": "{{closing_title}} · 2줄 · 96px"
+        },
+        "follow_cta": {
+          "type": "string",
+          "maxLength": 23,
+          "description": "{{follow_cta}} · 1줄 · 40px"
+        },
+        "save_cta": {
+          "type": "string",
+          "maxLength": 30,
+          "description": "{{save_cta}} · 1줄 · 30px"
+        },
+        "references": {
+          "type": "string",
+          "maxLength": 74,
+          "description": "{{references}} · 2줄 · 26px"
+        }
+      }
+    }
+  },
+  "$defs": {
+    "abbr": {
+      "type": "string",
+      "pattern": "^[A-Z]{3}$",
+      "description": "NBA 3글자 약어. 한글 팀명은 render.py TEAM_KO 표에서 자동"
+    },
+    "team_score": {
+      "type": "object",
+      "required": [
+        "abbr",
+        "score"
+      ],
+      "properties": {
+        "abbr": {
+          "$ref": "#/$defs/abbr"
+        },
+        "score": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "leader": {
+      "type": "object",
+      "required": [
+        "name",
+        "pts",
+        "reb",
+        "ast"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "maxLength": 12,
+          "description": "{{player_name}} · 32px(→28→26px까지 축소)"
+        },
+        "pts": {
+          "type": "integer"
+        },
+        "reb": {
+          "type": "integer"
+        },
+        "ast": {
+          "type": "integer"
+        }
+      }
+    },
+    "conference": {
+      "type": "array",
+      "minItems": 15,
+      "maxItems": 15,
+      "items": {
+        "type": "object",
+        "required": [
+          "rank",
+          "abbr",
+          "w",
+          "l"
+        ],
+        "properties": {
+          "rank": {
+            "type": "integer"
+          },
+          "abbr": {
+            "$ref": "#/$defs/abbr"
+          },
+          "w": {
+            "type": "integer"
+          },
+          "l": {
+            "type": "integer"
+          }
+        }
+      }
+    }
+  }
+}
