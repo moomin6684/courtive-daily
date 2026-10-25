@@ -98,19 +98,22 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .trow .n{font:700 30px/32px var(--num);text-align:right}
 .trow.th{height:40px;border-bottom:none} .trow.th *{font:700 20px/28px var(--kr);color:var(--mute-on-white)}
 /* v3 · photo-free: logos, team colours and big numbers carry each card */
-.panel{background:rgba(255,255,255,.06);padding:30px 36px 34px}
-.panel .lab{display:flex;justify-content:space-between;align-items:center;font:700 24px/32px var(--kr);color:var(--mute-on-navy)}
-.panel .lab .disp{font-size:28px;color:var(--cyan)}
 .hero{display:grid;grid-template-columns:170px minmax(0,1fr) 150px minmax(0,1fr) 170px;align-items:center}
 .hero .tm{display:flex;flex-direction:column;align-items:center;gap:10px}
-.dsc{border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center}
+.dsc{border-radius:50%;background:var(--white);display:flex;align-items:center;justify-content:center;flex:none}
 .hero .ab{font:700 34px/36px var(--num)} .hero .ko{font:400 22px/28px var(--kr);color:var(--mute-on-navy)}
 .hero .sc{font:700 190px/160px var(--num);letter-spacing:-.01em} .hero .sc.l{text-align:right;padding-right:6px} .hero .sc.r{text-align:left;padding-left:6px}
 .hero .sc.win{color:var(--cyan)} .hero .sc.lose{color:var(--white)}
 .hero .st{text-align:center;font:700 28px/34px var(--num);color:var(--cyan)}
-.hero.sm .sc{font-size:146px;line-height:124px} .hero.sm .st{font-size:24px;line-height:30px}
-.idx{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;border-top:2px solid rgba(255,255,255,.18);padding-top:24px}
-.idx .n{font:700 84px/84px var(--num);color:var(--white)} .idx .k{font:700 24px/32px var(--kr);color:var(--mute-on-navy);margin-top:6px}
+.em{color:var(--cyan)}
+.cv-h{font:900 112px/136px var(--kr);letter-spacing:-.015em}
+.cv-score{display:grid;grid-template-columns:170px minmax(0,1fr) 140px minmax(0,1fr) 170px;align-items:center}
+.cv-score .sc{font:700 220px/180px var(--num);letter-spacing:-.01em}
+.cv-who{display:flex;align-items:center;gap:18px}
+.cv-who .nm{font:900 52px/64px var(--kr)} .cv-who .tm{font:700 34px/40px var(--num);color:var(--mute-on-navy)}
+.cv-stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:26px}
+.cv-stats .v{font:700 220px/184px var(--num);color:var(--cyan);letter-spacing:-.01em} .cv-stats .k{font:700 28px/36px var(--kr);color:var(--mute-on-navy);margin-top:10px}
+.cv-res{font:700 32px/40px var(--num);color:var(--mute-on-navy);margin-top:34px;letter-spacing:.01em}
 .top{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px;border-top:2px solid rgba(255,255,255,.18);padding-top:24px}
 .top .hd{font:400 28px/32px var(--display);color:var(--mute-on-navy);grid-column:1/-1;margin-bottom:-4px}
 .top .who{display:flex;gap:12px;align-items:center;height:44px} .top .who .logo{width:40px;height:40px}
@@ -138,38 +141,34 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 {% endmacro %}
 
 {% if card.kind == 'cover' %}
-{% set L = card.lead %}
+{% set F = card.focus %}
 <div class="card">
   {{ header() }}
   <div class="layer pad" style="top:132px">
     <div class="disp" style="font-size:64px">DAILY BRIEF.</div>
     <div style="font:700 40px/48px var(--num);margin-top:10px">{{ d.date_kst }}</div>
   </div>
-  <div class="layer pad" style="top:300px">
-    <div class="h-xl" style="white-space:pre-line" data-fit="2" data-steps="104,92,80" data-lh="1.23" data-slot="cover.headline">{{ d.cover.headline }}</div>
+  <div class="layer pad" style="top:316px">
+    <div class="cv-h" style="white-space:pre-line" data-fit="2" data-steps="112,100,88" data-lh="1.214" data-slot="cover.headline">{{ card.headline_html }}</div>
   </div>
-  {% if L %}{% set g = L.game %}
-  <div class="layer pad" style="top:612px">
-    <div class="panel">
-      <div class="lab"><span class="disp">LEAD GAME</span><span class="one" data-fit="1" data-slot="game_label">{{ L.label }}</span></div>
-      <div class="hero sm" style="margin-top:22px;grid-template-columns:140px minmax(0,1fr) 130px minmax(0,1fr) 140px">
-        <div class="tm"><div class="dsc" style="width:120px;height:120px">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="" style="width:88px;height:88px">{% endif %}</div><span class="ab">{{ g.away.abbr }}</span></div>
-        <div class="sc l {{ 'win' if g.away.win else 'lose' }}">{{ g.away.score }}</div>
-        <div class="st">{{ g.status_label }}</div>
-        <div class="sc r {{ 'win' if g.home.win else 'lose' }}">{{ g.home.score }}</div>
-        <div class="tm"><div class="dsc" style="width:120px;height:120px">{% if g.home.logo %}<img class="logo" src="{{ g.home.logo }}" alt="" style="width:88px;height:88px">{% endif %}</div><span class="ab">{{ g.home.abbr }}</span></div>
-      </div>
+  {{ cut(720, F.stripe if F else ['var(--blue)']) }}
+  {% if F and F.type == 'score' %}{% set g = F.game %}
+  <div class="layer pad" style="top:850px">
+    <div class="cv-score hero">
+      <div class="tm"><div class="dsc" style="width:150px;height:150px">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="" style="width:110px;height:110px">{% endif %}</div><span class="ab">{{ g.away.abbr }}</span></div>
+      <div class="sc l {{ 'win' if g.away.win else 'lose' }}">{{ g.away.score }}</div>
+      <div class="st">{{ g.status_label }}</div>
+      <div class="sc r {{ 'win' if g.home.win else 'lose' }}">{{ g.home.score }}</div>
+      <div class="tm"><div class="dsc" style="width:150px;height:150px">{% if g.home.logo %}<img class="logo" src="{{ g.home.logo }}" alt="" style="width:110px;height:110px">{% endif %}</div><span class="ab">{{ g.home.abbr }}</span></div>
     </div>
   </div>
-  {{ cut(1060, [g.away.c.navy, g.home.c.navy]) }}
-  {% else %}{{ cut(1060, ['var(--blue)']) }}{% endif %}
-  <div class="layer pad" style="top:1100px">
-    <div class="idx">
-      <div><div class="n">{{ card.counts.games }}</div><div class="k">경기 결과</div></div>
-      <div><div class="n">{{ card.counts.reports }}</div><div class="k">주목 경기</div></div>
-      <div><div class="n">{{ card.counts.news }}</div><div class="k">뉴스</div></div>
-    </div>
+  {% elif F and F.type == 'player' %}
+  <div class="layer pad" style="top:800px">
+    <div class="cv-who"><div class="dsc" style="width:76px;height:76px">{% if F.logo %}<img class="logo" src="{{ F.logo }}" alt="" style="width:56px;height:56px">{% endif %}</div><span class="nm one" data-fit="1" data-steps="52,46,40" data-slot="cover.focus.name">{{ F.name }}</span><span class="tm">{{ F.team }}</span></div>
+    <div class="cv-stats">{% for st in F.stats %}<div><div class="v">{{ st.v }}</div><div class="k">{{ st.k }}</div></div>{% endfor %}</div>
+    {% if F.result %}<div class="cv-res">{{ F.result }}</div>{% endif %}
   </div>
+  {% endif %}
   {{ footer('dark', '') }}
 </div>
 

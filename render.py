@@ -153,6 +153,13 @@ def default_label(t, g, comeback):
             "접전": f"접전 · {g['margin']}점 차", "일반": "일반"}[t]
 
 
+def emphasize(text):
+    """타이틀의 *강조* 구간을 시안으로. 나머지는 이스케이프."""
+    from markupsafe import Markup, escape
+    parts = str(text).split("*")
+    return Markup("".join(f'<span class="em">{escape(p)}</span>' if i % 2 else str(escape(p)) for i, p in enumerate(parts)))
+
+
 def build_cards(d):
     games = [prep_game(g) for g in d.get("games", [])]
     n = len(games)
@@ -188,10 +195,27 @@ def build_cards(d):
     for nws in d.get("news", []):
         tags = [{"abbr": t, "ko": TEAM_KO.get(t, t), "c": accents(t), "logo": logo(t)} for t in nws.get("teams", [])]
         cards.append({"kind": "news", "news": {**nws, "tags": tags, "status_class": STATUS_CLASS[nws["status"]]}})
-    # v3 표지: 첫 게임 리포트를 '리드 경기'로, 오늘 구성 개수를 색인으로 보여 준다
+    # v3 표지: 강조 타이틀 + 핵심 숫자 하나 (cover.focus)
+    #   {"type": "score", "game": 0}  → featured[game] 경기의 로고와 스코어 (기본값)
+    #   {"type": "player", "name": "니콜라 요키치", "team": "DEN", "game": 0,
+    #    "stats": [{"v": "35", "k": "득점"}, {"v": "15", "k": "리바운드"}, {"v": "10", "k": "어시스트"}]}
     games_cards = [c for c in cards if c["kind"] == "game"]
-    cards[0]["lead"] = games_cards[0] if games_cards else None
-    cards[0]["counts"] = {"games": n, "reports": len(games_cards), "news": len(d.get("news", []))}
+    cards[0]["headline_html"] = emphasize(d["cover"]["headline"])
+    f = dict(d["cover"].get("focus") or {"type": "score"})
+    gi = f.get("game", 0)
+    gc = games_cards[gi]["game"] if gi < len(games_cards) else None
+    if f["type"] == "score" and gc:
+        f.update(game=gc, stripe=[gc["away"]["c"]["navy"], gc["home"]["c"]["navy"]])
+    elif f["type"] == "player":
+        if len(f.get("stats", [])) != 3:
+            raise SystemExit("cover.focus.stats 는 3개 (예: 득점·리바운드·어시스트)")
+        f.update(logo=logo(f["team"]), stripe=[accent(f["team"], "navy")])
+        if gc:
+            w, l = (gc["away"], gc["home"]) if gc["away"]["win"] else (gc["home"], gc["away"])
+            f["result"] = f"{w['abbr']} {w['score']}–{l['score']} {l['abbr']} · {gc['status_label']}"
+    else:
+        f = None
+    cards[0]["focus"] = f
     cards.extend(boards)
     cards.append({"kind": "standings"})
     cards.append({"kind": "closing"})
@@ -203,7 +227,7 @@ def build_cards(d):
 
 def caption(d, cards):
     """발행용 캡션(2,200자 · 해시태그 30개 이내). 카드에 없는 출처와 사진 크레딧을 여기서 밝힌다."""
-    lines = [f"NOW / DAILY BRIEF · {d['date_kst']}", "", d["cover"]["headline"].replace("\n", " "), ""]
+    lines = [f"NOW / DAILY BRIEF · {d['date_kst']}", "", d["cover"]["headline"].replace("\n", " ").replace("*", ""), ""]
     for c in cards:
         if c["kind"] == "game":
             g = c["game"]; w, l = (g["away"], g["home"]) if g["away"]["win"] else (g["home"], g["away"])

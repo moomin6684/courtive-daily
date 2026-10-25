@@ -6,7 +6,27 @@
   "data_source": "경기 데이터 · Sportradar",
   "cover": {
     "mode": "game_day",
-    "headline": "23점 차 대역전,\n요키치 트리플더블"
+    "headline": "23점 차 대역전,\n요키치 *트리플더블*",
+    "focus": {
+      "type": "player",
+      "name": "니콜라 요키치",
+      "team": "DEN",
+      "game": 0,
+      "stats": [
+        {
+          "v": "35",
+          "k": "득점"
+        },
+        {
+          "v": "15",
+          "k": "리바운드"
+        },
+        {
+          "v": "10",
+          "k": "어시스트"
+        }
+      ]
+    }
   },
   "games": [
     {

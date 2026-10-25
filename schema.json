@@ -53,7 +53,7 @@
         "headline": {
           "type": "string",
           "maxLength": 22,
-          "description": "{{headline}} · 2줄 · 96px(→84→72px까지 축소) · 줄바꿈은 \\n로 직접 지정 권장"
+          "description": "{{headline}} · 2줄 · 96px(→84→72px까지 축소) · 줄바꿈은 \\n로 직접 지정 권장 · *강조* 한 군데는 시안"
         },
         "photo": {
           "type": [
@@ -66,6 +66,55 @@
           "type": "string",
           "maxLength": 40,
           "description": "사진 크레딧. 사진이 있으면 필수"
+        },
+        "focus": {
+          "type": "object",
+          "description": "v3 표지의 핵심 숫자. score = featured[game] 스코어, player = 선수 기록 3개",
+          "properties": {
+            "type": {
+              "enum": [
+                "score",
+                "player"
+              ]
+            },
+            "game": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "name": {
+              "type": "string",
+              "maxLength": 12
+            },
+            "team": {
+              "type": "string",
+              "pattern": "^[A-Z]{3}$"
+            },
+            "stats": {
+              "type": "array",
+              "minItems": 3,
+              "maxItems": 3,
+              "items": {
+                "type": "object",
+                "properties": {
+                  "v": {
+                    "type": "string",
+                    "maxLength": 3
+                  },
+                  "k": {
+                    "type": "string",
+                    "maxLength": 5
+                  }
+                },
+                "required": [
+                  "v",
+                  "k"
+                ]
+              }
+            }
+          },
+          "required": [
+            "type"
+          ]
         }
       }
     },
