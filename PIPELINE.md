@@ -29,13 +29,30 @@
 - 경기 없는 날: `games: []`, `featured: []` → 표지 · 뉴스 · 순위 · 마무리.
 - 마무리: `closing.title` "NBA 소식은\n코티브에서", `follow_cta` "매일 전해주는 NBA 소식" (바꾸지 않음).
 
-## 3. 사진 (출처가 분명한 것만)
+## 3. 사진 (해당 경기 사진을 먼저, 출처가 분명한 것만)
 
-- 위키미디어 공용(Commons)의 **CC BY · CC BY-SA · CC0** 만. NC·ND, 통신사(AP·Getty·Imagn), 구단 갤러리 사진 금지.
-- 검색: Commons API `generator=search` + `imageinfo`(extmetadata). User-Agent `COURTIVE-card-research/1.0 (editorial image licensing check)`, 429 면 20초씩 늘려 기다린다. 받을 때는 `iiurlwidth=1920` 썸네일.
-- 우선순위: 그 이야기의 선수 본인 → 같은 팀 경기 장면 → 경기장. 최근 사진일수록 좋다. 고교·대학 시절 사진은 피한다.
-- 파일은 `photos/DATE/src/이름.jpg`, 정보는 `photos/DATE/src/credits.json`(title, page, license, license_url, artist, date).
-- `photo_credit` 형식: `자료 사진(YYYY.MM 장소 또는 상대) 작가, 라이선스 / Wikimedia Commons`. 경기 당일 사진이 아니면 반드시 "자료 사진".
+쓸 수 있는 사진: **CC BY · CC BY-SA · CC0 · 퍼블릭 도메인** 만 (위키미디어 공용, 플리커 CC).
+쓰지 않는 사진: NC·ND, 통신사(AP · Getty · Imagn · Reuters), NBA·구단 홈페이지/SNS 사진, 중계 화면 캡처, 실제 선수를 AI 로 만든 이미지.
+
+### 3-1. 카드마다 이 순서로 찾는다 — 위 단계에서 찾으면 멈춘다
+
+1. **해당 경기 사진**: 촬영일이 미국 현지 경기일(`us_game_date`)이고, 그 매치업 또는 그 경기장.
+   - Commons: `list=search` + `srsort=create_timestamp_desc` 로 "<원정팀> <홈팀> <월 연도>", "<홈 경기장> <연도>", "<선수 영문 이름> <연도>" 를 검색하고, 후보마다 `extmetadata.DateTimeOriginal` 로 촬영일을 확인한다. 카테고리 "<Away> vs. <Home> (<Month Year>)" 형식도 확인.
+   - 플리커: WebSearch `site:flickr.com <팀> <팀> <월 연도>` 로 후보를 찾고, 사진 페이지에서 라이선스가 CC BY / BY-SA / CC0 / PDM 인지, 촬영일이 경기일인지 확인한다.
+   - 같은 날 사진은 대개 없다(무료 라이선스 사진은 며칠 뒤에 올라온다). 검색은 카드당 5분 안에서 끝내고 다음 단계로 간다.
+2. **이번 시즌 사진**: 같은 선수(또는 팀)의 이번 시즌(10월 이후) 사진 — 지금 유니폼.
+3. **최근 2년 이내, 지금 소속팀 유니폼** 사진.
+4. 여기까지 없으면: 2년이 넘었더라도 **지금 소속팀 유니폼**인 사진만. 다른 팀 시절·대학·고교 사진은 쓰지 않는다. 그것도 없으면 그 팀의 이번 시즌 경기 장면이나 홈 경기장 사진.
+
+- 표지는 그날 가장 큰 이야기의 주인공 사진을 같은 순서로 찾는다.
+- 받을 때: Commons 는 `iiurlwidth=1920` 썸네일, User-Agent `COURTIVE-card-research/1.0 (editorial image licensing check)`, 429 면 20초씩 늘려 기다린다. 플리커는 원본 페이지의 라이선스 표시를 그대로 기록한다.
+- 파일은 `photos/DATE/src/이름.jpg`, 정보는 `photos/DATE/src/credits.json`(title, page, license, license_url, artist, date, `tier`: 1–4 위 단계).
+
+### 3-2. 크레딧 — 카드 푸터와 캡션에 그대로 나간다
+
+- 1단계(해당 경기): `경기 사진(YYYY.MM.DD 경기장) 작가, 라이선스 / 출처`
+- 2–4단계: `자료 사진(YYYY.MM 장소 또는 상대) 작가, 라이선스 / 출처` — 경기 당일이 아니면 반드시 "자료 사진"과 촬영 연월.
+- 출처는 `Wikimedia Commons` 또는 `Flickr`.
 - CC BY-SA 는 색을 바꾸지 않는다(자르기·그라데이션만). `photo_pos` 로 얼굴·공이 잘리지 않게 맞추고, 필요하면 `photo_zoom`.
 - 사진을 끝내 못 구한 뉴스만 `"allow_logo_panel": true` (예비 레이아웃). 표지·게임 리포트는 사진 없이도 렌더된다.
 
@@ -57,6 +74,7 @@
    - `SendUserMessage` 로 캡션 전문(코드 블록)과 아래 안내:
      "승인이라고 답하시면 오늘 15:00에 올라갑니다. 고칠 곳은 '3번 제목을 …로'처럼 말씀해 주세요. 21:00까지 답이 없으면 올리지 않습니다."
    - 확인이 덜 된 사실이 있으면 무엇인지 한 줄로 함께 알린다.
+   - **사진 상태를 카드별로 한 줄씩** 알린다. 예: "표지: 자료 사진(2026.03) — 오늘 경기 사진은 없었어요 / 2번: 이번 시즌 사진(2026.10.22) / 5번: 경기 사진". 2년 넘은 사진(4단계)을 쓴 카드는 따로 표시해서 바꿀지 묻는다.
 3. 여기서 차례를 끝내고 사용자의 답을 기다린다. **답 없이 main 에 합치지 않는다.**
 
 ## 5-1. 사용자가 수정을 요청하면
