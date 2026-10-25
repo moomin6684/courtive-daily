@@ -188,6 +188,10 @@ def build_cards(d):
     for nws in d.get("news", []):
         tags = [{"abbr": t, "ko": TEAM_KO.get(t, t), "c": accents(t), "logo": logo(t)} for t in nws.get("teams", [])]
         cards.append({"kind": "news", "news": {**nws, "tags": tags, "status_class": STATUS_CLASS[nws["status"]]}})
+    # v3 표지: 첫 게임 리포트를 '리드 경기'로, 오늘 구성 개수를 색인으로 보여 준다
+    games_cards = [c for c in cards if c["kind"] == "game"]
+    cards[0]["lead"] = games_cards[0] if games_cards else None
+    cards[0]["counts"] = {"games": n, "reports": len(games_cards), "news": len(d.get("news", []))}
     cards.extend(boards)
     cards.append({"kind": "standings"})
     cards.append({"kind": "closing"})
@@ -231,7 +235,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("data")
     ap.add_argument("--out")
-    ap.add_argument("--template", default="card_v2.html.j2", help="card_v2.html.j2 (사진·로고 중심, 기본) 또는 card.html.j2 (v1)")
+    ap.add_argument("--template", default="card_v3.html.j2", help="card_v3.html.j2 (사진 없음, 기본) · card_v2.html.j2 (사진) · card.html.j2 (v1)")
     args = ap.parse_args()
     d = json.loads(pathlib.Path(args.data).read_text(encoding="utf-8"))
     if d.get("timestamp", "auto") == "auto":

@@ -6,10 +6,7 @@
   "data_source": "경기 데이터 · Sportradar",
   "cover": {
     "mode": "game_day",
-    "headline": "23점 차 대역전,\n요키치 트리플더블",
-    "photo": "../photos/2026-10-25/src/jokic2026.jpg",
-    "photo_credit": "자료 사진(2026.03 볼 아레나) MhcL947, CC BY 4.0 / Wikimedia Commons",
-    "photo_pos": "50% 52%"
+    "headline": "23점 차 대역전,\n요키치 트리플더블"
   },
   "games": [
     {
@@ -119,10 +116,7 @@
         "pts": 42,
         "reb": 3,
         "ast": 6
-      },
-      "photo": "../photos/2026-10-25/src/jokic2021.jpg",
-      "photo_pos": "28% 22%",
-      "photo_credit": "자료 사진(2021.03 올랜도전) Jose Garcia, CC BY-SA 2.0 / Wikimedia Commons"
+      }
     },
     {
       "away": "MIL",
@@ -140,11 +134,7 @@
         "pts": 28,
         "reb": 11,
         "ast": 10
-      },
-      "photo": "../photos/2026-10-25/src/embiid2019.jpg",
-      "photo_pos": "50% 40%",
-      "photo_zoom": 1.7,
-      "photo_credit": "자료 사진(2019.12 워싱턴전) All-Pro Reels, CC BY-SA 2.0 / Wikimedia Commons"
+      }
     },
     {
       "away": "GSW",
@@ -162,10 +152,7 @@
         "pts": 43,
         "reb": 7,
         "ast": 7
-      },
-      "photo": "../photos/2026-10-25/src/booker2016.jpg",
-      "photo_pos": "72% 32%",
-      "photo_credit": "자료 사진(2016.11 워싱턴전) Keith Allison, CC BY-SA 2.0 / Wikimedia Commons"
+      }
     }
   ],
   "news": [
@@ -178,9 +165,11 @@
       "title": "파올로 반케로,\n하이 앵클 스프레인",
       "body": "미네소타전에서 발목을 다쳐 수 주간 결장한다.\n0-2로 출발한 올랜도에 큰 공백이다.",
       "source": "Yahoo Sports · ESPN 보도",
-      "photo": "../photos/2026-10-25/src/magic2024_13.jpg",
-      "photo_credit": "자료 사진(2024.12 올랜도-밀워키전) Michael Barera, CC BY-SA 4.0 / Wikimedia Commons",
-      "photo_pos": "50% 55%"
+      "key": {
+        "value": "4–6",
+        "unit": "주",
+        "label": "예상 결장 기간 · 보도"
+      }
     }
   ],
   "standings": {

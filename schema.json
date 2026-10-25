@@ -203,6 +203,28 @@
           "photo_credit": {
             "type": "string",
             "maxLength": 40
+          },
+          "key": {
+            "type": "object",
+            "description": "v3 뉴스 카드 오른쪽 위 큰 숫자 (선택). 예: 4–6 / 주 / 예상 결장 기간 · 보도",
+            "properties": {
+              "value": {
+                "type": "string",
+                "maxLength": 5
+              },
+              "unit": {
+                "type": "string",
+                "maxLength": 2
+              },
+              "label": {
+                "type": "string",
+                "maxLength": 16
+              }
+            },
+            "required": [
+              "value",
+              "label"
+            ]
           }
         }
       }
