@@ -48,7 +48,8 @@
 
 ## 5. 기록(PR)과 Claude 앱 검수 요청
 
-1. 브랜치 `post/DATE` 에 `data/DATE.json`, `photos/DATE/`, `posts/DATE/` 를 커밋하고 push. PR 을 연다(기록용 — 사용자는 GitHub 을 보지 않는다):
+1. 브랜치 `post/DATE` 에 `data/DATE.json`, `photos/DATE/`, `posts/DATE/` 를 커밋하고 push. PR 을 연다(기록용 — 사용자는 GitHub 을 보지 않는다).
+   Claude 세션에서는 GitHub GraphQL 이 막혀 있으므로 `gh pr create` 대신 REST 로: `gh api repos/moomin6684/courtive-daily/pulls -f title=… -f head=post/DATE -f base=main -f body=@body.md` (Actions 수동 실행도 `gh api -X POST …/actions/workflows/<파일>/dispatches -f ref=main`).
    제목 `[검수] 코티브 데일리 YYYY.MM.DD — <표지 헤드라인 한 줄>`, 본문에 캡션 전문 · 사실 확인 목록(숫자·뉴스마다 출처 링크) · 사진별 Commons 링크와 라이선스.
 2. 사용자에게 보낸다 (휴대폰에서 보므로 짧게):
    - `PushNotification` 도구가 있으면 "오늘 카드 검수 준비됐어요 — <표지 헤드라인>" 으로 알림.
