@@ -226,7 +226,7 @@ def build_cards(d):
 
 
 def caption(d, cards):
-    """발행용 캡션(2,200자 · 해시태그 30개 이내). 카드에 없는 출처와 사진 크레딧을 여기서 밝힌다."""
+    """발행용 캡션(2,200자 · 해시태그 30개 이내): 날짜 · 표지 타이틀 · 카드별 한 줄 요약 · 해시태그."""
     lines = [f"NOW / DAILY BRIEF · {d['date_kst']}", "", d["cover"]["headline"].replace("\n", " ").replace("*", ""), ""]
     for c in cards:
         if c["kind"] == "game":
@@ -235,13 +235,11 @@ def caption(d, cards):
             lines.append(f"▸ {w['ko']} {w['score']}-{l['score']} {l['ko']}{ot} · {c['headline']}")
         elif c["kind"] == "news":
             n = c["news"]; lines.append(f"▸ {n['title'].replace(chr(10), ' ')} ({n.get('verification') or n['status']})")
-    n_games = len(d.get("games", []))
-    lines += ["", (f"미국 현지 {d['us_game_date']} {n_games}경기 결과와 동·서부 순위는 슬라이드에서 확인하세요." if n_games
-                   else "오늘은 경기가 없는 날이라 뉴스와 순위만 정리했어요."), ""]
-    refs = d.get("closing", {}).get("references", "").replace("\n", " / ")
-    if refs:
-        lines.append("출처 " + refs)
+    # 10/26 사용자 수정: "슬라이드에서 확인하세요" 안내 줄과 출처 줄은 넣지 않는다.
+    # (사진 크레딧은 사진을 쓸 때만 — v3 는 사진이 없어 보통 나오지 않는다. 라이선스 표기라 사진이 있으면 남긴다.)
     credits = [h.get("photo_credit") for h in [d["cover"], *d.get("featured", []), *d.get("news", [])] if h.get("photo") and h.get("photo_credit")]
+    if credits:
+        lines.append("")
     for cr in dict.fromkeys(credits):
         lines.append("사진 " + cr)
     tags = ["#NBA", "#NBA데일리", "#코티브", "#COURTIVE", "#농구", "#NBA결과"]
