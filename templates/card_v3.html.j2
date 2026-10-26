@@ -29,12 +29,16 @@
     radial-gradient(ellipse 70% 40% at 0% 100%, rgba(20,107,255,.08), rgba(20,107,255,0) 70%),
     linear-gradient(180deg,#EEF6FF 0%,#E3EFFF 100%);
   --grain-navy:.40; --grain-ice:.07;
+  --line-navy:rgba(255,255,255,.12); --line-ice:rgba(20,107,255,.13);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1350px;overflow-x:clip;background:var(--navy)}
 body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .card{position:relative;width:1080px;height:1350px;overflow:hidden;color:var(--white);background:var(--bg-navy)}
 .card.ice{background:var(--bg-ice);color:var(--navy)}
+.court{position:absolute;left:0;top:0;width:1080px;height:1350px;fill:none;stroke-width:2;pointer-events:none}
+.court.navy{stroke:var(--line-navy)} .court.ice{stroke:var(--line-ice)}
+.court .dash{stroke-dasharray:14 12}
 .card::after{content:"";position:absolute;inset:0;z-index:20;pointer-events:none;background:url("{{ assets }}/texture/grain.png") 0 0/512px 512px repeat;mix-blend-mode:overlay;opacity:var(--grain-navy)}
 .card.ice::after{mix-blend-mode:normal;opacity:var(--grain-ice)}
 .layer{position:absolute;left:0;right:0}
@@ -150,6 +154,16 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
   <div class="photo" style="height:{{ h }}px;clip-path:polygon(0 0,100% 0,100% {{ h - 100 }}px,0 {{ h }}px)"><img src="{{ src }}" alt="" style="object-position:{{ pos }};transform:scale({{ zoom }});transform-origin:{{ pos }}"><div class="shade"></div></div>
   <div class="stripe" style="top:{{ h - 100 }}px;height:114px;clip-path:polygon(0 100px,100% 0,100% 14px,0 114px)">{% for c in stripe %}<i style="background:{{ c }}"></i>{% endfor %}</div>
 {% endmacro %}
+{# v3.3 (10/26): 얇은 코트 라인 패턴 — 카드 가로 1080px = 코트 폭 50ft (21.6px/ft), 아래쪽이 베이스라인인 실제 비율의 하프코트.
+   레인 두 줄(x 367·713)과 자유투 라인(y 940)·하프 라인(y 335)을 카드 끝까지 늘려 격자처럼 쓴다. #}
+{% macro court(tone='navy', clip='') %}<svg class="court {{ tone }}" viewBox="0 0 1080 1350" width="1080" height="1350"{% if clip %} style="clip-path:{{ clip }}"{% endif %} aria-hidden="true">
+  <path d="M367 0V1350M713 0V1350M0 335H1080M0 940H1080"/>
+  <circle cx="540" cy="335" r="130"/><circle cx="540" cy="335" r="43"/>
+  <path d="M410 940A130 130 0 0 1 670 940"/><path class="dash" d="M410 940A130 130 0 0 0 670 940"/>
+  <path d="M65 1350V1043A513 513 0 0 1 1015 1043V1350"/>
+  <path d="M454 1264V1237A86 86 0 0 1 626 1237V1264"/>
+  <path d="M475 1264H605"/><circle cx="540" cy="1237" r="10"/>
+</svg>{% endmacro %}
 {% macro cut(h, stripe) %}
   <div class="stripe" style="top:{{ h - 100 }}px;height:114px;clip-path:polygon(0 100px,100% 0,100% 14px,0 114px)">{% for c in stripe %}<i style="background:{{ c }}"></i>{% endfor %}</div>
 {% endmacro %}
@@ -158,6 +172,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 {# v3.1 (10/26): 표지는 날짜 + 가운데 큰 타이틀 하나. 사선 띠는 그날 주인공 팀 컬러 #}
 {% set F = card.focus %}
 <div class="card">
+  {{ court('navy') }}
   <div class="layer" style="top:88px;text-align:center;font:700 64px/72px var(--num);letter-spacing:.06em;color:var(--cyan)">{{ d.date_kst }}</div>
   <div class="layer pad" style="top:200px;height:930px;display:flex;align-items:center;justify-content:center">
     <div class="cv-title" data-fit="2" data-steps="132,120,108,96" data-lh="1.18" data-slot="cover.headline">{{ card.headline_html }}</div>
@@ -168,6 +183,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 
 {% elif card.kind == 'scoreboard' %}
 <div class="card ice">
+  {{ court('ice') }}
   {{ header('light') }}
   <div class="layer pad" style="top:136px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end">
@@ -192,6 +208,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 {% elif card.kind == 'game' %}
 {% set g = card.game %}
 <div class="card">
+  {{ court('navy') }}
   {{ header() }}
   <div class="layer pad" style="top:128px">
     <div class="kicker"><span class="disp" style="font-size:40px">GAME REPORT</span><span class="chip one" data-fit="1" data-slot="game_label">{{ card.label }}</span></div>
@@ -222,8 +239,10 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 {% elif card.kind == 'news' %}
 {% set n = card.news %}{% set t = n.tags[0] if n.tags else None %}
 <div class="card ice">
+  {{ court('ice') }}
   {% if t %}
   <div class="photo" style="height:560px;background:var(--bg-navy);clip-path:polygon(0 0,100% 0,100% 460px,0 560px)"></div>
+  {{ court('navy', 'polygon(0 0,100% 0,100% 460px,0 560px)') }}
   {{ cut(560, [t.c.navy]) }}
   {{ header() }}
   <div class="layer pad" style="top:128px;z-index:3">
@@ -246,6 +265,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 
 {% elif card.kind == 'standings' %}
 <div class="card ice">
+  {{ court('ice') }}
   {{ symbol(140, 526, 800, 574, 'var(--blue)', 0.06) }}
   {{ header('light') }}
   <div class="layer pad" style="top:136px">
@@ -269,6 +289,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 
 {% elif card.kind == 'closing' %}
 <div class="card">
+  {{ court('navy') }}
   <svg class="layer" style="left:430px;top:620px;opacity:.09" width="960" height="686" viewBox="0 0 960 686"><path fill="#fff" fill-rule="evenodd" d="M384 0H960L328.226 273.933C311.4 281.226 299.22 297.84 294.54 317.46L268.997 424.473C262.86 450.18 271.02 471.362 301.08 471.362H577.481C588 471.362 596.1 475.242 604.627 481.234L804.524 621.902L792.185 656.452C785.436 675.336 762.84 686.067 742.828 686.067H160.411C64.5 686.067 0 621.6 0 527.4C0 507 3.6 492 7.2 475.2L48.21 283.8C57.81 238.77 80.1 204.12 115.99 172.751L254.19 51.8252C292.5 18.3 327.6 0 384 0ZM927.918 130.797L826.735 547.866L602.159 387.455L629.306 286.272C631.548 277.914 640.2 272.13 646.581 268.997L927.918 130.797Z"/></svg>
   {{ cut(640, ['var(--blue)']) }}
   {{ header() }}
