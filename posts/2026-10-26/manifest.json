@@ -40,7 +40,8 @@
     }
   ],
   "caption_file": "caption.txt",
-  "status": "pending",
+  "status": "hold",
   "created_at": "2026-10-26T14:15:10+09:00",
-  "source_data": "data/2026-10-26.json"
+  "source_data": "data/2026-10-26.json",
+  "note": "브리핑 기준으로 다시 구성하는 중 — 새 버전 승인 후 교체"
 }
