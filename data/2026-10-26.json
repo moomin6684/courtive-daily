@@ -130,8 +130,8 @@
     {
       "away": "ORL",
       "home": "NYK",
-      "label": "4쿼터 40-27 · 닉스 0-3",
-      "headline": "바그너, 4쿼터에만 21점",
+      "label": "4쿼터 역전 · 닉스 0-3",
+      "headline": "매직 역전승, 챔피언 닉스 0-3",
       "away_leader": {
         "name": "프란츠 바그너",
         "pts": 23,
@@ -172,22 +172,42 @@
         "OKC"
       ],
       "title": "제일런 윌리엄스,\n들것에 실려 퇴장",
-      "body": "클리퍼스전 종료 1분 14초 전 왼쪽 다리를 다쳤다.\n구단은 아직 진단 결과를 밝히지 않았다.",
-      "source": "AP · The Canadian Press"
+      "body": "클리퍼스전 막판 왼쪽 다리를 다쳤다.\n월리스·제일린 윌리엄스도 부상으로 빠졌다.",
+      "source": "Yahoo Sports · Field Level Media",
+      "key": {
+        "value": "3",
+        "unit": "명",
+        "label": "이날 썬더 부상자"
+      }
     },
     {
       "status": "부상 업데이트",
-      "verification": "보도 · 오른쪽 햄스트링 염좌",
+      "verification": "왼쪽 무릎 부기 · 복귀 미정",
       "teams": [
-        "DET"
+        "TOR"
       ],
-      "title": "제일런 듀렌,\n최소 2주 결장",
-      "body": "마이애미전에서 햄스트링을 다쳤다.\n디트로이트는 듀렌 없이도 3연승을 이어 갔다.",
-      "source": "AP · NBC Sports",
+      "title": "카와이 레너드,\n경기 직전 결장",
+      "body": "토론토 복귀 후 벌써 세 번째 결장이다.\n랩터스는 미네소타에 94-117로 졌다.",
+      "source": "Yahoo Sports",
       "key": {
-        "value": "2",
-        "unit": "주",
-        "label": "최소 결장 기간 · 보도"
+        "value": "3",
+        "unit": "번째",
+        "label": "이번 시즌 결장"
+      }
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "아킬레스 파열 뒤 복귀 시즌",
+      "teams": [
+        "IND"
+      ],
+      "title": "할리버튼,\n복귀 후 최고의 밤",
+      "body": "브루클린전 24점 10어시스트, 3점슛 4/7.\n후반에만 20점을 넣었다.",
+      "source": "Field Level Media",
+      "key": {
+        "value": "24",
+        "unit": "점",
+        "label": "10어시스트 · 복귀 후 최고"
       }
     }
   ],
@@ -382,6 +402,6 @@
     "title": "NBA 소식은\n코티브에서",
     "follow_cta": "매일 전해주는 NBA 소식",
     "save_cta": "오늘의 브리핑은 저장해 두세요.",
-    "references": "경기 · CBS Sports, StatMuse, 순위 · 경기 결과 집계\n뉴스 · AP, Field Level Media, NBC Sports"
+    "references": "경기 · CBS Sports, Field Level Media\n뉴스 · Yahoo Sports, Field Level Media, AP"
   }
 }
