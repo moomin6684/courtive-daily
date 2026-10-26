@@ -124,7 +124,8 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .hero .sc.win{color:var(--cyan)} .hero .sc.lose{color:var(--white)}
 .hero .st{text-align:center;font:700 28px/34px var(--num);color:var(--cyan)}
 .em{color:var(--cyan)}
-.cv-title{font:900 132px/156px var(--kr);letter-spacing:-.02em;text-align:center;white-space:pre-line;word-break:keep-all;width:100%}
+/* v3.6 (10/26): 표지 타이틀 강조 — 로고 사선처럼 오른쪽으로 9° 기울이고 더 크게·좁은 자간 */
+.cv-title{font:900 150px/177px var(--kr);letter-spacing:-.05em;text-align:center;white-space:pre-line;word-break:keep-all;width:100%;transform:skewX(-9deg)}
 .cv-h{font:900 112px/136px var(--kr);letter-spacing:-.015em}
 .cv-score .sc{font-size:176px;line-height:150px}
 .cv-who{display:flex;align-items:center;gap:18px}
@@ -175,7 +176,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
   {{ court('navy') }}
   <div class="layer" style="top:88px;text-align:center;font:700 64px/72px var(--num);letter-spacing:.06em;color:var(--cyan)">{{ d.date_kst }}</div>
   <div class="layer pad" style="top:200px;height:930px;display:flex;align-items:center;justify-content:center">
-    <div class="cv-title" data-fit="2" data-steps="132,120,108,96" data-lh="1.18" data-slot="cover.headline">{{ card.headline_html }}</div>
+    <div class="cv-title" data-fit="2" data-steps="150,136,124,112" data-lh="1.18" data-slot="cover.headline">{{ card.headline_html }}</div>
   </div>
   {{ cut(1250, F.stripe if F else ['var(--blue)']) }}
   {{ footer('dark', '') }}
