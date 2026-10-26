@@ -6,7 +6,7 @@
   "data_source": "경기 데이터 · Sportradar",
   "cover": {
     "mode": "game_day",
-    "headline": "23점 차 대역전,\n요키치 *트리플더블*",
+    "headline": "23점 차 대역전\n요키치 *트리플더블*",
     "focus": {
       "type": "player",
       "name": "니콜라 요키치",
@@ -124,7 +124,7 @@
       "home": "DEN",
       "max_deficit_overcome": 23,
       "label": "연장 · 23점 차 역전",
-      "headline": "요키치 35-15-10, 대역전승",
+      "headline": "요키치 35-15-10 대역전승",
       "away_leader": {
         "name": "트레이 머피 3세",
         "pts": 26,
@@ -160,7 +160,7 @@
       "away": "GSW",
       "home": "PHX",
       "label": "43점 · 워리어스 0-3",
-      "headline": "부커 43점, 야투 25개 중 17개",
+      "headline": "부커 43점 야투 25개 중 17개",
       "away_leader": {
         "name": "야셀 렌데보그",
         "pts": 26,
@@ -182,8 +182,8 @@
       "teams": [
         "ORL"
       ],
-      "title": "파올로 반케로,\n하이 앵클 스프레인",
-      "body": "미네소타전에서 발목을 다쳐 수 주간 결장한다.\n0-2로 출발한 올랜도에 큰 공백이다.",
+      "title": "파올로 반케로\n하이 앵클 스프레인",
+      "body": "미네소타전에서 발목을 다쳐 수 주간 결장한다\n0-2로 출발한 올랜도에 큰 공백이다",
       "source": "Yahoo Sports · ESPN 보도",
       "key": {
         "value": "4–6",

@@ -8,7 +8,7 @@ Reads one day's brief data (see schema.json), applies the Figma rules
 renders each card as 1080x1350 PNG with headless Chromium, and fails loudly when
 any text slot overflows its box after the allowed font-size steps.
 """
-import argparse, json, math, pathlib, sys, datetime
+import argparse, json, math, pathlib, re, sys, datetime
 from jinja2 import Environment, FileSystemLoader
 
 ROOT = pathlib.Path(__file__).resolve().parent
@@ -283,6 +283,23 @@ def main():
             holder["photo"] = None
     st["as_of_parts"] = [{"t": "기준 "}, {"t": st.get("as_of", d["timestamp"]), "n": True}, {"t": " · " + st.get("note", "리그 순위")}]
 
+    # 10/26 사용자 결정: 카드 문구에는 쉼표·마침표를 쓰지 않는다 (숫자 소수점 25.3 은 허용, 선수 이름 Jr. 등은 검사 안 함)
+    punct = []
+    def _pc(slot, text):
+        if isinstance(text, str) and re.search(r",|，|(?<!\d)\.|\.(?!\d)|。", text):
+            punct.append({"card": 0, "kind": "text", "slot": slot, "text": "쉼표·마침표 금지 — 줄바꿈이나 띄어쓰기로: " + text.replace("\n", " / ")})
+    _pc("cover.headline", d["cover"].get("headline"))
+    for k, g in enumerate(d.get("featured", [])):
+        for f in ("headline", "label"):
+            _pc(f"featured[{k}].{f}", g.get(f))
+    for k, n in enumerate(d.get("news", [])):
+        for f in ("title", "body", "verification"):
+            _pc(f"news[{k}].{f}", n.get(f))
+        for f in ("value", "unit", "label"):
+            _pc(f"news[{k}].key.{f}", (n.get("key") or {}).get(f))
+    for f in ("title", "follow_cta"):
+        _pc(f"closing.{f}", d.get("closing", {}).get(f))
+
     out = pathlib.Path(args.out or ROOT / "out" / pathlib.Path(args.data).stem).resolve()
     (out / "html").mkdir(parents=True, exist_ok=True)
     env = Environment(loader=FileSystemLoader(ROOT / "templates"), autoescape=True)
@@ -290,7 +307,7 @@ def main():
     cards = build_cards(d)
 
     from playwright.sync_api import sync_playwright
-    problems, notes, pngs = [], [], []
+    problems, notes, pngs = list(punct), [], []
     with sync_playwright() as p:
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)

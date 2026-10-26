@@ -18,16 +18,16 @@
   --mute-on-white:#5E6F8C; --mute-on-navy:#8FA3C7; --line-on-ice:#D3E3F7; --scrim:rgba(10,33,71,.78); --scrim-top:rgba(10,33,71,.9); --scrim-mid:rgba(10,33,71,.6);
   --kr:"Noto Sans KR","Noto Sans CJK KR",sans-serif; --num:"Barlow Condensed","Noto Sans KR",sans-serif; --display:"Anton","Noto Sans KR",sans-serif;
   --pad:56px; --cut:100px; --stripe:14px;
-  /* v3.2 (10/26): 배경 그라디언트 + 노이즈 질감 — 사용자 레퍼런스(푸른 빛 번짐 + 그레인) */
+  /* v3.2 (10/26): 배경 그라디언트 + 노이즈 질감 — 사용자 레퍼런스(푸른 빛 번짐 + 그레인). v3.4: 그라디언트 세기 절반으로(사용자 요청) */
   --bg-navy:
-    radial-gradient(ellipse 70% 42% at 30% 56%, rgba(20,107,255,.34), rgba(20,107,255,0) 70%),
-    radial-gradient(ellipse 60% 32% at 100% 100%, rgba(110,175,255,.26), rgba(110,175,255,0) 70%),
-    radial-gradient(ellipse 55% 30% at 0% 0%, rgba(90,150,255,.18), rgba(90,150,255,0) 70%),
-    linear-gradient(180deg,#0D2A5A 0%,#0A2147 48%,#081A3A 100%);
+    radial-gradient(ellipse 70% 42% at 30% 56%, rgba(20,107,255,.17), rgba(20,107,255,0) 70%),
+    radial-gradient(ellipse 60% 32% at 100% 100%, rgba(110,175,255,.12), rgba(110,175,255,0) 70%),
+    radial-gradient(ellipse 55% 30% at 0% 0%, rgba(90,150,255,.08), rgba(90,150,255,0) 70%),
+    linear-gradient(180deg,#0B2550 0%,#0A2147 48%,#091D41 100%);
   --bg-ice:
-    radial-gradient(ellipse 75% 45% at 100% 0%, rgba(20,107,255,.11), rgba(20,107,255,0) 70%),
-    radial-gradient(ellipse 70% 40% at 0% 100%, rgba(20,107,255,.08), rgba(20,107,255,0) 70%),
-    linear-gradient(180deg,#EEF6FF 0%,#E3EFFF 100%);
+    radial-gradient(ellipse 75% 45% at 100% 0%, rgba(20,107,255,.06), rgba(20,107,255,0) 70%),
+    radial-gradient(ellipse 70% 40% at 0% 100%, rgba(20,107,255,.045), rgba(20,107,255,0) 70%),
+    linear-gradient(180deg,#ECF5FF 0%,#E7F2FF 100%);
   --grain-navy:.40; --grain-ice:.07;
   --line-navy:rgba(255,255,255,.12); --line-ice:rgba(20,107,255,.13);
 }
@@ -188,7 +188,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
   <div class="layer pad" style="top:136px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end">
       <div class="disp" style="font-size:96px;color:var(--blue)">FINAL<br>SCORES</div>
-      <div class="r" style="font:700 28px/40px var(--kr)" data-slot="scoreboard_summary">{{ card.summary }}<br><span style="font-weight:400;font-size:22px;color:var(--mute-on-white)">원정 왼쪽, 홈 오른쪽</span></div>
+      <div class="r" style="font:700 28px/40px var(--kr)" data-slot="scoreboard_summary">{{ card.summary }}<br><span style="font-weight:400;font-size:22px;color:var(--mute-on-white)">원정 왼쪽 · 홈 오른쪽</span></div>
     </div>
   </div>
   <div class="layer pad" style="top:{{ 372 if card.dense else 420 }}px">
