@@ -56,6 +56,7 @@
 - 오토 레이아웃 `gap` = 형제 사이 `margin-top`(세로) 또는 `gap`(가로). `padding` = CSS padding.
 - 글자: Figma `size / lh` = CSS `font-size / line-height`, `ls -1%` = `letter-spacing:-.01em`. 글꼴 Noto Sans KR Regular/Bold/Black = 400/700/900, Barlow Condensed Bold = `--num` 700, Anton = `--display`.
 - 색: `var:Color/Blue` → `var(--blue)`, Navy/Ice/White/Cyan 동일, `Color/Mute On Light` → `--mute-on-white`, `Color/Mute On Dark` → `--mute-on-navy`, `Color/Line Ice` → `--line-on-ice`. `var:Team/ABBR/Role`는 데이터(`accent()`)가 고르므로 템플릿에 고정하지 않는다.
+- 배경 `fills` 의 그라디언트(아래부터: 단색 변수 → 세로 선형 → 원형 3개) = CSS `--bg-navy` / `--bg-ice` (아래 층이 CSS 목록의 뒤쪽). 원형 그라디언트 중심·반지름은 `gradientTransform` 에서 cx = (0.5−tx)/a, rx = 0.5/a. 효과 `Noise` = CSS `.card::after` 그레인(`assets/texture/grain.png`, 남색 overlay `--grain-navy`, 밝은 카드 normal `--grain-ice`) — Figma 노이즈와 코드 그레인은 모양이 조금 달라서 세기(투명도)만 맞춘다.
 - `Photo` 높이 = `photo(src, h)`의 h, `Cut mask` 오른쪽 높이 차 = `--cut`(100). `Stripe` 두께 = `--stripe`(14).
 - 로고 슬롯 `{{…logo}}` 프레임 크기 = CSS 로고 너비·높이. 안의 Team Logo 인스턴스는 슬롯 크기 ÷ 0.85로 그려 보이는 크기를 맞춘다.
 - `{{ }}` 레이어의 글자 내용은 데이터라서 반영하지 않는다. 스타일·위치·크기만 반영한다.
@@ -69,3 +70,4 @@
 - 10/26 v3: 사진을 쓰지 않기로 하고 v3 를 만듦. 표지는 로고 · DAILY BRIEF 날짜 · 강조 타이틀(*별표* → 시안) · 핵심 숫자 하나(스코어형 / 선수 기록형). 점수는 176px, 259px 칸 고정 + 넘침 검사.
 - 10/26 v3 1차 수정: 표지 타이틀 top 316 → 294 · 게임 리포트 점수와 상태 사이 20px · 헤드라인 가운데 정렬 top 734 · TOP SCORERS 는 한 줄 헤드라인 기준 860 (두 줄이면 그만큼 아래로) · 뉴스 큰 숫자 자간 4%.
 - 10/26 v3.1 표지 단순화: 피드 그리드를 위해 표지는 날짜(64px 시안, top 88) + 가운데 큰 타이틀 하나(132px Black, 2줄, 넘으면 120→108→96)만. 헤더·DAILY BRIEF·스코어·선수 기록 삭제. 사선 띠는 맨 아래(top 1150)로, 그날 주인공 팀 컬러. 마스터 예시 문장은 120px 단계(코드의 자동 축소와 같은 결과). Cover · Score 는 보관(반투명).
+- 10/26 v3.2 배경 질감: 남색 카드(표지·게임 리포트·마무리, 뉴스 위쪽 패널)는 세로 그라디언트 + 푸른 빛 번짐 3개, 밝은 카드(뉴스·스코어보드·순위)는 옅은 하늘색 번짐 2개. 모든 카드에 노이즈 질감. v3 가 함께 쓰는 v2 마스터(04 스코어보드·05 순위·06 마무리)에도 적용됨.

@@ -295,7 +295,8 @@ def main():
         browser = p.chromium.launch()
         page = browser.new_page(viewport={"width": 1080, "height": 1350}, device_scale_factor=1)
         for i, c in enumerate(cards, 1):
-            html = tpl.render(d=d, card=c, page=c["page"], fonts=(ROOT / "assets" / "fonts").as_uri())
+            html = tpl.render(d=d, card=c, page=c["page"], fonts=(ROOT / "assets" / "fonts").as_uri(),
+                              assets=(ROOT / "assets").as_uri())
             hp = out / "html" / f"{i:02d}-{c['kind']}.html"
             hp.write_text(html, encoding="utf-8")
             page.goto(hp.as_uri())

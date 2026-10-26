@@ -26,6 +26,7 @@ async function rec(n, parent, root){
   if ('strokes' in n && n.strokes.length){ r.stroke=await paints(n.strokes); r.sw=('strokeTopWeight' in n)?[n.strokeTopWeight,n.strokeRightWeight,n.strokeBottomWeight,n.strokeLeftWeight].join(','):String(n.strokeWeight); }
   if ('cornerRadius' in n && typeof n.cornerRadius==='number' && n.cornerRadius) r.rad=n.cornerRadius;
   if ('isMask' in n && n.isMask) r.mask=true;
+  if ('effects' in n && n.effects.length) r.fx=n.effects.filter(e=>e.visible!==false).map(e=>e.type+(e.type==='NOISE'?' '+e.noiseType+' '+r1(e.noiseSize)+' d'+r2(e.density)+' '+hx(e.color)+'@'+r2(e.color.a)+(e.secondaryColor?'/'+hx(e.secondaryColor)+'@'+r2(e.secondaryColor.a):''):'')).join(' | ');
   if ('layoutMode' in n && n.layoutMode!=='NONE'){ r.lay=[n.layoutMode,n.itemSpacing,[n.paddingTop,n.paddingRight,n.paddingBottom,n.paddingLeft].join(','),n.primaryAxisAlignItems,n.counterAxisAlignItems].join(' '); }
   if (n.layoutPositioning==='ABSOLUTE') r.abs=true;
   if (n.type==='TEXT'){ const fn=n.fontName, lh=n.lineHeight, ls=n.letterSpacing;
