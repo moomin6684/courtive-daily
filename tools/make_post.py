@@ -19,10 +19,14 @@ HASHTAG_LIMIT = 30
 
 
 def main():
-    if len(sys.argv) != 2:
+    # 다시 올리기(예: 디자인 변경 후 재게시): python3 tools/make_post.py data/2026-10-26-v2.json --now --replaces <permalink>
+    args = sys.argv[1:]
+    if not args:
         raise SystemExit(__doc__)
-    data_path = pathlib.Path(sys.argv[1])
-    stem = data_path.stem                       # 2026-10-27
+    now_flag = "--now" in args
+    replaces = args[args.index("--replaces") + 1] if "--replaces" in args else None
+    data_path = pathlib.Path(args[0])
+    stem = data_path.stem                       # 2026-10-27 (재게시는 2026-10-26-v2)
     out = ROOT / "out" / stem
     report = json.loads((out / "report.json").read_text(encoding="utf-8"))
     if report["overflow"]:
@@ -52,17 +56,20 @@ def main():
     from PIL import Image
     Image.open(out / "contact-sheet.png").convert("RGB").save(post / "preview.jpg", quality=85)
 
-    y, m, d = map(int, stem.split("-"))
+    y, m, d = map(int, stem[:10].split("-"))
     kst = datetime.timezone(datetime.timedelta(hours=9))
+    at = datetime.datetime.now(kst).replace(microsecond=0) if now_flag else datetime.datetime(y, m, d, PUBLISH_HOUR_KST, 0, tzinfo=kst)
     manifest = {
-        "date": stem,
-        "publish_at": datetime.datetime(y, m, d, PUBLISH_HOUR_KST, 0, tzinfo=kst).isoformat(),
+        "date": stem[:10],
+        "publish_at": at.isoformat(),
         "images": images,
         "caption_file": "caption.txt",
         "status": "pending",
         "created_at": datetime.datetime.now(kst).isoformat(timespec="seconds"),
         "source_data": f"data/{data_path.name}",
     }
+    if replaces:
+        manifest["replaces"] = replaces
     (post / "manifest.json").write_text(json.dumps(manifest, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({"post": str(post.relative_to(ROOT)), "images": len(images), "caption_chars": len(caption),
                       "publish_at": manifest["publish_at"]}, ensure_ascii=False))

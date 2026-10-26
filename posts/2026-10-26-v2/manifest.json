@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-26",
+  "publish_at": "2026-10-26T17:06:36+09:00",
+  "images": [
+    {
+      "file": "01.jpg",
+      "card": "01-cover"
+    },
+    {
+      "file": "02.jpg",
+      "card": "02-game"
+    },
+    {
+      "file": "03.jpg",
+      "card": "03-game"
+    },
+    {
+      "file": "04.jpg",
+      "card": "04-game"
+    },
+    {
+      "file": "05.jpg",
+      "card": "05-news"
+    },
+    {
+      "file": "06.jpg",
+      "card": "06-news"
+    },
+    {
+      "file": "07.jpg",
+      "card": "07-news"
+    },
+    {
+      "file": "08.jpg",
+      "card": "08-scoreboard"
+    },
+    {
+      "file": "09.jpg",
+      "card": "09-standings"
+    },
+    {
+      "file": "10.jpg",
+      "card": "10-closing"
+    }
+  ],
+  "caption_file": "caption.txt",
+  "status": "pending",
+  "created_at": "2026-10-26T17:06:36+09:00",
+  "source_data": "data/2026-10-26-v2.json",
+  "replaces": "https://www.instagram.com/p/De8uWl2FiEF/"
+}
