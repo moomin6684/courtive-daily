@@ -77,7 +77,7 @@ v3 부터 카드에 사진을 넣지 않는다(실시간 경기 사진은 라이
 - `git checkout main && git pull && git merge --no-ff post/DATE -m "approve: DATE" && git push origin main` (PR 은 이것으로 함께 닫힌다).
 - 지금이 16:00 KST 이전이면 "16:00에 올라갑니다", 이후면 "곧 올라갑니다(몇 분 걸림)" 라고 답한다.
 - 16:00 이후라면 2–3분 뒤 `posts/DATE/manifest.json` 을 다시 받아 status 가 published 인지 확인하고 permalink 를 알려 준다. 실패(last_error)면 이유를 쉬운 말로 알린다.
-- 16:00 이전에 승인했다면 `mcp__claude-code-remote__send_later` 로 16:12 KST 에 이 대화로 "발행 확인" 메시지를 예약한다. 그 메시지가 오면 `git pull` 후 manifest 를 확인해 게시물 링크(permalink)를 알리고, 실패면 이유와 다시 올리는 방법(Actions 의 publish 를 수동 실행)을 알린다.
+- 16:00 이전에 승인했다면 `mcp__claude-code-remote__send_later` 로 16:01 KST 에 이 대화로 "발행 실행" 메시지를 예약한다. 그 메시지가 오면 GitHub 예약 실행을 기다리지 말고 `gh api -X POST repos/moomin6684/courtive-daily/actions/workflows/publish.yml/dispatches -f ref=main` 로 바로 실행하고(GitHub 예약 실행은 수십 분 늦을 수 있음 — 10/26 첫 발행 때 확인), 끝나면 `git pull` 후 manifest 를 확인해 게시물 링크(permalink)를 알린다. 실패면 이유와 다시 올리는 방법을 알린다. (예약 실행과 겹쳐도 status 가 published 로 바뀌면 다시 올리지 않는다.)
 
 ## 6. 하지 않는 것
 
