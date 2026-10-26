@@ -13,7 +13,7 @@ import shutil
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
-PUBLISH_HOUR_KST = 15          # 발행 시각 (KST)
+PUBLISH_HOUR_KST = 16          # 발행 시각 (KST)
 CAPTION_LIMIT = 2200           # 인스타그램 캡션 최대 길이
 HASHTAG_LIMIT = 30
 
