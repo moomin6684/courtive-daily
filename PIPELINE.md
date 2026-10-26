@@ -10,7 +10,7 @@
 - 저장소: `moomin6684/courtive-daily` (push 권한으로 붙여서 clone).
 - `pip install jinja2 pillow --break-system-packages` (Playwright Chromium 은 이미 설치돼 있음 — 다시 설치하지 말 것).
 - 날짜: `DATE` = 오늘 KST(YYYY-MM-DD), `date_kst` = YYYY.MM.DD, `us_game_date` = 미국 동부 기준 어제 날짜.
-- 이미 `posts/DATE/manifest.json` 이 `published` 면 아무것도 하지 않고 끝낸다.
+- 이미 `posts/DATE/manifest.json` 이 있으면(status 가 published · pending · hold 무엇이든) 새로 만들지 않는다. 사용자에게 "오늘 카드는 이미 있어요(상태: …)" 라고 한 줄 알리고 끝낸다. 다시 만들어 달라는 요청이 있을 때만 덮어쓴다.
 
 ## 1. 사실 모으기 (추측 금지)
 
