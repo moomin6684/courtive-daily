@@ -13,8 +13,8 @@
 
 | 마스터 | id | 템플릿 분기 (`card_v3.html.j2`) |
 |---|---|---|
-| v3/Card/01 Cover · Player | 120:7436 | `cover`, `cover.focus.type == 'player'` (`.cv-who`, `.cv-stats`, `.cv-res`) |
-| v3/Card/01b Cover · Score | 120:7576 | `cover`, `cover.focus.type == 'score'` (`.cv-score`) |
+| v3/Card/01 Cover | 120:7436 | `cover` (v3.1: `{{date_kst}}` top 88 · `Title Area` 200–1130 가운데 정렬 → `.cv-title` · `Stripe` → `cut(1250)`) |
+| v3/Card/01b Cover · Score (보관) | 120:7576 | 10/26부터 안 씀 — 스냅샷 대상에서 뺌 |
 | v3/Card/02 Game Report | 121:7795 | `game` (`.hero`, `.top`) |
 | v3/Card/03 News | 121:7844 | `news` (패널 · `.key` · 본문) |
 | 04 Scoreboard · 05 Standings · 06 Closing | G 섹션 v2 마스터 | v2 와 같은 마크업 |
@@ -68,3 +68,4 @@
 - 10/26 확정(v2.0): 발행 순서를 표지 → 게임 리포트(최대 3) → 뉴스 → 스코어보드 → 순위 → 마무리로 바꿨다(`build_cards`).
 - 10/26 v3: 사진을 쓰지 않기로 하고 v3 를 만듦. 표지는 로고 · DAILY BRIEF 날짜 · 강조 타이틀(*별표* → 시안) · 핵심 숫자 하나(스코어형 / 선수 기록형). 점수는 176px, 259px 칸 고정 + 넘침 검사.
 - 10/26 v3 1차 수정: 표지 타이틀 top 316 → 294 · 게임 리포트 점수와 상태 사이 20px · 헤드라인 가운데 정렬 top 734 · TOP SCORERS 는 한 줄 헤드라인 기준 860 (두 줄이면 그만큼 아래로) · 뉴스 큰 숫자 자간 4%.
+- 10/26 v3.1 표지 단순화: 피드 그리드를 위해 표지는 날짜(64px 시안, top 88) + 가운데 큰 타이틀 하나(132px Black, 2줄, 넘으면 120→108→96)만. 헤더·DAILY BRIEF·스코어·선수 기록 삭제. 사선 띠는 맨 아래(top 1150)로, 그날 주인공 팀 컬러. 마스터 예시 문장은 120px 단계(코드의 자동 축소와 같은 결과). Cover · Score 는 보관(반투명).
