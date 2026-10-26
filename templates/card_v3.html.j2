@@ -29,7 +29,7 @@
     radial-gradient(ellipse 70% 40% at 0% 100%, rgba(20,107,255,.045), rgba(20,107,255,0) 70%),
     linear-gradient(180deg,#ECF5FF 0%,#E7F2FF 100%);
   --grain-navy:.40; --grain-ice:.07;
-  --line-navy:rgba(255,255,255,.12); --line-ice:rgba(20,107,255,.13);
+  --line-navy:rgba(255,255,255,.12);
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html,body{width:1080px;height:1350px;overflow-x:clip;background:var(--navy)}
@@ -37,7 +37,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .card{position:relative;width:1080px;height:1350px;overflow:hidden;color:var(--white);background:var(--bg-navy)}
 .card.ice{background:var(--bg-ice);color:var(--navy)}
 .court{position:absolute;left:0;top:0;width:1080px;height:1350px;fill:none;stroke-width:2;pointer-events:none}
-.court.navy{stroke:var(--line-navy)} .court.ice{stroke:var(--line-ice)}
+.court.navy{stroke:var(--line-navy)}
 .court .dash{stroke-dasharray:14 12}
 .card::after{content:"";position:absolute;inset:0;z-index:20;pointer-events:none;background:url("{{ assets }}/texture/grain.png") 0 0/512px 512px repeat;mix-blend-mode:overlay;opacity:var(--grain-navy)}
 .card.ice::after{mix-blend-mode:normal;opacity:var(--grain-ice)}
@@ -183,7 +183,6 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 
 {% elif card.kind == 'scoreboard' %}
 <div class="card ice">
-  {{ court('ice') }}
   {{ header('light') }}
   <div class="layer pad" style="top:136px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end">
@@ -239,7 +238,6 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 {% elif card.kind == 'news' %}
 {% set n = card.news %}{% set t = n.tags[0] if n.tags else None %}
 <div class="card ice">
-  {{ court('ice') }}
   {% if t %}
   <div class="photo" style="height:560px;background:var(--bg-navy);clip-path:polygon(0 0,100% 0,100% 460px,0 560px)"></div>
   {{ court('navy', 'polygon(0 0,100% 0,100% 460px,0 560px)') }}
@@ -265,7 +263,6 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 
 {% elif card.kind == 'standings' %}
 <div class="card ice">
-  {{ court('ice') }}
   {{ symbol(140, 526, 800, 574, 'var(--blue)', 0.06) }}
   {{ header('light') }}
   <div class="layer pad" style="top:136px">
