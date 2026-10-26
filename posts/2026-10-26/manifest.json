@@ -44,8 +44,8 @@
     }
   ],
   "caption_file": "caption.txt",
-  "status": "hold",
+  "status": "pending",
   "created_at": "2026-10-26T14:28:32+09:00",
   "source_data": "data/2026-10-26.json",
-  "note": "브리핑 기준 재구성본 — 사용자 승인 대기"
+  "approved_at": "2026-10-26T14:33:00+09:00"
 }
