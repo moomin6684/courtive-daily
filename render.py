@@ -195,24 +195,18 @@ def build_cards(d):
     for nws in d.get("news", []):
         tags = [{"abbr": t, "ko": TEAM_KO.get(t, t), "c": accents(t), "logo": logo(t)} for t in nws.get("teams", [])]
         cards.append({"kind": "news", "news": {**nws, "tags": tags, "status_class": STATUS_CLASS[nws["status"]]}})
-    # v3 표지: 강조 타이틀 + 핵심 숫자 하나 (cover.focus)
-    #   {"type": "score", "game": 0}  → featured[game] 경기의 로고와 스코어 (기본값)
-    #   {"type": "player", "name": "니콜라 요키치", "team": "DEN", "game": 0,
-    #    "stats": [{"v": "35", "k": "득점"}, {"v": "15", "k": "리바운드"}, {"v": "10", "k": "어시스트"}]}
+    # v3.1 표지 (10/26): 날짜 + 가운데 큰 타이틀 하나. cover.focus 는 아래쪽 사선 띠 색만 정한다.
+    #   {"type": "score", "game": 0}  → featured[game] 경기 두 팀 컬러 (기본값)
+    #   {"type": "team", "team": "DEN"} → 그 팀 컬러 하나 ("player" 도 같은 뜻 — 예전 데이터 호환)
     games_cards = [c for c in cards if c["kind"] == "game"]
     cards[0]["headline_html"] = emphasize(d["cover"]["headline"])
     f = dict(d["cover"].get("focus") or {"type": "score"})
     gi = f.get("game", 0)
     gc = games_cards[gi]["game"] if gi < len(games_cards) else None
-    if f["type"] == "score" and gc:
-        f.update(game=gc, stripe=[gc["away"]["c"]["navy"], gc["home"]["c"]["navy"]])
-    elif f["type"] == "player":
-        if len(f.get("stats", [])) != 3:
-            raise SystemExit("cover.focus.stats 는 3개 (예: 득점·리바운드·어시스트)")
-        f.update(logo=logo(f["team"]), stripe=[accent(f["team"], "navy")])
-        if gc:
-            w, l = (gc["away"], gc["home"]) if gc["away"]["win"] else (gc["home"], gc["away"])
-            f["result"] = f"{w['abbr']} {w['score']}–{l['score']} {l['abbr']} · {gc['status_label']}"
+    if f["type"] in ("team", "player") and f.get("team"):
+        f["stripe"] = [accent(f["team"], "navy")]
+    elif f["type"] == "score" and gc:
+        f["stripe"] = [gc["away"]["c"]["navy"], gc["home"]["c"]["navy"]]
     else:
         f = None
     cards[0]["focus"] = f

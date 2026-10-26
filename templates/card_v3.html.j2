@@ -107,6 +107,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .hero .sc.win{color:var(--cyan)} .hero .sc.lose{color:var(--white)}
 .hero .st{text-align:center;font:700 28px/34px var(--num);color:var(--cyan)}
 .em{color:var(--cyan)}
+.cv-title{font:900 132px/156px var(--kr);letter-spacing:-.02em;text-align:center;white-space:pre-line;word-break:keep-all;width:100%}
 .cv-h{font:900 112px/136px var(--kr);letter-spacing:-.015em}
 .cv-score .sc{font-size:176px;line-height:150px}
 .cv-who{display:flex;align-items:center;gap:18px}
@@ -141,34 +142,14 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 {% endmacro %}
 
 {% if card.kind == 'cover' %}
+{# v3.1 (10/26): 표지는 날짜 + 가운데 큰 타이틀 하나. 사선 띠는 그날 주인공 팀 컬러 #}
 {% set F = card.focus %}
 <div class="card">
-  {{ header() }}
-  <div class="layer pad" style="top:132px">
-    <div class="disp" style="font-size:64px">DAILY BRIEF.</div>
-    <div style="font:700 40px/48px var(--num);margin-top:10px">{{ d.date_kst }}</div>
+  <div class="layer" style="top:88px;text-align:center;font:700 64px/72px var(--num);letter-spacing:.06em;color:var(--cyan)">{{ d.date_kst }}</div>
+  <div class="layer pad" style="top:200px;height:930px;display:flex;align-items:center;justify-content:center">
+    <div class="cv-title" data-fit="2" data-steps="132,120,108,96" data-lh="1.18" data-slot="cover.headline">{{ card.headline_html }}</div>
   </div>
-  <div class="layer pad" style="top:294px">
-    <div class="cv-h" style="white-space:pre-line" data-fit="2" data-steps="112,100,88" data-lh="1.214" data-slot="cover.headline">{{ card.headline_html }}</div>
-  </div>
-  {{ cut(720, F.stripe if F else ['var(--blue)']) }}
-  {% if F and F.type == 'score' %}{% set g = F.game %}
-  <div class="layer pad" style="top:850px">
-    <div class="cv-score hero">
-      <div class="tm"><div class="dsc" style="width:150px;height:150px">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="" style="width:110px;height:110px">{% endif %}</div><span class="ab">{{ g.away.abbr }}</span></div>
-      <div data-fit="1" data-slot="score" class="one sc l {{ 'win' if g.away.win else 'lose' }}">{{ g.away.score }}</div>
-      <div class="st">{{ g.status_label }}</div>
-      <div data-fit="1" data-slot="score" class="one sc r {{ 'win' if g.home.win else 'lose' }}">{{ g.home.score }}</div>
-      <div class="tm"><div class="dsc" style="width:150px;height:150px">{% if g.home.logo %}<img class="logo" src="{{ g.home.logo }}" alt="" style="width:110px;height:110px">{% endif %}</div><span class="ab">{{ g.home.abbr }}</span></div>
-    </div>
-  </div>
-  {% elif F and F.type == 'player' %}
-  <div class="layer pad" style="top:800px">
-    <div class="cv-who"><div class="dsc" style="width:76px;height:76px">{% if F.logo %}<img class="logo" src="{{ F.logo }}" alt="" style="width:56px;height:56px">{% endif %}</div><span class="nm one" data-fit="1" data-steps="52,46,40" data-slot="cover.focus.name">{{ F.name }}</span><span class="tm">{{ F.team }}</span></div>
-    <div class="cv-stats">{% for st in F.stats %}<div><div class="v">{{ st.v }}</div><div class="k">{{ st.k }}</div></div>{% endfor %}</div>
-    {% if F.result %}<div class="cv-res">{{ F.result }}</div>{% endif %}
-  </div>
-  {% endif %}
+  {{ cut(1250, F.stripe if F else ['var(--blue)']) }}
   {{ footer('dark', '') }}
 </div>
 

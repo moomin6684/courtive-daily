@@ -53,7 +53,7 @@
         "headline": {
           "type": "string",
           "maxLength": 22,
-          "description": "{{headline}} · 2줄 · 96px(→84→72px까지 축소) · 줄바꿈은 \\n로 직접 지정 권장 · *강조* 한 군데는 시안"
+          "description": "v3.1 표지의 유일한 문장 · 가운데 정렬 2줄 · 132px(→120→108→96px까지 축소) · 줄당 8자 안팎 · 줄바꿈은 \\n로 직접 지정 · *강조* 한 군데는 시안"
         },
         "photo": {
           "type": [
@@ -69,11 +69,12 @@
         },
         "focus": {
           "type": "object",
-          "description": "v3 표지의 핵심 숫자. score = featured[game] 스코어, player = 선수 기록 3개",
+          "description": "v3.1 표지 아래쪽 사선 띠 색. score = featured[game] 두 팀 컬러(기본값), team = 그 팀 컬러 하나 (player 는 예전 데이터 호환용, team 과 같음). 표지에는 날짜와 타이틀만 나온다",
           "properties": {
             "type": {
               "enum": [
                 "score",
+                "team",
                 "player"
               ]
             },
@@ -81,40 +82,11 @@
               "type": "integer",
               "minimum": 0
             },
-            "name": {
-              "type": "string",
-              "maxLength": 12
-            },
             "team": {
               "type": "string",
               "pattern": "^[A-Z]{3}$"
-            },
-            "stats": {
-              "type": "array",
-              "minItems": 3,
-              "maxItems": 3,
-              "items": {
-                "type": "object",
-                "properties": {
-                  "v": {
-                    "type": "string",
-                    "maxLength": 3
-                  },
-                  "k": {
-                    "type": "string",
-                    "maxLength": 5
-                  }
-                },
-                "required": [
-                  "v",
-                  "k"
-                ]
-              }
             }
-          },
-          "required": [
-            "type"
-          ]
+          }
         }
       }
     },
