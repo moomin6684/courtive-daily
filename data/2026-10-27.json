@@ -1,0 +1,397 @@
+{
+  "date_kst": "2026.10.27",
+  "us_game_date": "2026.10.26",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "경기 데이터 · CBS Sports",
+  "cover": {
+    "mode": "game_day",
+    "headline": "윌리엄스 수술에도\n썬더 *4연승*",
+    "focus": {
+      "type": "team",
+      "team": "OKC"
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "WAS",
+        "score": 103
+      },
+      "home": {
+        "abbr": "CHA",
+        "score": 110
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIN",
+        "score": 125
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 127
+      },
+      "ot": 1
+    },
+    {
+      "away": {
+        "abbr": "CHI",
+        "score": 99
+      },
+      "home": {
+        "abbr": "BOS",
+        "score": 134
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "DAL",
+        "score": 113
+      },
+      "home": {
+        "abbr": "MIA",
+        "score": 109
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "IND",
+        "score": 102
+      },
+      "home": {
+        "abbr": "MIL",
+        "score": 110
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHX",
+        "score": 114
+      },
+      "home": {
+        "abbr": "OKC",
+        "score": 125
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "ATL",
+        "score": 110
+      },
+      "home": {
+        "abbr": "HOU",
+        "score": 120
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MEM",
+        "score": 110
+      },
+      "home": {
+        "abbr": "UTA",
+        "score": 105
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "GSW",
+        "score": 134
+      },
+      "home": {
+        "abbr": "DEN",
+        "score": 114
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "MIN",
+      "home": "CLE",
+      "label": "연장 · 2점 차",
+      "headline": "에드워즈 47점 빛바랜 패배",
+      "away_leader": {
+        "name": "앤서니 에드워즈",
+        "pts": 47,
+        "reb": 4,
+        "ast": 4
+      },
+      "home_leader": {
+        "name": "도너번 미첼",
+        "pts": 26,
+        "reb": 5,
+        "ast": 7
+      }
+    },
+    {
+      "away": "DAL",
+      "home": "MIA",
+      "label": "4점 차 접전 · 히트 0-4",
+      "headline": "플래그 29점 11어시스트",
+      "away_leader": {
+        "name": "쿠퍼 플래그",
+        "pts": 29,
+        "reb": 6,
+        "ast": 11
+      },
+      "home_leader": {
+        "name": "야니스 아데토쿤보",
+        "pts": 29,
+        "reb": 15,
+        "ast": 11
+      }
+    },
+    {
+      "away": "MEM",
+      "home": "UTA",
+      "label": "5점 차 접전 · 개막 4연승",
+      "headline": "멤피스 개막 4연승 질주",
+      "away_leader": {
+        "name": "시더릭 카워드",
+        "pts": 16,
+        "reb": 11,
+        "ast": 3
+      },
+      "home_leader": {
+        "name": "키욘테 조지",
+        "pts": 26,
+        "reb": 3,
+        "ast": 6
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "복귀 시점은 수술 뒤 발표",
+      "teams": [
+        "OKC"
+      ],
+      "title": "제일런 윌리엄스\n월리스 동시 수술",
+      "body": "윌리엄스는 왼쪽 비골 골절과 발목 탈구\n월리스는 관절와순 파열\n썬더는 선즈를 꺾고 4전 전승",
+      "source": "NBA.com · Hoops Rumors",
+      "key": {
+        "value": "2",
+        "unit": "명",
+        "label": "썬더 수술 예정"
+      }
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "정밀 검사 결과 대기",
+      "teams": [
+        "UTA"
+      ],
+      "title": "마카넨 잭슨 주니어\n한 경기에 부상 이탈",
+      "body": "마카넨은 손목 잭슨은 오른 무릎\n둘 다 코트로 돌아오지 못했다\n유타는 멤피스에 105-110 패배",
+      "source": "Deseret News · FLM",
+      "key": {
+        "value": "2",
+        "unit": "명",
+        "label": "이날 재즈 부상 이탈"
+      }
+    }
+  ],
+  "standings": {
+    "note": "승률순 · 동률 순서 잠정",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "DET",
+        "w": 3,
+        "l": 0
+      },
+      {
+        "rank": 2,
+        "abbr": "PHI",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 3,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 4,
+        "abbr": "TOR",
+        "w": 2,
+        "l": 1
+      },
+      {
+        "rank": 5,
+        "abbr": "CLE",
+        "w": 2,
+        "l": 1
+      },
+      {
+        "rank": 6,
+        "abbr": "BOS",
+        "w": 2,
+        "l": 1
+      },
+      {
+        "rank": 7,
+        "abbr": "WAS",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 8,
+        "abbr": "ATL",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 9,
+        "abbr": "IND",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 10,
+        "abbr": "ORL",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 11,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 12,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 13,
+        "abbr": "NYK",
+        "w": 0,
+        "l": 3
+      },
+      {
+        "rank": 14,
+        "abbr": "BKN",
+        "w": 0,
+        "l": 3
+      },
+      {
+        "rank": 15,
+        "abbr": "MIA",
+        "w": 0,
+        "l": 4
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "HOU",
+        "w": 4,
+        "l": 0
+      },
+      {
+        "rank": 2,
+        "abbr": "MEM",
+        "w": 4,
+        "l": 0
+      },
+      {
+        "rank": 3,
+        "abbr": "OKC",
+        "w": 4,
+        "l": 0
+      },
+      {
+        "rank": 4,
+        "abbr": "LAL",
+        "w": 3,
+        "l": 0
+      },
+      {
+        "rank": 5,
+        "abbr": "POR",
+        "w": 2,
+        "l": 0
+      },
+      {
+        "rank": 6,
+        "abbr": "MIN",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 7,
+        "abbr": "DAL",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 8,
+        "abbr": "DEN",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 9,
+        "abbr": "PHX",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 10,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 11,
+        "abbr": "SAS",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 12,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 13,
+        "abbr": "GSW",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 14,
+        "abbr": "NOP",
+        "w": 0,
+        "l": 3
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 0,
+        "l": 3
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · CBS Sports, Field Level Media\n뉴스 · NBA.com, Hoops Rumors, Deseret News"
+  }
+}
