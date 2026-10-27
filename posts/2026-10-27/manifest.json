@@ -44,7 +44,11 @@
     }
   ],
   "caption_file": "caption.txt",
-  "status": "pending",
+  "status": "published",
   "created_at": "2026-10-27T15:19:35+09:00",
-  "source_data": "data/2026-10-27.json"
+  "source_data": "data/2026-10-27.json",
+  "published_at": "2026-10-27T16:04:14+09:00",
+  "account": "courtive.media",
+  "media_id": "18401919940204080",
+  "permalink": "https://www.instagram.com/p/De_RxkOETXe/"
 }
