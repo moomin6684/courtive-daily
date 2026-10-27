@@ -91,7 +91,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .rows{display:flex;flex-direction:column}
 .rows.sparse{gap:20px} .rows.dense{gap:10px}
 .srow{display:grid;grid-template-columns:minmax(0,1fr) 300px minmax(0,1fr);align-items:center;background:var(--white);padding:0 28px}
-.sparse .srow{height:170px;grid-template-columns:minmax(0,1fr) 380px minmax(0,1fr);padding:0 24px} .dense .srow{height:96px}
+.sparse .srow{height:170px;grid-template-columns:minmax(0,1fr) 380px minmax(0,1fr);padding:0 24px} .dense .srow{height:var(--rh,96px)}
 .sside{display:flex;align-items:center;gap:18px;min-width:0}
 .sside.home{flex-direction:row-reverse;text-align:right}
 .sside .logo{width:62px;height:62px} .sparse .sside .logo{width:96px;height:96px}
@@ -103,16 +103,25 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
 .sparse .score{gap:12px} .sparse .score .p{font-size:104px;line-height:110px;width:156px} .sparse .score .sep{width:32px}
 .score .p.win{color:var(--blue)} .score .p.lose{color:var(--mute-on-white)}
 .score .sep{width:34px;text-align:center;font:700 22px/26px var(--num);color:var(--mute-on-white)}
+/* 10/27: 9경기 이상도 한 장 — 두 줄 격자, 한국어 팀명은 빼고 로고·약어·점수만 */
+.rows.grid{display:grid;grid-auto-flow:column;grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:16px;row-gap:10px}
+.grid .srow{height:var(--rh,96px);grid-template-columns:minmax(0,1fr) 196px minmax(0,1fr);padding:0 16px}
+.grid .sside{gap:10px} .grid .sside .logo{width:46px;height:46px} .grid .sside .ko{display:none}
+.grid .score{gap:4px} .grid .score .p{font-size:58px;line-height:64px;width:80px} .grid .score .sep{width:28px;font-size:18px}
 /* standings */
 .confs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
 .conf .hd{display:flex;justify-content:space-between;align-items:baseline;padding:0 4px 12px;border-bottom:3px solid var(--navy)}
 .conf .hd .en{font:400 44px/48px var(--display)} .conf .hd .krn{font:700 24px/30px var(--kr)}
-.trow{display:grid;grid-template-columns:40px 36px 64px minmax(0,1fr) 44px 44px;gap:8px;align-items:center;height:51px;border-bottom:1px solid var(--line-on-ice)}
+.trow{display:grid;grid-template-columns:40px 36px 64px minmax(0,1fr) 20px 44px 44px;gap:8px;align-items:center;height:51px;border-bottom:1px solid var(--line-on-ice)}
 .trow .rk{font:700 26px/32px var(--num);color:var(--mute-on-white);text-align:right}
 .trow .logo{width:32px;height:32px}
 .trow .tm{font:700 28px/32px var(--num)}
 .trow .ko{font:400 22px/32px var(--kr)}
 .trow .n{font:700 30px/32px var(--num);text-align:right}
+/* 10/27: 그날 경기 결과 ▲ 승(초록) ▼ 패(빨강) */
+:root{--win:#14A85A; --loss:#E5374B}
+.tri{display:block;width:18px;height:15px} .tri.W{fill:var(--win)} .tri.L{fill:var(--loss)}
+.legend{display:inline-flex;align-items:center;gap:6px} .legend .tri{width:14px;height:12px}
 .trow.th{height:40px;border-bottom:none} .trow.th *{font:700 20px/28px var(--kr);color:var(--mute-on-white)}
 /* v3 · photo-free: logos, team colours and big numbers carry each card */
 .hero{display:grid;grid-template-columns:170px minmax(0,1fr) 110px minmax(0,1fr) 170px;align-items:center}
@@ -165,6 +174,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
   <path d="M454 1264V1237A86 86 0 0 1 626 1237V1264"/>
   <path d="M475 1264H605"/><circle cx="540" cy="1237" r="10"/>
 </svg>{% endmacro %}
+{% macro tri(r) %}<svg class="tri {{ r }}" viewBox="0 0 18 15" aria-label="{{ '승' if r == 'W' else '패' }}">{% if r == 'W' %}<path d="M9 0L18 15H0Z"/>{% else %}<path d="M0 0H18L9 15Z"/>{% endif %}</svg>{% endmacro %}
 {% macro cut(h, stripe) %}
   <div class="stripe" style="top:{{ h - 100 }}px;height:114px;clip-path:polygon(0 100px,100% 0,100% 14px,0 114px)">{% for c in stripe %}<i style="background:{{ c }}"></i>{% endfor %}</div>
 {% endmacro %}
@@ -192,7 +202,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
     </div>
   </div>
   <div class="layer pad" style="top:{{ 372 if card.dense else 420 }}px">
-    <div class="rows {{ 'dense' if card.dense else 'sparse' }}">
+    <div class="rows {{ 'dense' if card.dense else 'sparse' }}{{ ' grid' if card.grid }}" style="--rh:{{ card.row_h or 96 }}px{% if card.grid %};grid-template-rows:repeat({{ card.rows }},{{ card.row_h }}px){% endif %}">
     {% for g in card.games %}
       <div class="srow">
         <div class="sside">{% if g.away.logo %}<img class="logo" src="{{ g.away.logo }}" alt="">{% endif %}<div class="t"><span class="ab">{{ g.away.abbr }}</span><span class="ko one" data-fit="1" data-slot="team_ko">{{ g.away.ko }}</span></div></div>
@@ -269,7 +279,7 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
   <div class="layer pad" style="top:136px">
     <div style="display:flex;justify-content:space-between;align-items:flex-end">
       <div class="disp" style="font-size:96px;color:var(--blue)">STANDINGS</div>
-      <div class="r" style="font:400 22px/30px var(--kr);color:var(--mute-on-white)">기준 {{ d.standings.as_of or d.timestamp }}<br>{{ d.standings.note }}</div>
+      <div class="r" style="font:400 22px/30px var(--kr);color:var(--mute-on-white)">기준 {{ d.standings.as_of or d.timestamp }}<br>{{ d.standings.note }}{% if d.standings.has_today %}<br><span class="legend">{{ tri('W') }}승 {{ tri('L') }}패 · 오늘 경기</span>{% endif %}</div>
     </div>
   </div>
   <div class="layer pad" style="top:339px">
@@ -277,8 +287,8 @@ body{-webkit-font-smoothing:antialiased;text-rendering:geometricPrecision}
       {% for key, en, kr in [('east','EAST','동부'),('west','WEST','서부')] %}
       <div class="conf">
         <div class="hd"><span class="en">{{ en }}</span><span class="krn">{{ kr }}</span></div>
-        <div class="trow th"><span class="rk">#</span><span></span><span>팀</span><span></span><span class="n">승</span><span class="n">패</span></div>
-        {% for t in d.standings[key] %}<div class="trow"><span class="rk">{{ t.rank }}</span>{% if t.logo %}<img class="logo" src="{{ t.logo }}" alt="">{% else %}<span></span>{% endif %}<span class="tm">{{ t.abbr }}</span><span class="ko one" data-fit="1" data-slot="standings.team_ko">{{ t.ko }}</span><span class="n">{{ t.w }}</span><span class="n">{{ t.l }}</span></div>{% endfor %}
+        <div class="trow th"><span class="rk">#</span><span></span><span>팀</span><span></span><span></span><span class="n">승</span><span class="n">패</span></div>
+        {% for t in d.standings[key] %}<div class="trow"><span class="rk">{{ t.rank }}</span>{% if t.logo %}<img class="logo" src="{{ t.logo }}" alt="">{% else %}<span></span>{% endif %}<span class="tm">{{ t.abbr }}</span><span class="ko one" data-fit="1" data-slot="standings.team_ko">{{ t.ko }}</span><span>{% if t.today %}{{ tri(t.today) }}{% endif %}</span><span class="n">{{ t.w }}</span><span class="n">{{ t.l }}</span></div>{% endfor %}
       </div>
       {% endfor %}
     </div>

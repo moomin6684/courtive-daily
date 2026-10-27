@@ -169,17 +169,15 @@ def build_cards(d):
     if n:
         if n <= 4:
             boards.append({"kind": "scoreboard", "dense": False, "games": games, "summary": f"{n}경기 · 최종 스코어"})
-        elif n <= 8:
-            boards.append({"kind": "scoreboard", "dense": True, "games": games, "summary": f"{n}경기 · 최종 스코어"})
         else:
-            first = math.ceil(n / 2)
-            parts = [games[:first], games[first:]]
-            start = 1
-            for i, part in enumerate(parts):
-                end = start + len(part) - 1
-                boards.append({"kind": "scoreboard", "dense": True, "games": part,
-                              "summary": f"{n}경기 중 {start}–{end} · {i + 1} / 2"})
-                start = end + 1
+            # 10/27 결정: 경기가 많아도 스코어보드는 반드시 한 장.
+            #   5–10경기 → 한 줄 목록(줄 높이를 경기 수에 맞춰 줄임), 11–15경기 → 두 줄 격자(왼쪽 위→아래, 오른쪽 위→아래)
+            area, gap = 868, 10                     # 목록 영역 top 372 ~ 1240
+            grid = n >= 11
+            rows = math.ceil(n / 2) if grid else n
+            row_h = min(120 if grid else 96, (area - (rows - 1) * gap) // rows)
+            boards.append({"kind": "scoreboard", "dense": True, "grid": grid, "rows": rows, "row_h": row_h,
+                           "games": games, "summary": f"{n}경기 · 최종 스코어"})
         for f in d.get("featured", []):
             g = next((x for x in games if x["away"]["abbr"] == f["away"] and x["home"]["abbr"] == f["home"]), None)
             if g is None:
@@ -261,8 +259,16 @@ def main():
     d.setdefault("data_source", "경기 데이터 · Sportradar")
     d["coverage_parts"] = [{"t": "미국 경기일 "}, {"t": f"{d['us_game_date']} (ET)", "n": True}]
     st = d["standings"]
+    # 10/27 결정: 순위표에서 그날 경기를 한 팀 옆에 ▲(승·초록) ▼(패·빨강)
+    today = {}
+    for g in d.get("games", []):
+        a, h = g["away"], g["home"]
+        aw = a["score"] > h["score"]
+        today[a["abbr"]], today[h["abbr"]] = ("W", "L") if aw else ("L", "W")
+    st["has_today"] = bool(today)
     for conf in ("east", "west"):
         for t in st[conf]:
+            t["today"] = today.get(t["abbr"])
             t.setdefault("ko", TEAM_KO.get(t["abbr"], t["abbr"]))
             t["c"] = accents(t["abbr"])
             t["logo"] = logo(t["abbr"])

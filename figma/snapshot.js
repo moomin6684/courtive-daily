@@ -4,7 +4,7 @@
 const MODE = '__MODE__';
 const page = await figma.getNodeByIdAsync("55:54"); await figma.setCurrentPageAsync(page);
 const SEC = await figma.getNodeByIdAsync("106:3621");
-const ROOTS = ["120:7436","121:7795","121:7844","119:7377","119:7411","134:9597",                         // v3 masters + parts (H section)
+const ROOTS = ["120:7436","121:7795","121:7844","119:7377","119:7411","134:9597","152:9716","152:10303",                         // v3 masters + parts (H section)
                "108:3881","109:5169","109:5548","108:4174","110:4744","110:4771","111:6238","110:4797",   // v2 card masters (04–06 are reused by v3)
                "107:3628","107:3645","107:3864","107:3894","107:3928","107:3952"];                          // parts
 const VN = {};
