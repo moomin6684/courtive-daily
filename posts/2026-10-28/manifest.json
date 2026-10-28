@@ -40,7 +40,11 @@
     }
   ],
   "caption_file": "caption.txt",
-  "status": "pending",
+  "status": "published",
   "created_at": "2026-10-28T15:24:55+09:00",
-  "source_data": "data/2026-10-28.json"
+  "source_data": "data/2026-10-28.json",
+  "published_at": "2026-10-28T16:03:38+09:00",
+  "account": "courtive.media",
+  "media_id": "18115234895027741",
+  "permalink": "https://www.instagram.com/p/DfB2gcMlIq6/"
 }
