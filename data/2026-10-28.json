@@ -1,0 +1,342 @@
+{
+  "date_kst": "2026.10.28",
+  "us_game_date": "2026.10.27",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "경기 데이터 · StatMuse",
+  "cover": {
+    "mode": "game_day",
+    "headline": "에드워즈 무릎 수술\n최대 *2개월* 이탈",
+    "focus": {
+      "type": "team",
+      "team": "MIN"
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "BKN",
+        "score": 124
+      },
+      "home": {
+        "abbr": "BOS",
+        "score": 125
+      },
+      "ot": 1
+    },
+    {
+      "away": {
+        "abbr": "DET",
+        "score": 97
+      },
+      "home": {
+        "abbr": "NYK",
+        "score": 111
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "SAC",
+        "score": 103
+      },
+      "home": {
+        "abbr": "SAS",
+        "score": 130
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 136
+      },
+      "home": {
+        "abbr": "LAL",
+        "score": 129
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "BKN",
+      "home": "BOS",
+      "label": "연장 · 1점 차",
+      "headline": "테이텀 연장 버저비터 40점",
+      "away_leader": {
+        "name": "마이클 포터 주니어",
+        "pts": 27,
+        "reb": 12,
+        "ast": 2
+      },
+      "home_leader": {
+        "name": "제이슨 테이텀",
+        "pts": 40,
+        "reb": 5,
+        "ast": 8
+      }
+    },
+    {
+      "away": "POR",
+      "home": "LAL",
+      "label": "무패 맞대결 · 7점 차",
+      "headline": "돈치치 41점에도 첫 패배",
+      "away_leader": {
+        "name": "데니 아브디야",
+        "pts": 23,
+        "reb": 4,
+        "ast": 9
+      },
+      "home_leader": {
+        "name": "루카 돈치치",
+        "pts": 41,
+        "reb": 5,
+        "ast": 9
+      }
+    },
+    {
+      "away": "DET",
+      "home": "NYK",
+      "label": "디펜딩 챔피언 첫 승",
+      "headline": "타운스 20리바운드 닉스 첫 승",
+      "away_leader": {
+        "name": "폴 리드",
+        "pts": 22,
+        "reb": 9,
+        "ast": 3
+      },
+      "home_leader": {
+        "name": "칼앤서니 타운스",
+        "pts": 27,
+        "reb": 20,
+        "ast": 3
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "보도",
+      "verification": "AP 보도 · 팀 발표 전",
+      "teams": [
+        "MIN"
+      ],
+      "title": "에드워즈 무릎 수술\n최대 2개월 이탈",
+      "body": "오른쪽 무릎 관절경 수술 예정\n시즌 평균 33.3점 에이스의 공백\n미네소타는 3승 1패로 출발",
+      "source": "NBA.com · AP",
+      "key": {
+        "value": "2",
+        "unit": "개월",
+        "label": "최대 결장 전망 · 보도"
+      }
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "최소 2주 결장",
+      "teams": [
+        "DET"
+      ],
+      "title": "피스톤스 듀런\n햄스트링 부상",
+      "body": "햄스트링 염좌로 최소 2주 결장\n닉스전 대신 선발 폴 리드 22점\n피스톤스 개막 4연승 무산",
+      "source": "NBA.com · FLM",
+      "key": {
+        "value": "2",
+        "unit": "주",
+        "label": "최소 결장 기간"
+      }
+    }
+  ],
+  "standings": {
+    "note": "승률순 · 동률 순서 잠정",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "DET",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "PHI",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 3,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 4,
+        "abbr": "BOS",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 5,
+        "abbr": "TOR",
+        "w": 2,
+        "l": 1
+      },
+      {
+        "rank": 6,
+        "abbr": "CLE",
+        "w": 2,
+        "l": 1
+      },
+      {
+        "rank": 7,
+        "abbr": "WAS",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 8,
+        "abbr": "ATL",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 9,
+        "abbr": "IND",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 10,
+        "abbr": "ORL",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 11,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 12,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 13,
+        "abbr": "NYK",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 14,
+        "abbr": "BKN",
+        "w": 0,
+        "l": 4
+      },
+      {
+        "rank": 15,
+        "abbr": "MIA",
+        "w": 0,
+        "l": 4
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "HOU",
+        "w": 4,
+        "l": 0
+      },
+      {
+        "rank": 2,
+        "abbr": "MEM",
+        "w": 4,
+        "l": 0
+      },
+      {
+        "rank": 3,
+        "abbr": "OKC",
+        "w": 4,
+        "l": 0
+      },
+      {
+        "rank": 4,
+        "abbr": "POR",
+        "w": 3,
+        "l": 0
+      },
+      {
+        "rank": 5,
+        "abbr": "LAL",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 6,
+        "abbr": "MIN",
+        "w": 3,
+        "l": 1
+      },
+      {
+        "rank": 7,
+        "abbr": "DAL",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 8,
+        "abbr": "SAS",
+        "w": 2,
+        "l": 2
+      },
+      {
+        "rank": 9,
+        "abbr": "DEN",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 10,
+        "abbr": "PHX",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 11,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 2
+      },
+      {
+        "rank": 12,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 13,
+        "abbr": "GSW",
+        "w": 1,
+        "l": 3
+      },
+      {
+        "rank": 14,
+        "abbr": "NOP",
+        "w": 0,
+        "l": 3
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 0,
+        "l": 4
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · StatMuse, AP, Field Level Media\n뉴스 · NBA.com, AP, Field Level Media"
+  }
+}
