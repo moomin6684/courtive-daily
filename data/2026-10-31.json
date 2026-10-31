@@ -6,7 +6,7 @@
   "data_source": "NBA 공식 박스스코어 · AP · Bleacher Report",
   "cover": {
     "mode": "game_day",
-    "headline": "25점 차 대역전\n커리 *통산 18위*",
+    "headline": "25점 차 대역전\n커리 *통산 득점 18위*",
     "focus": {"type": "score", "game": 0}
   },
   "games": [
