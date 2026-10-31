@@ -1,0 +1,110 @@
+{
+  "date_kst": "2026.10.31",
+  "us_game_date": "2026.10.30",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "NBA 공식 박스스코어 · AP · Bleacher Report",
+  "cover": {
+    "mode": "game_day",
+    "headline": "25점 차 대역전\n커리 *통산 18위*",
+    "focus": {"type": "score", "game": 0}
+  },
+  "games": [
+    {"away": {"abbr": "LAL", "score": 95}, "home": {"abbr": "GSW", "score": 112}, "ot": 0},
+    {"away": {"abbr": "NYK", "score": 93}, "home": {"abbr": "PHI", "score": 98}, "ot": 0},
+    {"away": {"abbr": "HOU", "score": 111}, "home": {"abbr": "DAL", "score": 116}, "ot": 0},
+    {"away": {"abbr": "ORL", "score": 121}, "home": {"abbr": "TOR", "score": 114}, "ot": 0},
+    {"away": {"abbr": "DEN", "score": 127}, "home": {"abbr": "PHX", "score": 120}, "ot": 0},
+    {"away": {"abbr": "IND", "score": 125}, "home": {"abbr": "MIA", "score": 145}, "ot": 0},
+    {"away": {"abbr": "LAC", "score": 101}, "home": {"abbr": "MIN", "score": 127}, "ot": 0},
+    {"away": {"abbr": "CHI", "score": 111}, "home": {"abbr": "BOS", "score": 125}, "ot": 0},
+    {"away": {"abbr": "DET", "score": 110}, "home": {"abbr": "BKN", "score": 94}, "ot": 0},
+    {"away": {"abbr": "CHA", "score": 79}, "home": {"abbr": "WAS", "score": 95}, "ot": 0}
+  ],
+  "featured": [
+    {
+      "away": "LAL", "home": "GSW",
+      "max_deficit_overcome": 25,
+      "label": "25점 차 역전 · 3점 8개",
+      "headline": "커리 31득점 워리어스 대역전",
+      "away_leader": {"name": "루카 돈치치", "pts": 37, "reb": 7, "ast": 5},
+      "home_leader": {"name": "스테픈 커리", "pts": 31, "reb": 4, "ast": 6}
+    },
+    {
+      "away": "NYK", "home": "PHI",
+      "label": "5점 차 · 막판 9–3",
+      "headline": "맥시 27득점 필라델피아 신승",
+      "away_leader": {"name": "제일런 브런슨", "pts": 24, "reb": 5, "ast": 6},
+      "home_leader": {"name": "타이리스 맥시", "pts": 27, "reb": 4, "ast": 4}
+    },
+    {
+      "away": "HOU", "home": "DAL",
+      "label": "11점 차 역전 · 5점 차",
+      "headline": "어빙 35득점 휴스턴 첫 패배",
+      "away_leader": {"name": "케빈 듀란트", "pts": 28, "reb": 5, "ast": 1},
+      "home_leader": {"name": "카이리 어빙", "pts": 35, "reb": 4, "ast": 9}
+    }
+  ],
+  "news": [
+    {
+      "status": "부상 업데이트",
+      "verification": "구단 발표 · 4주 뒤 재검진",
+      "teams": ["POR"],
+      "title": "자 모란트\n햄스트링 2도 염좌",
+      "body": "친정 멤피스전에서 왼쪽 햄스트링 부상\n영상 검사로 2도 염좌 확인\n4주 뒤 다시 상태를 본다",
+      "source": "NBA.com",
+      "key": {"value": "4", "unit": "주", "label": "재검진까지 · 구단 발표"}
+    },
+    {
+      "status": "보도",
+      "verification": "ESPN 보도 · 복귀 시점 미정",
+      "teams": ["IND"],
+      "title": "할리버튼\n햄스트링 부상",
+      "body": "아킬레스건 부상으로 한 시즌을 쉬고\n돌아왔지만 왼쪽 햄스트링을 다쳐\n다시 코트를 떠난다",
+      "source": "Field Level Media · ESPN"
+    }
+  ],
+  "standings": {
+    "note": "승률순 · 동률 순서 잠정",
+    "east": [
+      {"rank": 1, "abbr": "DET", "w": 5, "l": 1},
+      {"rank": 2, "abbr": "PHI", "w": 5, "l": 1},
+      {"rank": 3, "abbr": "BOS", "w": 4, "l": 1},
+      {"rank": 4, "abbr": "TOR", "w": 3, "l": 2},
+      {"rank": 5, "abbr": "CLE", "w": 3, "l": 2},
+      {"rank": 6, "abbr": "WAS", "w": 3, "l": 3},
+      {"rank": 7, "abbr": "CHA", "w": 3, "l": 3},
+      {"rank": 8, "abbr": "ATL", "w": 3, "l": 3},
+      {"rank": 9, "abbr": "ORL", "w": 2, "l": 3},
+      {"rank": 10, "abbr": "MIA", "w": 2, "l": 4},
+      {"rank": 11, "abbr": "IND", "w": 2, "l": 4},
+      {"rank": 12, "abbr": "NYK", "w": 2, "l": 4},
+      {"rank": 13, "abbr": "MIL", "w": 1, "l": 4},
+      {"rank": 14, "abbr": "CHI", "w": 1, "l": 5},
+      {"rank": 15, "abbr": "BKN", "w": 0, "l": 5}
+    ],
+    "west": [
+      {"rank": 1, "abbr": "MEM", "w": 5, "l": 0},
+      {"rank": 2, "abbr": "HOU", "w": 5, "l": 1},
+      {"rank": 3, "abbr": "OKC", "w": 4, "l": 1},
+      {"rank": 4, "abbr": "POR", "w": 3, "l": 1},
+      {"rank": 5, "abbr": "LAL", "w": 4, "l": 2},
+      {"rank": 6, "abbr": "DAL", "w": 4, "l": 2},
+      {"rank": 7, "abbr": "MIN", "w": 4, "l": 2},
+      {"rank": 8, "abbr": "DEN", "w": 3, "l": 2},
+      {"rank": 9, "abbr": "SAS", "w": 3, "l": 2},
+      {"rank": 10, "abbr": "GSW", "w": 3, "l": 3},
+      {"rank": 11, "abbr": "PHX", "w": 1, "l": 3},
+      {"rank": 12, "abbr": "LAC", "w": 1, "l": 4},
+      {"rank": 13, "abbr": "NOP", "w": 1, "l": 4},
+      {"rank": 14, "abbr": "UTA", "w": 1, "l": 4},
+      {"rank": 15, "abbr": "SAC", "w": 0, "l": 5}
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · NBA 공식 박스스코어 · AP · Bleacher Report\n뉴스 · NBA.com · Field Level Media"
+  }
+}
