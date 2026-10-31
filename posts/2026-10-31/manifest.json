@@ -40,7 +40,11 @@
     }
   ],
   "caption_file": "caption.txt",
-  "status": "pending",
+  "status": "published",
   "created_at": "2026-10-31T15:12:28+09:00",
-  "source_data": "data/2026-10-31.json"
+  "source_data": "data/2026-10-31.json",
+  "published_at": "2026-10-31T16:03:05+09:00",
+  "account": "courtive.media",
+  "media_id": "18135355222739065",
+  "permalink": "https://www.instagram.com/p/DfJk03fEarl/"
 }
