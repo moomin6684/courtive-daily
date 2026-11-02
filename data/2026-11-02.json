@@ -1,0 +1,102 @@
+{
+  "date_kst": "2026.11.02",
+  "us_game_date": "2026.11.01",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "AP · CBS · NBC Sports",
+  "cover": {
+    "mode": "game_day",
+    "headline": "커리 없이도\n렌드보그 *37득점*",
+    "focus": {"type": "team", "team": "GSW"}
+  },
+  "games": [
+    {"away": {"abbr": "BOS", "score": 108}, "home": {"abbr": "ORL", "score": 97}, "ot": 0},
+    {"away": {"abbr": "BKN", "score": 98}, "home": {"abbr": "IND", "score": 90}, "ot": 0},
+    {"away": {"abbr": "LAC", "score": 112}, "home": {"abbr": "GSW", "score": 124}, "ot": 0},
+    {"away": {"abbr": "TOR", "score": 125}, "home": {"abbr": "LAL", "score": 131}, "ot": 0}
+  ],
+  "featured": [
+    {
+      "away": "LAC", "home": "GSW",
+      "label": "신인 커리어 하이",
+      "headline": "렌드보그 37득점 4연승 견인",
+      "away_leader": {"name": "하치무라 루이", "pts": 24, "reb": 7, "ast": 0},
+      "home_leader": {"name": "약셀 렌드보그", "pts": 37, "reb": 4, "ast": 6}
+    },
+    {
+      "away": "TOR", "home": "LAL",
+      "label": "최대 26점 차 리드",
+      "headline": "돈치치 45득점 레이커스 진땀승",
+      "away_leader": {"name": "스카티 반스", "pts": 29, "reb": 6, "ast": 5},
+      "home_leader": {"name": "루카 돈치치", "pts": 45, "reb": 15, "ast": 6}
+    },
+    {
+      "away": "BOS", "home": "ORL",
+      "label": "자유투 15개 성공",
+      "headline": "테이텀 32득점 셀틱스 5연승",
+      "away_leader": {"name": "제이슨 테이텀", "pts": 32, "reb": 4, "ast": 7},
+      "home_leader": {"name": "트리스탄 다 시우바", "pts": 23, "reb": 10, "ast": 2}
+    }
+  ],
+  "news": [
+    {
+      "status": "부상 업데이트",
+      "verification": "구단 부상 보고 · AP 리캡",
+      "teams": ["IND"],
+      "title": "페이서스\n부상자 줄줄이",
+      "body": "할리버튼 햄스트링으로 결장 계속\n주바치 발목 · 토핀 허리로 결장\n페이서스는 4연패",
+      "source": "Pacers 부상 보고 · AP"
+    },
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · 루키 계약 옵션",
+      "teams": ["CHA", "WAS"],
+      "title": "호네츠 크뉴플 맥닐리\n3년 차 옵션 행사",
+      "body": "살라운 4년 차 옵션은\n미국 시간 월요일 마감\n위저즈는 사르 등 5명 옵션 행사",
+      "source": "구단 발표 · Hoops Rumors"
+    }
+  ],
+  "standings": {
+    "note": "승률순 · 동률 순서 잠정",
+    "east": [
+      {"rank": 1, "abbr": "PHI", "w": 6, "l": 1},
+      {"rank": 2, "abbr": "DET", "w": 5, "l": 1},
+      {"rank": 3, "abbr": "BOS", "w": 5, "l": 1},
+      {"rank": 4, "abbr": "CLE", "w": 4, "l": 2},
+      {"rank": 5, "abbr": "TOR", "w": 3, "l": 3},
+      {"rank": 6, "abbr": "WAS", "w": 3, "l": 3},
+      {"rank": 7, "abbr": "ATL", "w": 3, "l": 4},
+      {"rank": 8, "abbr": "CHA", "w": 3, "l": 4},
+      {"rank": 9, "abbr": "ORL", "w": 2, "l": 4},
+      {"rank": 10, "abbr": "MIA", "w": 2, "l": 4},
+      {"rank": 11, "abbr": "NYK", "w": 2, "l": 4},
+      {"rank": 12, "abbr": "IND", "w": 2, "l": 5},
+      {"rank": 13, "abbr": "BKN", "w": 1, "l": 5},
+      {"rank": 14, "abbr": "MIL", "w": 1, "l": 5},
+      {"rank": 15, "abbr": "CHI", "w": 1, "l": 5}
+    ],
+    "west": [
+      {"rank": 1, "abbr": "MEM", "w": 6, "l": 0},
+      {"rank": 2, "abbr": "HOU", "w": 6, "l": 1},
+      {"rank": 3, "abbr": "POR", "w": 4, "l": 1},
+      {"rank": 4, "abbr": "LAL", "w": 5, "l": 2},
+      {"rank": 5, "abbr": "SAS", "w": 4, "l": 2},
+      {"rank": 6, "abbr": "DAL", "w": 4, "l": 2},
+      {"rank": 7, "abbr": "OKC", "w": 4, "l": 2},
+      {"rank": 8, "abbr": "DEN", "w": 3, "l": 2},
+      {"rank": 9, "abbr": "MIN", "w": 4, "l": 3},
+      {"rank": 10, "abbr": "GSW", "w": 4, "l": 3},
+      {"rank": 11, "abbr": "NOP", "w": 2, "l": 4},
+      {"rank": 12, "abbr": "PHX", "w": 1, "l": 3},
+      {"rank": 13, "abbr": "UTA", "w": 1, "l": 5},
+      {"rank": 14, "abbr": "LAC", "w": 1, "l": 5},
+      {"rank": 15, "abbr": "SAC", "w": 0, "l": 6}
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · AP · CBS · NBC Sports 박스스코어\n뉴스 · 구단 발표 · Hoops Rumors · AP"
+  }
+}
