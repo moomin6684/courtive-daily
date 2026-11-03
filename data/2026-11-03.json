@@ -1,0 +1,463 @@
+{
+  "date_kst": "2026.11.03",
+  "us_game_date": "2026.11.02",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "AP · Yahoo · SI",
+  "cover": {
+    "mode": "game_day",
+    "headline": "멤피스 무패 행진\n*1점 차*로 멈췄다",
+    "focus": {
+      "type": "score",
+      "game": 0
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "NOP",
+        "score": 135
+      },
+      "home": {
+        "abbr": "MEM",
+        "score": 134
+      },
+      "ot": 1
+    },
+    {
+      "away": {
+        "abbr": "OKC",
+        "score": 117
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 112
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIA",
+        "score": 117
+      },
+      "home": {
+        "abbr": "LAL",
+        "score": 138
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "BOS",
+        "score": 93
+      },
+      "home": {
+        "abbr": "HOU",
+        "score": 109
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 118
+      },
+      "home": {
+        "abbr": "DEN",
+        "score": 110
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "BKN",
+        "score": 90
+      },
+      "home": {
+        "abbr": "NYK",
+        "score": 103
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CHI",
+        "score": 107
+      },
+      "home": {
+        "abbr": "PHI",
+        "score": 126
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "DET",
+        "score": 124
+      },
+      "home": {
+        "abbr": "CHA",
+        "score": 91
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "SAC",
+        "score": 115
+      },
+      "home": {
+        "abbr": "DAL",
+        "score": 100
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "UTA",
+        "score": 97
+      },
+      "home": {
+        "abbr": "SAS",
+        "score": 119
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "WAS",
+        "score": 103
+      },
+      "home": {
+        "abbr": "ORL",
+        "score": 94
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIL",
+        "score": 100
+      },
+      "home": {
+        "abbr": "MIN",
+        "score": 112
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "ATL",
+        "score": 108
+      },
+      "home": {
+        "abbr": "IND",
+        "score": 104
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHX",
+        "score": 113
+      },
+      "home": {
+        "abbr": "GSW",
+        "score": 116
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "TOR",
+        "score": 125
+      },
+      "home": {
+        "abbr": "LAC",
+        "score": 118
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "NOP",
+      "home": "MEM",
+      "label": "멤피스 개막 6연승 마감",
+      "headline": "펠리컨스 연장 끝 1점 차 승리",
+      "away_leader": {
+        "name": "자이언 윌리엄슨",
+        "pts": 25,
+        "reb": 11,
+        "ast": 4
+      },
+      "home_leader": {
+        "name": "타이 제롬",
+        "pts": 40,
+        "reb": 5,
+        "ast": 5
+      }
+    },
+    {
+      "away": "OKC",
+      "home": "CLE",
+      "label": "종료 33초 전 결승 3점",
+      "headline": "SGA 시즌 최다 43득점",
+      "away_leader": {
+        "name": "셰이 길저스알렉산더",
+        "pts": 43,
+        "reb": 3,
+        "ast": 8
+      },
+      "home_leader": {
+        "name": "도노반 미첼",
+        "pts": 17,
+        "reb": 5,
+        "ast": 11
+      }
+    },
+    {
+      "away": "MIA",
+      "home": "LAL",
+      "label": "5경기 연속 37득점 이상",
+      "headline": "돈치치 42득점 레이커스 대승",
+      "away_leader": {
+        "name": "야니스 아데토쿤보",
+        "pts": 30,
+        "reb": 12,
+        "ast": 7
+      },
+      "home_leader": {
+        "name": "루카 돈치치",
+        "pts": 42,
+        "reb": 7,
+        "ast": 13
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · 2027년 2월 7일",
+      "teams": [
+        "OKC"
+      ],
+      "title": "웨스트브룩 0번\n영구결번 확정",
+      "body": "2027년 2월 7일 닉스와의 홈경기\n2017년 MVP이자 OKC의 상징",
+      "source": "구단 발표 · Hoops Rumors",
+      "key": {
+        "value": "0",
+        "unit": "번",
+        "label": "영구결번 등번호 · 공식"
+      }
+    },
+    {
+      "status": "보도",
+      "verification": "AP · TSN 보도",
+      "teams": [
+        "IND"
+      ],
+      "title": "페이서스\n6명만 뛰고\n4점 차 패배",
+      "body": "부상 · 휴식 · 질병으로 11명 결장\n2004년 이후 가장 적은 출전 인원\n페이서스는 5연패",
+      "source": "AP · TSN",
+      "key": {
+        "value": "6",
+        "unit": "명",
+        "label": "출전 선수 · 보도"
+      }
+    }
+  ],
+  "standings": {
+    "note": "승률순 · 동률 순서 잠정",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 7,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "DET",
+        "w": 6,
+        "l": 1
+      },
+      {
+        "rank": 3,
+        "abbr": "BOS",
+        "w": 5,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 5,
+        "abbr": "CLE",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 6,
+        "abbr": "TOR",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 7,
+        "abbr": "ATL",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 8,
+        "abbr": "NYK",
+        "w": 3,
+        "l": 4
+      },
+      {
+        "rank": 9,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 5
+      },
+      {
+        "rank": 10,
+        "abbr": "MIA",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 11,
+        "abbr": "ORL",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 12,
+        "abbr": "IND",
+        "w": 2,
+        "l": 6
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 15,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 6
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "HOU",
+        "w": 7,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "MEM",
+        "w": 6,
+        "l": 1
+      },
+      {
+        "rank": 3,
+        "abbr": "POR",
+        "w": 5,
+        "l": 1
+      },
+      {
+        "rank": 4,
+        "abbr": "LAL",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 5,
+        "abbr": "SAS",
+        "w": 5,
+        "l": 2
+      },
+      {
+        "rank": 6,
+        "abbr": "OKC",
+        "w": 5,
+        "l": 2
+      },
+      {
+        "rank": 7,
+        "abbr": "MIN",
+        "w": 5,
+        "l": 3
+      },
+      {
+        "rank": 8,
+        "abbr": "GSW",
+        "w": 5,
+        "l": 3
+      },
+      {
+        "rank": 9,
+        "abbr": "DAL",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 10,
+        "abbr": "DEN",
+        "w": 3,
+        "l": 3
+      },
+      {
+        "rank": 11,
+        "abbr": "NOP",
+        "w": 3,
+        "l": 4
+      },
+      {
+        "rank": 12,
+        "abbr": "PHX",
+        "w": 1,
+        "l": 4
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 6
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · AP · Yahoo · SI · RotoWire · NBC Sports\n뉴스 · 구단 발표 · TSN · Hoops Rumors"
+  }
+}
