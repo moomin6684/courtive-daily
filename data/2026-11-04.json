@@ -1,0 +1,229 @@
+{
+  "date_kst": "2026.11.04",
+  "us_game_date": "2026.11.03",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "Basketball-Reference",
+  "cover": {
+    "mode": "no_games",
+    "headline": "미국 선거일\nNBA *하루 휴식*",
+    "focus": {
+      "type": "team",
+      "team": "SAS"
+    }
+  },
+  "games": [],
+  "featured": [],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "NBA 공식 발표 · 시즌 2주차",
+      "teams": [
+        "SAS",
+        "BOS"
+      ],
+      "title": "이주의 선수\n웸반야마 · 테이텀",
+      "body": "웸반야마 3전 전승 · 평균 36.0득점\n테이텀 4전 전승 · 평균 30.3득점\n네츠전 연장 결승골",
+      "source": "NBA.com",
+      "key": {
+        "value": "36.0",
+        "unit": "득점",
+        "label": "웸반야마 주간 평균"
+      }
+    }
+  ],
+  "standings": {
+    "note": "11/3 선거일 경기 없음",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 7,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "DET",
+        "w": 6,
+        "l": 1
+      },
+      {
+        "rank": 3,
+        "abbr": "BOS",
+        "w": 5,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 5,
+        "abbr": "CLE",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 6,
+        "abbr": "TOR",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 7,
+        "abbr": "ATL",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 8,
+        "abbr": "NYK",
+        "w": 3,
+        "l": 4
+      },
+      {
+        "rank": 9,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 5
+      },
+      {
+        "rank": 10,
+        "abbr": "MIA",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 11,
+        "abbr": "ORL",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 12,
+        "abbr": "IND",
+        "w": 2,
+        "l": 6
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 15,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 6
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "HOU",
+        "w": 7,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "MEM",
+        "w": 6,
+        "l": 1
+      },
+      {
+        "rank": 3,
+        "abbr": "POR",
+        "w": 5,
+        "l": 1
+      },
+      {
+        "rank": 4,
+        "abbr": "LAL",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 5,
+        "abbr": "SAS",
+        "w": 5,
+        "l": 2
+      },
+      {
+        "rank": 6,
+        "abbr": "OKC",
+        "w": 5,
+        "l": 2
+      },
+      {
+        "rank": 7,
+        "abbr": "MIN",
+        "w": 5,
+        "l": 3
+      },
+      {
+        "rank": 8,
+        "abbr": "GSW",
+        "w": 5,
+        "l": 3
+      },
+      {
+        "rank": 9,
+        "abbr": "DAL",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 10,
+        "abbr": "DEN",
+        "w": 3,
+        "l": 3
+      },
+      {
+        "rank": 11,
+        "abbr": "NOP",
+        "w": 3,
+        "l": 4
+      },
+      {
+        "rank": 12,
+        "abbr": "PHX",
+        "w": 1,
+        "l": 4
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 6
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "순위 · Basketball-Reference\n뉴스 · NBA.com · Hoops Rumors"
+  },
+  "caption": "NOW / DAILY BRIEF · 2026.11.04\n\n미국 11/3은 선거일이라 NBA 경기가 없었어요\n리그는 미국 11/4(한국 11/5 오전)부터 다시 시작해요\n\n▸ 이주의 선수 웸반야마 · 테이텀 (NBA 공식 발표 · 시즌 2주차)\n▸ 11/2 경기 기준 동·서부 순위\n\n#NBA #NBA데일리 #코티브 #COURTIVE #농구 #NBA결과"
+}
