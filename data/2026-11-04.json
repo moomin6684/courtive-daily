@@ -6,30 +6,15 @@
   "data_source": "Basketball-Reference",
   "cover": {
     "mode": "no_games",
-    "headline": "뒤몽 가문\n매버릭스 *69%* 확보",
+    "headline": "미국 선거일\nNBA *하루 휴식*",
     "focus": {
       "type": "team",
-      "team": "DAL"
+      "team": "SAS"
     }
   },
   "games": [],
   "featured": [],
   "news": [
-    {
-      "status": "보도",
-      "verification": "ESPN · 댈러스 모닝뉴스 보도",
-      "teams": [
-        "DAL"
-      ],
-      "title": "뒤몽 부부\n매버릭스\n지배 지분 확보",
-      "body": "아델슨 지분을 사들여 69% 보유\n마크 큐반은 27% 유지\n이사회 승인 여부는 아직 불분명",
-      "source": "ESPN · Yahoo · NBC DFW",
-      "key": {
-        "value": "69",
-        "unit": "%",
-        "label": "뒤몽 가문 지분 · 보도"
-      }
-    },
     {
       "status": "공식 발표",
       "verification": "NBA 공식 발표 · 시즌 2주차",
@@ -238,6 +223,7 @@
     "title": "NBA 소식은\n코티브에서",
     "follow_cta": "매일 전해주는 NBA 소식",
     "save_cta": "오늘의 브리핑은 저장해 두세요.",
-    "references": "순위 · Basketball-Reference\n뉴스 · ESPN · Yahoo · NBC DFW · NBA.com"
-  }
+    "references": "순위 · Basketball-Reference\n뉴스 · NBA.com · Hoops Rumors"
+  },
+  "caption": "NOW / DAILY BRIEF · 2026.11.04\n\n미국 11/3은 선거일이라 NBA 경기가 없었어요\n리그는 미국 11/4(한국 11/5 오전)부터 다시 시작해요\n\n▸ 이주의 선수 웸반야마 · 테이텀 (NBA 공식 발표 · 시즌 2주차)\n▸ 11/2 경기 기준 동·서부 순위\n\n#NBA #NBA데일리 #코티브 #COURTIVE #농구 #NBA결과"
 }
