@@ -1,0 +1,423 @@
+{
+  "date_kst": "2026.11.05",
+  "us_game_date": "2026.11.04",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "AP · B/R · Yahoo",
+  "cover": {
+    "mode": "game_day",
+    "headline": "웸반야마 52득점\n*NBA 최초* 기록",
+    "focus": {
+      "type": "score",
+      "game": 0
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "DAL",
+        "score": 111
+      },
+      "home": {
+        "abbr": "SAS",
+        "score": 112
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHI",
+        "score": 112
+      },
+      "home": {
+        "abbr": "DET",
+        "score": 106
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "UTA",
+        "score": 113
+      },
+      "home": {
+        "abbr": "NOP",
+        "score": 120
+      },
+      "ot": 1
+    },
+    {
+      "away": {
+        "abbr": "IND",
+        "score": 107
+      },
+      "home": {
+        "abbr": "MEM",
+        "score": 103
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CLE",
+        "score": 116
+      },
+      "home": {
+        "abbr": "OKC",
+        "score": 124
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIN",
+        "score": 117
+      },
+      "home": {
+        "abbr": "HOU",
+        "score": 107
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "LAL",
+        "score": 116
+      },
+      "home": {
+        "abbr": "SAC",
+        "score": 103
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CHI",
+        "score": 105
+      },
+      "home": {
+        "abbr": "NYK",
+        "score": 135
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIL",
+        "score": 102
+      },
+      "home": {
+        "abbr": "BOS",
+        "score": 109
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "ATL",
+        "score": 120
+      },
+      "home": {
+        "abbr": "WAS",
+        "score": 105
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CHA",
+        "score": 104
+      },
+      "home": {
+        "abbr": "BKN",
+        "score": 114
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "TOR",
+        "score": 109
+      },
+      "home": {
+        "abbr": "DEN",
+        "score": 128
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 132
+      },
+      "home": {
+        "abbr": "PHX",
+        "score": 119
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "DAL",
+      "home": "SAS",
+      "label": "NBA 최초 52·24·8",
+      "headline": "웸반야마 52득점 스퍼스 6연승",
+      "away_leader": {
+        "name": "카이리 어빙",
+        "pts": 29,
+        "reb": 7,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "빅터 웸반야마",
+        "pts": 52,
+        "reb": 24,
+        "ast": 2
+      }
+    },
+    {
+      "away": "PHI",
+      "home": "DET",
+      "label": "동부 1·2위 맞대결",
+      "headline": "브라운 30득점 필라델피아 설욕",
+      "away_leader": {
+        "name": "제일런 브라운",
+        "pts": 30,
+        "reb": 7,
+        "ast": 1
+      },
+      "home_leader": {
+        "name": "던컨 로빈슨",
+        "pts": 27,
+        "reb": 1,
+        "ast": 2
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "NBA 공식 · 사상 최초",
+      "teams": [
+        "PHI"
+      ],
+      "title": "르브론 제임스\n통산 필드골\n1만 6000개 돌파",
+      "body": "피스톤스전 2쿼터 레이업으로 달성\n3월 압둘자바의 통산 기록을 넘은 데 이어\n24번째 시즌에 또 하나의 최초",
+      "source": "NBA · Yahoo Sports",
+      "key": {
+        "value": "16000",
+        "unit": "개",
+        "label": "통산 필드골 · NBA 최초"
+      }
+    },
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · CBS Texas",
+      "teams": [
+        "DAL"
+      ],
+      "title": "듀몬트 부부\n매버릭스\n지배 지분 확보",
+      "body": "미리엄 아델슨의 지분을 사들여 69% 보유\n마크 큐반은 27% 유지\n새 아레나는 2031년 개장 목표",
+      "source": "CBS Texas · Hoops Rumors",
+      "key": {
+        "value": "69",
+        "unit": "%",
+        "label": "듀몬트 가문 지분 · 구단"
+      }
+    }
+  ],
+  "standings": {
+    "note": "MIA–LAC 경기 미반영",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 8,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "DET",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "BOS",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "ATL",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 5,
+        "abbr": "CLE",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 7,
+        "abbr": "TOR",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 8,
+        "abbr": "NYK",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 9,
+        "abbr": "IND",
+        "w": 3,
+        "l": 6
+      },
+      {
+        "rank": 10,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 6
+      },
+      {
+        "rank": 11,
+        "abbr": "MIA",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 12,
+        "abbr": "ORL",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 2,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 7
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 7
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "POR",
+        "w": 6,
+        "l": 1
+      },
+      {
+        "rank": 2,
+        "abbr": "HOU",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "LAL",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "MEM",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 5,
+        "abbr": "SAS",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 6,
+        "abbr": "OKC",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 7,
+        "abbr": "MIN",
+        "w": 6,
+        "l": 3
+      },
+      {
+        "rank": 8,
+        "abbr": "GSW",
+        "w": 5,
+        "l": 3
+      },
+      {
+        "rank": 9,
+        "abbr": "DEN",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 10,
+        "abbr": "DAL",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 11,
+        "abbr": "NOP",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 12,
+        "abbr": "PHX",
+        "w": 1,
+        "l": 5
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 7
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 7
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · AP · Bleacher Report · Yahoo · FOX 29 · Yardbarker\n뉴스 · NBA · CBS Texas · Hoops Rumors"
+  }
+}
