@@ -1,0 +1,86 @@
+{
+  "date_kst": "2026.11.06",
+  "us_game_date": "2026.11.05",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "NBA.com · AP · CBS",
+  "cover": {
+    "mode": "game_day",
+    "headline": "개막 3연패 뒤\n워리어스 *6연승*",
+    "focus": {"type": "score", "game": 0}
+  },
+  "games": [
+    {"away": {"abbr": "ORL", "score": 104}, "home": {"abbr": "PHX", "score": 117}, "ot": 0},
+    {"away": {"abbr": "MIA", "score": 100}, "home": {"abbr": "GSW", "score": 120}, "ot": 0}
+  ],
+  "featured": [
+    {
+      "away": "MIA", "home": "GSW",
+      "label": "개막 3연패 뒤 6연승",
+      "headline": "커리 29득점 워리어스 6연승",
+      "away_leader": {"name": "데이비언 미첼", "pts": 22, "reb": 2, "ast": 8},
+      "home_leader": {"name": "스테픈 커리", "pts": 29, "reb": 1, "ast": 4}
+    },
+    {
+      "away": "ORL", "home": "PHX",
+      "label": "한때 30점 차 리드",
+      "headline": "부커 30득점 피닉스 4연패 탈출",
+      "away_leader": {"name": "프란츠 바그너", "pts": 15, "reb": 8, "ast": 15},
+      "home_leader": {"name": "데빈 부커", "pts": 30, "reb": 1, "ast": 8}
+    }
+  ],
+  "news": [
+    {
+      "status": "보도",
+      "verification": "ESPN · SF Chronicle 보도",
+      "teams": ["GSW"],
+      "title": "워리어스\n포르징기스\n연봉 지급 중단",
+      "body": "10월 13일 이후 팀 시설에 나오지 않아\n노사협약 조항을 근거로 지급 보류\n연봉 맞추기 트레이드 전망",
+      "source": "ESPN · SF Chronicle",
+      "key": {"value": "2000", "unit": "만 달러", "label": "올 시즌 연봉 · 보도"}
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {"rank": 1, "abbr": "PHI", "w": 8, "l": 1},
+      {"rank": 2, "abbr": "DET", "w": 6, "l": 2},
+      {"rank": 3, "abbr": "BOS", "w": 6, "l": 2},
+      {"rank": 4, "abbr": "ATL", "w": 5, "l": 4},
+      {"rank": 5, "abbr": "CLE", "w": 4, "l": 4},
+      {"rank": 6, "abbr": "WAS", "w": 4, "l": 4},
+      {"rank": 7, "abbr": "TOR", "w": 4, "l": 4},
+      {"rank": 8, "abbr": "NYK", "w": 4, "l": 4},
+      {"rank": 9, "abbr": "MIA", "w": 3, "l": 6},
+      {"rank": 10, "abbr": "IND", "w": 3, "l": 6},
+      {"rank": 11, "abbr": "CHA", "w": 3, "l": 6},
+      {"rank": 12, "abbr": "ORL", "w": 2, "l": 6},
+      {"rank": 13, "abbr": "BKN", "w": 2, "l": 6},
+      {"rank": 14, "abbr": "MIL", "w": 1, "l": 7},
+      {"rank": 15, "abbr": "CHI", "w": 1, "l": 7}
+    ],
+    "west": [
+      {"rank": 1, "abbr": "POR", "w": 6, "l": 1},
+      {"rank": 2, "abbr": "LAL", "w": 7, "l": 2},
+      {"rank": 3, "abbr": "HOU", "w": 7, "l": 2},
+      {"rank": 4, "abbr": "OKC", "w": 6, "l": 2},
+      {"rank": 5, "abbr": "MEM", "w": 6, "l": 2},
+      {"rank": 6, "abbr": "SAS", "w": 6, "l": 2},
+      {"rank": 7, "abbr": "GSW", "w": 6, "l": 3},
+      {"rank": 8, "abbr": "MIN", "w": 6, "l": 3},
+      {"rank": 9, "abbr": "DEN", "w": 4, "l": 3},
+      {"rank": 10, "abbr": "NOP", "w": 4, "l": 4},
+      {"rank": 11, "abbr": "DAL", "w": 4, "l": 4},
+      {"rank": 12, "abbr": "PHX", "w": 2, "l": 5},
+      {"rank": 13, "abbr": "LAC", "w": 1, "l": 7},
+      {"rank": 14, "abbr": "UTA", "w": 1, "l": 7},
+      {"rank": 15, "abbr": "SAC", "w": 1, "l": 7}
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · NBA.com · AP · CBS Sports · NBC Sports\n뉴스 · ESPN · SF Chronicle · Hoops Rumors"
+  }
+}

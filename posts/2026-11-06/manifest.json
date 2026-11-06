@@ -1,0 +1,38 @@
+{
+  "date": "2026-11-06",
+  "publish_at": "2026-11-06T16:00:00+09:00",
+  "images": [
+    {
+      "file": "01.jpg",
+      "card": "01-cover"
+    },
+    {
+      "file": "02.jpg",
+      "card": "02-game"
+    },
+    {
+      "file": "03.jpg",
+      "card": "03-game"
+    },
+    {
+      "file": "04.jpg",
+      "card": "04-news"
+    },
+    {
+      "file": "05.jpg",
+      "card": "05-scoreboard"
+    },
+    {
+      "file": "06.jpg",
+      "card": "06-standings"
+    },
+    {
+      "file": "07.jpg",
+      "card": "07-closing"
+    }
+  ],
+  "caption_file": "caption.txt",
+  "status": "pending",
+  "created_at": "2026-11-06T15:20:02+09:00",
+  "source_data": "data/2026-11-06.json"
+}
