@@ -1,0 +1,394 @@
+{
+  "date_kst": "2026.11.07",
+  "us_game_date": "2026.11.06",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "NBA.com · AP · CBS",
+  "cover": {
+    "mode": "game_day",
+    "headline": "르브론 8득점\n*396경기*\n행진 끝",
+    "focus": {
+      "type": "score",
+      "game": 0
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "BOS",
+        "score": 119
+      },
+      "home": {
+        "abbr": "CHA",
+        "score": 80
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "WAS",
+        "score": 132
+      },
+      "home": {
+        "abbr": "ATL",
+        "score": 139
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHI",
+        "score": 95
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 119
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIN",
+        "score": 115
+      },
+      "home": {
+        "abbr": "NOP",
+        "score": 109
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "OKC",
+        "score": 128
+      },
+      "home": {
+        "abbr": "MEM",
+        "score": 97
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "TOR",
+        "score": 121
+      },
+      "home": {
+        "abbr": "MIL",
+        "score": 107
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "UTA",
+        "score": 100
+      },
+      "home": {
+        "abbr": "DAL",
+        "score": 112
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 118
+      },
+      "home": {
+        "abbr": "LAL",
+        "score": 124
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "SAS",
+        "score": 124
+      },
+      "home": {
+        "abbr": "SAC",
+        "score": 109
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "PHI",
+      "home": "CLE",
+      "label": "필라델피아 5연승 끝",
+      "headline": "르브론 8득점에 묶은 클리블랜드 24점 차 완승",
+      "away_leader": {
+        "name": "제일런 브라운",
+        "pts": 20,
+        "reb": 5,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "도너번 미첼",
+        "pts": 23,
+        "reb": 7,
+        "ast": 8
+      }
+    },
+    {
+      "away": "WAS",
+      "home": "ATL",
+      "label": "트레이 영 첫 애틀랜타 원정",
+      "headline": "알렉산더-워커 28득점 애틀랜타 3연승",
+      "away_leader": {
+        "name": "트레이 영",
+        "pts": 23,
+        "reb": 2,
+        "ast": 10
+      },
+      "home_leader": {
+        "name": "니킬 알렉산더-워커",
+        "pts": 28,
+        "reb": 2,
+        "ast": 2
+      }
+    },
+    {
+      "away": "TOR",
+      "home": "MIL",
+      "label": "15점 차 역전",
+      "max_deficit_overcome": 15,
+      "headline": "마틴 27득점 토론토 역전승",
+      "away_leader": {
+        "name": "앨라이자 마틴",
+        "pts": 27,
+        "reb": 4,
+        "ast": 1
+      },
+      "home_leader": {
+        "name": "타일러 히로",
+        "pts": 23,
+        "reb": 5,
+        "ast": 10
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "보도",
+      "verification": "AP · Yahoo Sports 확인",
+      "teams": [
+        "PHI",
+        "CLE"
+      ],
+      "title": "르브론\n클리블랜드에서\n396경기 행진 끝",
+      "body": "클리블랜드에서 치른 정규시즌 경기마다\n두 자릿수 득점을 이어 왔지만\n이날 8득점 7리바운드 3어시스트",
+      "source": "AP · Yahoo Sports",
+      "key": {
+        "value": "396",
+        "unit": "경기",
+        "label": "연속 두 자릿수 득점 끝"
+      }
+    },
+    {
+      "status": "보도",
+      "verification": "ESPN 보도",
+      "teams": [
+        "SAC"
+      ],
+      "title": "사보니스\n새크라멘토를\n떠나고 싶다",
+      "body": "ESPN 팀 맥마흔 보도\n킹스도 트레이드에 열려 있다\n큰 연봉이 걸림돌이라는 평가",
+      "source": "ESPN · Hoops Rumors"
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 8,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "BOS",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "DET",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "ATL",
+        "w": 6,
+        "l": 4
+      },
+      {
+        "rank": 5,
+        "abbr": "CLE",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "TOR",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 7,
+        "abbr": "NYK",
+        "w": 4,
+        "l": 4
+      },
+      {
+        "rank": 8,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 5
+      },
+      {
+        "rank": 9,
+        "abbr": "IND",
+        "w": 3,
+        "l": 6
+      },
+      {
+        "rank": 10,
+        "abbr": "MIA",
+        "w": 3,
+        "l": 6
+      },
+      {
+        "rank": 11,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 7
+      },
+      {
+        "rank": 12,
+        "abbr": "BKN",
+        "w": 2,
+        "l": 6
+      },
+      {
+        "rank": 13,
+        "abbr": "ORL",
+        "w": 2,
+        "l": 6
+      },
+      {
+        "rank": 14,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 7
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 8
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "LAL",
+        "w": 8,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "HOU",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "OKC",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "SAS",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 5,
+        "abbr": "POR",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 6,
+        "abbr": "MIN",
+        "w": 7,
+        "l": 3
+      },
+      {
+        "rank": 7,
+        "abbr": "GSW",
+        "w": 6,
+        "l": 3
+      },
+      {
+        "rank": 8,
+        "abbr": "MEM",
+        "w": 6,
+        "l": 3
+      },
+      {
+        "rank": 9,
+        "abbr": "DEN",
+        "w": 4,
+        "l": 3
+      },
+      {
+        "rank": 10,
+        "abbr": "DAL",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 11,
+        "abbr": "NOP",
+        "w": 4,
+        "l": 5
+      },
+      {
+        "rank": 12,
+        "abbr": "PHX",
+        "w": 2,
+        "l": 5
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 7
+      },
+      {
+        "rank": 14,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 8
+      },
+      {
+        "rank": 15,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 8
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · NBA.com · AP · CBS Sports · Field Level Media\n뉴스 · ESPN · Yahoo Sports · Hoops Rumors"
+  }
+}
