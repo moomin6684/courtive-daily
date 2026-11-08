@@ -1,0 +1,372 @@
+{
+  "date_kst": "2026.11.08",
+  "us_game_date": "2026.11.07",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "NBA.com · AP · CBS",
+  "cover": {
+    "mode": "game_day",
+    "headline": "커리 41득점\n워리어스 *7연승*",
+    "focus": {
+      "type": "score",
+      "game": 0
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "DEN",
+        "score": 114
+      },
+      "home": {
+        "abbr": "IND",
+        "score": 102
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "BKN",
+        "score": 121
+      },
+      "home": {
+        "abbr": "ATL",
+        "score": 124
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "NYK",
+        "score": 109
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 97
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "WAS",
+        "score": 75
+      },
+      "home": {
+        "abbr": "OKC",
+        "score": 114
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "ORL",
+        "score": 119
+      },
+      "home": {
+        "abbr": "GSW",
+        "score": 126
+      },
+      "ot": 1
+    },
+    {
+      "away": {
+        "abbr": "HOU",
+        "score": 99
+      },
+      "home": {
+        "abbr": "PHX",
+        "score": 102
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "SAS",
+        "score": 125
+      },
+      "home": {
+        "abbr": "POR",
+        "score": 103
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "ORL",
+      "home": "GSW",
+      "label": "0승 3패 뒤 7연승",
+      "headline": "커리 41득점 연장 승리",
+      "away_leader": {
+        "name": "프란츠 바그너",
+        "pts": 30,
+        "reb": 6,
+        "ast": 11
+      },
+      "home_leader": {
+        "name": "스테픈 커리",
+        "pts": 41,
+        "reb": 6,
+        "ast": 6
+      }
+    },
+    {
+      "away": "BKN",
+      "home": "ATL",
+      "label": "17점 차 역전",
+      "max_deficit_overcome": 17,
+      "headline": "제일런 존슨 30득점 4연승",
+      "away_leader": {
+        "name": "마이클 포터 Jr.",
+        "pts": 25,
+        "reb": 9,
+        "ast": 1
+      },
+      "home_leader": {
+        "name": "제일런 존슨",
+        "pts": 30,
+        "reb": 7,
+        "ast": 6
+      }
+    },
+    {
+      "away": "SAS",
+      "home": "POR",
+      "label": "샌안토니오 8연승",
+      "headline": "웸반야마 29득점 22점 차 완승",
+      "away_leader": {
+        "name": "빅터 웸반야마",
+        "pts": 29,
+        "reb": 7,
+        "ast": 3
+      },
+      "home_leader": {
+        "name": "데니 아브디야",
+        "pts": 15,
+        "reb": 4,
+        "ast": 1
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "본인 SNS 성명 · 은퇴는 아님",
+      "teams": [
+        "GSW"
+      ],
+      "title": "포르징기스\n건강 문제로\n농구를 잠시 떠난다",
+      "body": "몸이 원하는 만큼 회복되지 않았다\n건강을 우선하겠다는 성명\n복귀 시점은 밝히지 않았다",
+      "source": "TSN · Eurohoops · Hoops Rumors"
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "허리 뻣뻣함 · 레이커스 부상 보고",
+      "teams": [
+        "LAL",
+        "DET"
+      ],
+      "title": "돈치치\n피스톤스전\n출전 불투명",
+      "body": "허리 뻣뻣함으로 출전 불투명\n한국 시간 9일 오전 디트로이트 원정\n최근 4경기 연속 40득점 이상",
+      "source": "Yahoo Sports · HoopsHype",
+      "key": {
+        "value": "4",
+        "unit": "경기",
+        "label": "연속 40득점 이상"
+      }
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 8,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "BOS",
+        "w": 7,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "DET",
+        "w": 6,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "ATL",
+        "w": 7,
+        "l": 4
+      },
+      {
+        "rank": 5,
+        "abbr": "NYK",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "TOR",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 7,
+        "abbr": "CLE",
+        "w": 5,
+        "l": 5
+      },
+      {
+        "rank": 8,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 6
+      },
+      {
+        "rank": 9,
+        "abbr": "MIA",
+        "w": 3,
+        "l": 6
+      },
+      {
+        "rank": 10,
+        "abbr": "IND",
+        "w": 3,
+        "l": 7
+      },
+      {
+        "rank": 11,
+        "abbr": "CHA",
+        "w": 3,
+        "l": 7
+      },
+      {
+        "rank": 12,
+        "abbr": "ORL",
+        "w": 2,
+        "l": 7
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 2,
+        "l": 7
+      },
+      {
+        "rank": 14,
+        "abbr": "CHI",
+        "w": 1,
+        "l": 7
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 8
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "LAL",
+        "w": 8,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "SAS",
+        "w": 8,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "OKC",
+        "w": 8,
+        "l": 2
+      },
+      {
+        "rank": 4,
+        "abbr": "GSW",
+        "w": 7,
+        "l": 3
+      },
+      {
+        "rank": 5,
+        "abbr": "MIN",
+        "w": 7,
+        "l": 3
+      },
+      {
+        "rank": 6,
+        "abbr": "HOU",
+        "w": 7,
+        "l": 3
+      },
+      {
+        "rank": 7,
+        "abbr": "MEM",
+        "w": 6,
+        "l": 3
+      },
+      {
+        "rank": 8,
+        "abbr": "POR",
+        "w": 6,
+        "l": 3
+      },
+      {
+        "rank": 9,
+        "abbr": "DEN",
+        "w": 5,
+        "l": 3
+      },
+      {
+        "rank": 10,
+        "abbr": "DAL",
+        "w": 5,
+        "l": 4
+      },
+      {
+        "rank": 11,
+        "abbr": "NOP",
+        "w": 4,
+        "l": 5
+      },
+      {
+        "rank": 12,
+        "abbr": "PHX",
+        "w": 3,
+        "l": 5
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 1,
+        "l": 7
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 8
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 8
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · NBA.com · AP · CBS Sports · Field Level Media\n뉴스 · TSN · Eurohoops · Yahoo Sports · Hoops Rumors"
+  }
+}
