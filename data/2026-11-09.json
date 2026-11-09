@@ -1,0 +1,107 @@
+{
+  "date_kst": "2026.11.09",
+  "us_game_date": "2026.11.08",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "AP · NBA.com · CBS",
+  "cover": {
+    "mode": "game_day",
+    "headline": "돈치치 없이도\n리브스 *43득점*",
+    "focus": {"type": "score", "game": 0}
+  },
+  "games": [
+    {"away": {"abbr": "PHI", "score": 127}, "home": {"abbr": "CHI", "score": 121}, "ot": 0},
+    {"away": {"abbr": "LAL", "score": 121}, "home": {"abbr": "DET", "score": 116}, "ot": 0},
+    {"away": {"abbr": "UTA", "score": 100}, "home": {"abbr": "MIN", "score": 115}, "ot": 0},
+    {"away": {"abbr": "BKN", "score": 93}, "home": {"abbr": "DAL", "score": 130}, "ot": 0},
+    {"away": {"abbr": "BOS", "score": 117}, "home": {"abbr": "MIL", "score": 97}, "ot": 0},
+    {"away": {"abbr": "MIA", "score": 114}, "home": {"abbr": "SAC", "score": 108}, "ot": 0},
+    {"away": {"abbr": "NOP", "score": 123}, "home": {"abbr": "LAC", "score": 139}, "ot": 0}
+  ],
+  "featured": [
+    {
+      "away": "LAL", "home": "DET",
+      "label": "5점 차 · 서부 1위",
+      "headline": "리브스 시즌 최다 43득점",
+      "away_leader": {"name": "오스틴 리브스", "pts": 43, "reb": 5, "ast": 4},
+      "home_leader": {"name": "대니스 젠킨스", "pts": 31, "reb": 5, "ast": 4}
+    },
+    {
+      "away": "PHI", "home": "CHI",
+      "label": "리드 9번 교체",
+      "headline": "브라운 맥시 56득점 합작",
+      "away_leader": {"name": "제일런 브라운", "pts": 29, "reb": 7, "ast": 4},
+      "home_leader": {"name": "조시 기디", "pts": 19, "reb": 7, "ast": 15}
+    },
+    {
+      "away": "MIA", "home": "SAC",
+      "label": "6점 차 · 킹스 추격 뿌리쳐",
+      "headline": "야니스 29득점 14리바운드",
+      "away_leader": {"name": "야니스 아데토쿤보", "pts": 29, "reb": 14, "ast": 3},
+      "home_leader": {"name": "대리어스 애커프 Jr.", "pts": 32, "reb": 5, "ast": 10}
+    }
+  ],
+  "news": [
+    {
+      "status": "보도",
+      "verification": "ESPN 샴스 차라니아 보도",
+      "teams": ["OKC", "SAC"],
+      "title": "OKC\n클리포드 영입\n지명권 2장 내줘",
+      "body": "새크라멘토에 2라운드 지명권 2장\n주전 셋이 빠진 가드진 보강\n클리포드는 2025년 24순위 출신",
+      "source": "NBA.com · ESPN",
+      "key": {"value": "2", "unit": "장", "label": "2라운드 지명권"}
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "허리 통증 · 복귀 시점 미정",
+      "teams": ["LAL", "DET"],
+      "title": "돈치치\n허리 통증으로\n피스톤스전 결장",
+      "body": "레이커스는 허리 통증으로 쉬게 했다\n복귀 시점은 밝히지 않았다\n리브스가 43득점으로 공백을 메웠다",
+      "source": "Bleacher Report · Eurohoops",
+      "key": {"value": "40.1", "unit": "득점", "label": "시즌 평균"}
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {"rank": 1, "abbr": "PHI", "w": 9, "l": 2},
+      {"rank": 2, "abbr": "BOS", "w": 8, "l": 2},
+      {"rank": 3, "abbr": "DET", "w": 6, "l": 3},
+      {"rank": 4, "abbr": "ATL", "w": 7, "l": 4},
+      {"rank": 5, "abbr": "NYK", "w": 5, "l": 4},
+      {"rank": 6, "abbr": "TOR", "w": 5, "l": 4},
+      {"rank": 7, "abbr": "CLE", "w": 5, "l": 5},
+      {"rank": 8, "abbr": "WAS", "w": 4, "l": 6},
+      {"rank": 9, "abbr": "MIA", "w": 4, "l": 6},
+      {"rank": 10, "abbr": "CHA", "w": 3, "l": 7},
+      {"rank": 11, "abbr": "IND", "w": 3, "l": 7},
+      {"rank": 12, "abbr": "ORL", "w": 2, "l": 7},
+      {"rank": 13, "abbr": "BKN", "w": 2, "l": 8},
+      {"rank": 14, "abbr": "CHI", "w": 1, "l": 8},
+      {"rank": 15, "abbr": "MIL", "w": 1, "l": 9}
+    ],
+    "west": [
+      {"rank": 1, "abbr": "LAL", "w": 9, "l": 2},
+      {"rank": 2, "abbr": "OKC", "w": 8, "l": 2},
+      {"rank": 3, "abbr": "SAS", "w": 8, "l": 2},
+      {"rank": 4, "abbr": "MIN", "w": 8, "l": 3},
+      {"rank": 5, "abbr": "GSW", "w": 7, "l": 3},
+      {"rank": 6, "abbr": "HOU", "w": 7, "l": 3},
+      {"rank": 7, "abbr": "MEM", "w": 6, "l": 3},
+      {"rank": 8, "abbr": "POR", "w": 6, "l": 3},
+      {"rank": 9, "abbr": "DEN", "w": 5, "l": 3},
+      {"rank": 10, "abbr": "DAL", "w": 6, "l": 4},
+      {"rank": 11, "abbr": "NOP", "w": 4, "l": 6},
+      {"rank": 12, "abbr": "PHX", "w": 3, "l": 5},
+      {"rank": 13, "abbr": "LAC", "w": 2, "l": 7},
+      {"rank": 14, "abbr": "UTA", "w": 1, "l": 9},
+      {"rank": 15, "abbr": "SAC", "w": 1, "l": 9}
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · AP · NBA.com · CBS Sports · Field Level Media · Bleacher Report\n뉴스 · NBA.com · ESPN · Eurohoops"
+  }
+}
