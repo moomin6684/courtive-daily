@@ -1,0 +1,107 @@
+{
+  "date_kst": "2026.11.10",
+  "us_game_date": "2026.11.09",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "AP · NBA.com · CBS",
+  "cover": {
+    "mode": "game_day",
+    "headline": "51점 차 대승\n워리어스 *8연승*",
+    "focus": {"type": "team", "team": "GSW"}
+  },
+  "games": [
+    {"away": {"abbr": "CLE", "score": 112}, "home": {"abbr": "CHA", "score": 124}, "ot": 0},
+    {"away": {"abbr": "LAL", "score": 124}, "home": {"abbr": "ATL", "score": 114}, "ot": 0},
+    {"away": {"abbr": "WAS", "score": 111}, "home": {"abbr": "DET", "score": 122}, "ot": 0},
+    {"away": {"abbr": "MEM", "score": 118}, "home": {"abbr": "TOR", "score": 102}, "ot": 0},
+    {"away": {"abbr": "IND", "score": 122}, "home": {"abbr": "DAL", "score": 125}, "ot": 0},
+    {"away": {"abbr": "DEN", "score": 100}, "home": {"abbr": "HOU", "score": 110}, "ot": 0},
+    {"away": {"abbr": "SAS", "score": 122}, "home": {"abbr": "PHX", "score": 96}, "ot": 0},
+    {"away": {"abbr": "NOP", "score": 87}, "home": {"abbr": "GSW", "score": 138}, "ot": 0}
+  ],
+  "featured": [
+    {
+      "away": "NOP", "home": "GSW",
+      "label": "51점 차 · 8연승",
+      "headline": "커리 포지엠스키 50득점 합작",
+      "away_leader": {"name": "데릭 퀸", "pts": 16, "reb": 4, "ast": 0},
+      "home_leader": {"name": "스테픈 커리", "pts": 25, "reb": 5, "ast": 2}
+    },
+    {
+      "away": "SAS", "home": "PHX",
+      "label": "26점 차 · 9연승",
+      "headline": "웸반야마 25분 만에 40득점",
+      "away_leader": {"name": "빅토르 웸반야마", "pts": 40, "reb": 11, "ast": 3},
+      "home_leader": {"name": "데빈 부커", "pts": 32, "reb": 2, "ast": 4}
+    },
+    {
+      "away": "IND", "home": "DAL",
+      "label": "3점 차 · 4쿼터 역전",
+      "headline": "플래그 시즌 최다 43득점",
+      "away_leader": {"name": "파스칼 시아캄", "pts": 29, "reb": 9, "ast": 8},
+      "home_leader": {"name": "쿠퍼 플래그", "pts": 43, "reb": 10, "ast": 6}
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "서부 돈치치 · 동부 브런슨",
+      "teams": ["LAL", "NYK"],
+      "title": "돈치치 브런슨\n이주의 선수",
+      "body": "돈치치는 3경기 모두 40득점 이상\n브런슨은 평균 27.7득점\n두 팀 모두 이번 주 3전 전승",
+      "source": "NBA.com · Hoops Rumors",
+      "key": {"value": "45.0", "unit": "득점", "label": "돈치치 주간 평균"}
+    },
+    {
+      "status": "보도",
+      "verification": "마크 스타인 보도",
+      "teams": ["GSW"],
+      "title": "워리어스\n포르진기스\n트레이드 상대 찾는다",
+      "body": "포르진기스는 바이아웃도 받아들일 뜻\n윌 리처드는 엄지 인대 파열\n부목 출전과 수술 중 며칠 안에 결정",
+      "source": "Hoops Rumors · The Athletic"
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {"rank": 1, "abbr": "PHI", "w": 9, "l": 2},
+      {"rank": 2, "abbr": "BOS", "w": 8, "l": 2},
+      {"rank": 3, "abbr": "DET", "w": 7, "l": 3},
+      {"rank": 4, "abbr": "ATL", "w": 7, "l": 5},
+      {"rank": 5, "abbr": "NYK", "w": 5, "l": 4},
+      {"rank": 6, "abbr": "TOR", "w": 5, "l": 5},
+      {"rank": 7, "abbr": "CLE", "w": 5, "l": 6},
+      {"rank": 8, "abbr": "MIA", "w": 4, "l": 6},
+      {"rank": 9, "abbr": "WAS", "w": 4, "l": 7},
+      {"rank": 10, "abbr": "CHA", "w": 4, "l": 7},
+      {"rank": 11, "abbr": "IND", "w": 3, "l": 8},
+      {"rank": 12, "abbr": "ORL", "w": 2, "l": 7},
+      {"rank": 13, "abbr": "BKN", "w": 2, "l": 8},
+      {"rank": 14, "abbr": "CHI", "w": 1, "l": 8},
+      {"rank": 15, "abbr": "MIL", "w": 1, "l": 9}
+    ],
+    "west": [
+      {"rank": 1, "abbr": "LAL", "w": 10, "l": 2},
+      {"rank": 2, "abbr": "SAS", "w": 9, "l": 2},
+      {"rank": 3, "abbr": "OKC", "w": 8, "l": 2},
+      {"rank": 4, "abbr": "MIN", "w": 8, "l": 3},
+      {"rank": 5, "abbr": "GSW", "w": 8, "l": 3},
+      {"rank": 6, "abbr": "HOU", "w": 8, "l": 3},
+      {"rank": 7, "abbr": "MEM", "w": 7, "l": 3},
+      {"rank": 8, "abbr": "POR", "w": 6, "l": 3},
+      {"rank": 9, "abbr": "DAL", "w": 7, "l": 4},
+      {"rank": 10, "abbr": "DEN", "w": 5, "l": 4},
+      {"rank": 11, "abbr": "NOP", "w": 4, "l": 7},
+      {"rank": 12, "abbr": "PHX", "w": 3, "l": 6},
+      {"rank": 13, "abbr": "LAC", "w": 2, "l": 7},
+      {"rank": 14, "abbr": "UTA", "w": 1, "l": 9},
+      {"rank": 15, "abbr": "SAC", "w": 1, "l": 9}
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요.",
+    "references": "경기 · AP · CBS Sports · FOX Sports · NBC Sports\n뉴스 · NBA.com · Hoops Rumors"
+  }
+}
