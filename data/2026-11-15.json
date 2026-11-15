@@ -1,0 +1,348 @@
+{
+  "date_kst": "2026.11.15",
+  "us_game_date": "2026.11.14",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "AP · CBS · StatMuse",
+  "cover": {
+    "mode": "game_day",
+    "headline": "야니스 34득점\n히트 *4연승*",
+    "focus": {
+      "type": "team",
+      "team": "MIA"
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "DEN",
+        "score": 116
+      },
+      "home": {
+        "abbr": "NOP",
+        "score": 108
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "DAL",
+        "score": 117
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 127
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "BKN",
+        "score": 110
+      },
+      "home": {
+        "abbr": "MEM",
+        "score": 129
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CHI",
+        "score": 117
+      },
+      "home": {
+        "abbr": "MIN",
+        "score": 106
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "DET",
+        "score": 117
+      },
+      "home": {
+        "abbr": "MIA",
+        "score": 137
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "DET",
+      "home": "MIA",
+      "label": "4연승 · 팀 블록 14개",
+      "headline": "야니스 34득점 14리바운드",
+      "away_leader": {
+        "name": "케이드 커닝햄",
+        "pts": 33,
+        "reb": 5,
+        "ast": 8
+      },
+      "home_leader": {
+        "name": "야니스 아데토쿤보",
+        "pts": 34,
+        "reb": 14,
+        "ast": 8
+      }
+    },
+    {
+      "away": "DAL",
+      "home": "CLE",
+      "label": "주전 전원 결장에도 승리",
+      "headline": "프록터 커리어 첫 트리플더블",
+      "away_leader": {
+        "name": "카이리 어빙",
+        "pts": 34,
+        "reb": 6,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "타이리스 프록터",
+        "pts": 24,
+        "reb": 11,
+        "ast": 10
+      }
+    },
+    {
+      "away": "BKN",
+      "home": "MEM",
+      "label": "7명 두 자릿수 득점",
+      "headline": "코워드 23득점 12리바운드",
+      "away_leader": {
+        "name": "줄리어스 랜들",
+        "pts": 22,
+        "reb": 4,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "세드릭 코워드",
+        "pts": 23,
+        "reb": 12,
+        "ast": 4
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "보도",
+      "verification": "지역지 보도 · 항공 운항 중단 여파",
+      "teams": [
+        "CLE"
+      ],
+      "title": "클리블랜드\n주전 4명 휴식",
+      "body": "항공 운항 중단으로 경기 8시간도 안 남기고 귀가\n미첼 하든 앨런 왓슨이 댈러스전 결장",
+      "source": "Hoops Rumors · AP",
+      "key": {
+        "value": "4",
+        "unit": "명",
+        "label": "휴식한 주전 · 보도"
+      }
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "감독 언급 · 추가 검사 예정",
+      "teams": [
+        "MEM"
+      ],
+      "title": "멤피스 GG 잭슨\n발 부상",
+      "body": "브루클린전 1쿼터 3분도 못 뛰고 이탈\n감독은 지금까지는 좋아 보이지 않는다고 밝혔다",
+      "source": "Hoops Rumors"
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "BOS",
+        "w": 10,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "PHI",
+        "w": 10,
+        "l": 3
+      },
+      {
+        "rank": 3,
+        "abbr": "DET",
+        "w": 8,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "ATL",
+        "w": 7,
+        "l": 6
+      },
+      {
+        "rank": 5,
+        "abbr": "MIA",
+        "w": 7,
+        "l": 6
+      },
+      {
+        "rank": 6,
+        "abbr": "CLE",
+        "w": 7,
+        "l": 7
+      },
+      {
+        "rank": 7,
+        "abbr": "NYK",
+        "w": 6,
+        "l": 6
+      },
+      {
+        "rank": 8,
+        "abbr": "TOR",
+        "w": 5,
+        "l": 7
+      },
+      {
+        "rank": 9,
+        "abbr": "ORL",
+        "w": 5,
+        "l": 7
+      },
+      {
+        "rank": 10,
+        "abbr": "IND",
+        "w": 5,
+        "l": 8
+      },
+      {
+        "rank": 11,
+        "abbr": "CHA",
+        "w": 4,
+        "l": 8
+      },
+      {
+        "rank": 12,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 9
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 3,
+        "l": 9
+      },
+      {
+        "rank": 14,
+        "abbr": "CHI",
+        "w": 3,
+        "l": 9
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 12
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "LAL",
+        "w": 11,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "SAS",
+        "w": 11,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "HOU",
+        "w": 10,
+        "l": 3
+      },
+      {
+        "rank": 4,
+        "abbr": "POR",
+        "w": 9,
+        "l": 3
+      },
+      {
+        "rank": 5,
+        "abbr": "MIN",
+        "w": 9,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "MEM",
+        "w": 9,
+        "l": 4
+      },
+      {
+        "rank": 7,
+        "abbr": "DEN",
+        "w": 7,
+        "l": 4
+      },
+      {
+        "rank": 8,
+        "abbr": "OKC",
+        "w": 8,
+        "l": 5
+      },
+      {
+        "rank": 9,
+        "abbr": "GSW",
+        "w": 8,
+        "l": 5
+      },
+      {
+        "rank": 10,
+        "abbr": "DAL",
+        "w": 7,
+        "l": 6
+      },
+      {
+        "rank": 11,
+        "abbr": "PHX",
+        "w": 5,
+        "l": 6
+      },
+      {
+        "rank": 12,
+        "abbr": "NOP",
+        "w": 4,
+        "l": 10
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 3,
+        "l": 8
+      },
+      {
+        "rank": 14,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 11
+      },
+      {
+        "rank": 15,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 12
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요",
+    "references": "경기 · AP · CBS Sports · StatMuse\n뉴스 · Hoops Rumors"
+  }
+}
