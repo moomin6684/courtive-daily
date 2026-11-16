@@ -224,7 +224,7 @@ def caption(d, cards):
         if c["kind"] == "game":
             g = c["game"]; w, l = (g["away"], g["home"]) if g["away"]["win"] else (g["home"], g["away"])
             ot = f" ({g['ot_label']})" if g["ot_label"] else ""
-            lines.append(f"▸ {w['ko']} {w['score']}-{l['score']} {l['ko']}{ot} · {c['headline'].replace(chr(10), ' ')}")
+            lines.append(f"▸ {w['ko']} {w['score']}-{l['score']} {l['ko']}{ot} · {c['headline']}")
         elif c["kind"] == "news":
             n = c["news"]; lines.append(f"▸ {n['title'].replace(chr(10), ' ')} ({n.get('verification') or n['status']})")
     # 10/26 사용자 수정: "슬라이드에서 확인하세요" 안내 줄과 출처 줄은 넣지 않는다.
