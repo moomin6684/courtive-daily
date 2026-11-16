@@ -6,7 +6,7 @@
   "data_source": "CBS · StatMuse",
   "cover": {
     "mode": "game_day",
-    "headline": "르브론 키드 넘고\n어시스트 *역대 3위*",
+    "headline": "르브론\n제이슨 키드 넘고\n어시스트 *역대 3위*",
     "focus": {
       "type": "team",
       "team": "PHI"
@@ -118,7 +118,7 @@
       "away": "IND",
       "home": "PHI",
       "label": "통산 어시스트 역대 3위",
-      "headline": "르브론 11어시스트로 키드 추월",
+      "headline": "르브론 11어시스트로\n제이슨 키드 추월",
       "away_leader": {
         "name": "파스칼 시아캄",
         "pts": 31,
