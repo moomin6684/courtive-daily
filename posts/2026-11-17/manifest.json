@@ -40,7 +40,12 @@
     }
   ],
   "caption_file": "caption.txt",
-  "status": "pending",
+  "status": "published",
   "created_at": "2026-11-17T15:09:24+09:00",
-  "source_data": "data/2026-11-17.json"
+  "source_data": "data/2026-11-17.json",
+  "published_at": "2026-11-17T16:08:15+09:00",
+  "account": "courtive.media",
+  "media_id": "18117520838120289",
+  "permalink": "https://www.instagram.com/p/Df1W6iuGzun/",
+  "note": "media_publish 오류를 받았지만 게시 확인: POST 17841415593542779/media_publish → HTTP 403: {\"error\":{\"message\":\"Application request limit reached\",\"type\":\"OAuthException\",\"is_transient\":false,\"code\":4,\""
 }
