@@ -1,0 +1,381 @@
+{
+  "date_kst": "2026.11.17",
+  "us_game_date": "2026.11.16",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "CBS · AP · StatMuse",
+  "cover": {
+    "mode": "game_day",
+    "headline": "엠비드 37득점\n필라델피아\n*동부 1위*",
+    "focus": {
+      "type": "team",
+      "team": "PHI"
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "CHI",
+        "score": 115
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 126
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MEM",
+        "score": 136
+      },
+      "home": {
+        "abbr": "WAS",
+        "score": 120
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "ORL",
+        "score": 115
+      },
+      "home": {
+        "abbr": "BOS",
+        "score": 105
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "HOU",
+        "score": 110
+      },
+      "home": {
+        "abbr": "MIA",
+        "score": 128
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHI",
+        "score": 135
+      },
+      "home": {
+        "abbr": "BKN",
+        "score": 123
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "GSW",
+        "score": 94
+      },
+      "home": {
+        "abbr": "NOP",
+        "score": 115
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 98
+      },
+      "home": {
+        "abbr": "MIN",
+        "score": 106
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHX",
+        "score": 117
+      },
+      "home": {
+        "abbr": "DEN",
+        "score": 105
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "PHI",
+      "home": "BKN",
+      "label": "르브론 결장 4전 전승",
+      "headline": "엠비드 37득점 · 동부 1위",
+      "away_leader": {
+        "name": "조엘 엠비드",
+        "pts": 37,
+        "reb": 5,
+        "ast": 1
+      },
+      "home_leader": {
+        "name": "줄리어스 랜들",
+        "pts": 33,
+        "reb": 6,
+        "ast": 1
+      }
+    },
+    {
+      "away": "ORL",
+      "home": "BOS",
+      "label": "보스턴 시즌 첫 홈 패배",
+      "headline": "올랜도 4연승 · 보스턴 6연승 끝",
+      "away_leader": {
+        "name": "데스먼드 베인",
+        "pts": 24,
+        "reb": 8,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "제이슨 테이텀",
+        "pts": 24,
+        "reb": 12,
+        "ast": 4
+      }
+    },
+    {
+      "away": "HOU",
+      "home": "MIA",
+      "label": "0승 4패 뒤 8승 2패",
+      "headline": "한 번도 안 뒤진 히트 5연승",
+      "away_leader": {
+        "name": "알페렌 셴귄",
+        "pts": 23,
+        "reb": 7,
+        "ast": 2
+      },
+      "home_leader": {
+        "name": "야니스 아데토쿤보",
+        "pts": 20,
+        "reb": 13,
+        "ast": 6
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · 복귀 시점 미정",
+      "teams": [
+        "MEM"
+      ],
+      "title": "멤피스 GG 잭슨\n왼발 골절로 수술",
+      "body": "왼발 다섯째 발허리뼈가 부러졌다\n복귀 시점은 수술 뒤 정해진다",
+      "source": "Hoops Rumors · Grizzlies PR"
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "구단 발표 · MRI 결과",
+      "teams": [
+        "CLE"
+      ],
+      "title": "클리블랜드 모블리\n엄지발가락 염좌",
+      "body": "11일 뉴욕전에서 왼쪽 엄지발가락을 다쳤다\n치료와 재활 뒤 다시 평가한다",
+      "source": "Hoops Rumors",
+      "key": {
+        "value": "7–10",
+        "unit": "일",
+        "label": "재평가까지 · 구단 발표"
+      }
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 12,
+        "l": 3
+      },
+      {
+        "rank": 2,
+        "abbr": "BOS",
+        "w": 11,
+        "l": 3
+      },
+      {
+        "rank": 3,
+        "abbr": "DET",
+        "w": 8,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "MIA",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 5,
+        "abbr": "ATL",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 6,
+        "abbr": "NYK",
+        "w": 7,
+        "l": 6
+      },
+      {
+        "rank": 7,
+        "abbr": "CLE",
+        "w": 8,
+        "l": 7
+      },
+      {
+        "rank": 8,
+        "abbr": "ORL",
+        "w": 6,
+        "l": 7
+      },
+      {
+        "rank": 9,
+        "abbr": "TOR",
+        "w": 5,
+        "l": 8
+      },
+      {
+        "rank": 10,
+        "abbr": "IND",
+        "w": 5,
+        "l": 9
+      },
+      {
+        "rank": 11,
+        "abbr": "CHA",
+        "w": 4,
+        "l": 9
+      },
+      {
+        "rank": 12,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 11
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 3,
+        "l": 10
+      },
+      {
+        "rank": 14,
+        "abbr": "CHI",
+        "w": 3,
+        "l": 10
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 13
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "SAS",
+        "w": 12,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "LAL",
+        "w": 12,
+        "l": 2
+      },
+      {
+        "rank": 3,
+        "abbr": "HOU",
+        "w": 11,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "MIN",
+        "w": 10,
+        "l": 4
+      },
+      {
+        "rank": 5,
+        "abbr": "MEM",
+        "w": 10,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "POR",
+        "w": 9,
+        "l": 4
+      },
+      {
+        "rank": 7,
+        "abbr": "OKC",
+        "w": 9,
+        "l": 5
+      },
+      {
+        "rank": 8,
+        "abbr": "DEN",
+        "w": 7,
+        "l": 5
+      },
+      {
+        "rank": 9,
+        "abbr": "GSW",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 10,
+        "abbr": "DAL",
+        "w": 7,
+        "l": 7
+      },
+      {
+        "rank": 11,
+        "abbr": "PHX",
+        "w": 6,
+        "l": 7
+      },
+      {
+        "rank": 12,
+        "abbr": "LAC",
+        "w": 4,
+        "l": 8
+      },
+      {
+        "rank": 13,
+        "abbr": "NOP",
+        "w": 5,
+        "l": 10
+      },
+      {
+        "rank": 14,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 12
+      },
+      {
+        "rank": 15,
+        "abbr": "UTA",
+        "w": 1,
+        "l": 13
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요",
+    "references": "경기 · CBS Sports · AP · StatMuse\n뉴스 · Hoops Rumors"
+  }
+}
