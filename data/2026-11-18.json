@@ -1,0 +1,327 @@
+{
+  "date_kst": "2026.11.18",
+  "us_game_date": "2026.11.17",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "CBS · AP · StatMuse",
+  "cover": {
+    "mode": "game_day",
+    "headline": "디트로이트\n역전승\n스퍼스 *12연승* 끝",
+    "focus": {
+      "type": "score",
+      "game": 0
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "DET",
+        "score": 105
+      },
+      "home": {
+        "abbr": "SAS",
+        "score": 93
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "NYK",
+        "score": 111
+      },
+      "home": {
+        "abbr": "TOR",
+        "score": 102
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 105
+      },
+      "home": {
+        "abbr": "MIN",
+        "score": 106
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "UTA",
+        "score": 132
+      },
+      "home": {
+        "abbr": "LAC",
+        "score": 107
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "DET",
+      "home": "SAS",
+      "label": "14점 차 뒤집은 원정승",
+      "headline": "스퍼스 12연승 끝",
+      "away_leader": {
+        "name": "케이드 커닝햄",
+        "pts": 27,
+        "reb": 5,
+        "ast": 6
+      },
+      "home_leader": {
+        "name": "빅터 웸반야마",
+        "pts": 25,
+        "reb": 18,
+        "ast": 4
+      }
+    },
+    {
+      "away": "NYK",
+      "home": "TOR",
+      "label": "토론토전 15연승",
+      "headline": "13점 차 역전 · 브런슨 31득점",
+      "away_leader": {
+        "name": "제일런 브런슨",
+        "pts": 31,
+        "reb": 5,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "자코비 월터",
+        "pts": 25,
+        "reb": 1,
+        "ast": 2
+      }
+    },
+    {
+      "away": "POR",
+      "home": "MIN",
+      "label": "종료 2.6초 전 결승 레이업",
+      "headline": "미네소타 1점 차 역전승",
+      "away_leader": {
+        "name": "데이미언 릴라드",
+        "pts": 25,
+        "reb": 3,
+        "ast": 5
+      },
+      "home_leader": {
+        "name": "아요 도순무",
+        "pts": 30,
+        "reb": 4,
+        "ast": 5
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · 약 4주 뒤 재평가",
+      "teams": [
+        "ATL"
+      ],
+      "title": "애틀랜타 CJ 매컬럼\n왼쪽 종아리 염좌",
+      "body": "일요일 밀워키전에서 다쳤다\n신인 아사 뉴얼도 발가락 수술로\n약 4개월 뒤 재평가",
+      "source": "NBA.com · Hoops Rumors",
+      "key": {
+        "value": "약 4",
+        "unit": "주",
+        "label": "재평가까지 · 구단 발표"
+      }
+    }
+  ],
+  "standings": {
+    "note": "샬럿–LA 레이커스는 경기 중이라 미반영",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 12,
+        "l": 3
+      },
+      {
+        "rank": 2,
+        "abbr": "BOS",
+        "w": 11,
+        "l": 3
+      },
+      {
+        "rank": 3,
+        "abbr": "DET",
+        "w": 9,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "MIA",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 5,
+        "abbr": "ATL",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 6,
+        "abbr": "NYK",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 7,
+        "abbr": "CLE",
+        "w": 8,
+        "l": 7
+      },
+      {
+        "rank": 8,
+        "abbr": "ORL",
+        "w": 6,
+        "l": 7
+      },
+      {
+        "rank": 9,
+        "abbr": "TOR",
+        "w": 5,
+        "l": 9
+      },
+      {
+        "rank": 10,
+        "abbr": "IND",
+        "w": 5,
+        "l": 9
+      },
+      {
+        "rank": 11,
+        "abbr": "CHA",
+        "w": 4,
+        "l": 9
+      },
+      {
+        "rank": 12,
+        "abbr": "WAS",
+        "w": 4,
+        "l": 11
+      },
+      {
+        "rank": 13,
+        "abbr": "BKN",
+        "w": 3,
+        "l": 10
+      },
+      {
+        "rank": 14,
+        "abbr": "CHI",
+        "w": 3,
+        "l": 10
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 13
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "LAL",
+        "w": 12,
+        "l": 2
+      },
+      {
+        "rank": 2,
+        "abbr": "SAS",
+        "w": 12,
+        "l": 3
+      },
+      {
+        "rank": 3,
+        "abbr": "MIN",
+        "w": 11,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "HOU",
+        "w": 11,
+        "l": 4
+      },
+      {
+        "rank": 5,
+        "abbr": "MEM",
+        "w": 10,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "POR",
+        "w": 9,
+        "l": 5
+      },
+      {
+        "rank": 7,
+        "abbr": "OKC",
+        "w": 9,
+        "l": 5
+      },
+      {
+        "rank": 8,
+        "abbr": "DEN",
+        "w": 7,
+        "l": 5
+      },
+      {
+        "rank": 9,
+        "abbr": "GSW",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 10,
+        "abbr": "DAL",
+        "w": 7,
+        "l": 7
+      },
+      {
+        "rank": 11,
+        "abbr": "PHX",
+        "w": 6,
+        "l": 7
+      },
+      {
+        "rank": 12,
+        "abbr": "NOP",
+        "w": 5,
+        "l": 10
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 4,
+        "l": 9
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 2,
+        "l": 13
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 12
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요",
+    "references": "경기 · CBS Sports · AP · StatMuse\n뉴스 · NBA.com · Hoops Rumors"
+  }
+}
