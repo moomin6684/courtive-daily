@@ -56,6 +56,17 @@
         "score": 107
       },
       "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CHA",
+        "score": 114
+      },
+      "home": {
+        "abbr": "LAL",
+        "score": 118
+      },
+      "ot": 1
     }
   ],
   "featured": [
@@ -78,21 +89,21 @@
       }
     },
     {
-      "away": "NYK",
-      "home": "TOR",
-      "label": "토론토전 15연승",
-      "headline": "13점 차 역전 · 브런슨 31득점",
+      "away": "CHA",
+      "home": "LAL",
+      "label": "18점 차 역전 · 연장승",
+      "headline": "그라임스 47득점 · 동점 3점슛",
       "away_leader": {
-        "name": "제일런 브런슨",
-        "pts": 31,
-        "reb": 5,
-        "ast": 5
+        "name": "브랜던 밀러",
+        "pts": 28,
+        "reb": 2,
+        "ast": 4
       },
       "home_leader": {
-        "name": "자코비 월터",
-        "pts": 25,
-        "reb": 1,
-        "ast": 2
+        "name": "퀜틴 그라임스",
+        "pts": 47,
+        "reb": 6,
+        "ast": 3
       }
     },
     {
@@ -132,7 +143,7 @@
     }
   ],
   "standings": {
-    "note": "샬럿–LA 레이커스는 경기 중이라 미반영",
+    "note": "",
     "east": [
       {
         "rank": 1,
@@ -198,7 +209,7 @@
         "rank": 11,
         "abbr": "CHA",
         "w": 4,
-        "l": 9
+        "l": 10
       },
       {
         "rank": 12,
@@ -229,7 +240,7 @@
       {
         "rank": 1,
         "abbr": "LAL",
-        "w": 12,
+        "w": 13,
         "l": 2
       },
       {
