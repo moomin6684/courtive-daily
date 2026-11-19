@@ -1,0 +1,426 @@
+{
+  "date_kst": "2026.11.19",
+  "us_game_date": "2026.11.18",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "CBS · AP · StatMuse",
+  "cover": {
+    "mode": "game_day",
+    "headline": "아데토쿤보\n친정 밀워키 격파\n히트 *6연승*",
+    "focus": {
+      "type": "score",
+      "game": 0
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "MIL",
+        "score": 130
+      },
+      "home": {
+        "abbr": "MIA",
+        "score": 137
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "UTA",
+        "score": 109
+      },
+      "home": {
+        "abbr": "LAL",
+        "score": 97
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MEM",
+        "score": 124
+      },
+      "home": {
+        "abbr": "CLE",
+        "score": 121
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "HOU",
+        "score": 119
+      },
+      "home": {
+        "abbr": "IND",
+        "score": 104
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHI",
+        "score": 121
+      },
+      "home": {
+        "abbr": "ORL",
+        "score": 116
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CHI",
+        "score": 137
+      },
+      "home": {
+        "abbr": "BKN",
+        "score": 107
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "WAS",
+        "score": 103
+      },
+      "home": {
+        "abbr": "TOR",
+        "score": 99
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "ATL",
+        "score": 117
+      },
+      "home": {
+        "abbr": "OKC",
+        "score": 112
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "DET",
+        "score": 122
+      },
+      "home": {
+        "abbr": "NOP",
+        "score": 109
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "GSW",
+        "score": 94
+      },
+      "home": {
+        "abbr": "DAL",
+        "score": 116
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "BOS",
+        "score": 101
+      },
+      "home": {
+        "abbr": "DEN",
+        "score": 105
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHX",
+        "score": 128
+      },
+      "home": {
+        "abbr": "SAC",
+        "score": 107
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "MIL",
+      "home": "MIA",
+      "label": "트레이드 후 첫 친정전",
+      "headline": "아데토쿤보 친정 상대 27득점",
+      "away_leader": {
+        "name": "카일 쿠즈마",
+        "pts": 26,
+        "reb": 5,
+        "ast": 1
+      },
+      "home_leader": {
+        "name": "야니스 아데토쿤보",
+        "pts": 27,
+        "reb": 14,
+        "ast": 9
+      }
+    },
+    {
+      "away": "UTA",
+      "home": "LAL",
+      "label": "4쿼터 15연속 득점",
+      "headline": "레이커스 9연승 저지",
+      "away_leader": {
+        "name": "키욘테 조지",
+        "pts": 30,
+        "reb": 1,
+        "ast": 10
+      },
+      "home_leader": {
+        "name": "루카 돈치치",
+        "pts": 29,
+        "reb": 5,
+        "ast": 7
+      }
+    },
+    {
+      "away": "MEM",
+      "home": "CLE",
+      "label": "종료 2.3초 전 쐐기 자유투",
+      "headline": "멤피스 구단 최다 원정 8연승",
+      "away_leader": {
+        "name": "캠 스펜서",
+        "pts": 26,
+        "reb": 1,
+        "ast": 7
+      },
+      "home_leader": {
+        "name": "도노반 미첼",
+        "pts": 34,
+        "reb": 4,
+        "ast": 3
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · 1주 뒤 다시 발표",
+      "teams": [
+        "TOR"
+      ],
+      "title": "토론토 카와이 레너드\n최소 1주 더 결장",
+      "body": "왼쪽 무릎 부기를 치료 중\n10월 25일부터 결장",
+      "source": "CP24 · Hoops Rumors",
+      "key": {
+        "value": "최소 1",
+        "unit": "주",
+        "label": "추가 결장 · 구단 발표"
+      }
+    },
+    {
+      "status": "부상 업데이트",
+      "verification": "감독 발표 · 복귀 시점 미정",
+      "teams": [
+        "HOU",
+        "IND"
+      ],
+      "title": "휴스턴 알페렌 센군\n양쪽 눈 부상",
+      "body": "인디애나전 리바운드 다툼 중\n얼굴을 맞았다\n오른쪽 눈 부기 · 왼쪽 각막 긁힘",
+      "source": "AP · Houston Chronicle"
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 13,
+        "l": 3
+      },
+      {
+        "rank": 2,
+        "abbr": "BOS",
+        "w": 11,
+        "l": 4
+      },
+      {
+        "rank": 3,
+        "abbr": "DET",
+        "w": 10,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "MIA",
+        "w": 9,
+        "l": 6
+      },
+      {
+        "rank": 5,
+        "abbr": "ATL",
+        "w": 9,
+        "l": 6
+      },
+      {
+        "rank": 6,
+        "abbr": "NYK",
+        "w": 8,
+        "l": 6
+      },
+      {
+        "rank": 7,
+        "abbr": "CLE",
+        "w": 8,
+        "l": 8
+      },
+      {
+        "rank": 8,
+        "abbr": "ORL",
+        "w": 6,
+        "l": 8
+      },
+      {
+        "rank": 9,
+        "abbr": "TOR",
+        "w": 5,
+        "l": 10
+      },
+      {
+        "rank": 10,
+        "abbr": "IND",
+        "w": 5,
+        "l": 10
+      },
+      {
+        "rank": 11,
+        "abbr": "WAS",
+        "w": 5,
+        "l": 11
+      },
+      {
+        "rank": 12,
+        "abbr": "CHA",
+        "w": 4,
+        "l": 10
+      },
+      {
+        "rank": 13,
+        "abbr": "CHI",
+        "w": 4,
+        "l": 10
+      },
+      {
+        "rank": 14,
+        "abbr": "BKN",
+        "w": 3,
+        "l": 11
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 1,
+        "l": 14
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "LAL",
+        "w": 13,
+        "l": 3
+      },
+      {
+        "rank": 2,
+        "abbr": "SAS",
+        "w": 12,
+        "l": 3
+      },
+      {
+        "rank": 3,
+        "abbr": "HOU",
+        "w": 12,
+        "l": 4
+      },
+      {
+        "rank": 4,
+        "abbr": "MIN",
+        "w": 11,
+        "l": 4
+      },
+      {
+        "rank": 5,
+        "abbr": "MEM",
+        "w": 11,
+        "l": 4
+      },
+      {
+        "rank": 6,
+        "abbr": "POR",
+        "w": 9,
+        "l": 5
+      },
+      {
+        "rank": 7,
+        "abbr": "DEN",
+        "w": 8,
+        "l": 5
+      },
+      {
+        "rank": 8,
+        "abbr": "OKC",
+        "w": 9,
+        "l": 6
+      },
+      {
+        "rank": 9,
+        "abbr": "DAL",
+        "w": 8,
+        "l": 7
+      },
+      {
+        "rank": 10,
+        "abbr": "GSW",
+        "w": 8,
+        "l": 7
+      },
+      {
+        "rank": 11,
+        "abbr": "PHX",
+        "w": 7,
+        "l": 7
+      },
+      {
+        "rank": 12,
+        "abbr": "NOP",
+        "w": 5,
+        "l": 11
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 4,
+        "l": 9
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 3,
+        "l": 13
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 1,
+        "l": 13
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요",
+    "references": "경기 · CBS Sports · AP · StatMuse\n뉴스 · CP24 · Hoops Rumors · AP"
+  }
+}
