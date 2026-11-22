@@ -6,7 +6,7 @@
   "data_source": "CBS · AP",
   "cover": {
     "mode": "game_day",
-    "headline": "웸반야마 *50득점*\n서부 공동 1위",
+    "headline": "웸반야마 *50득점*\n샌안토니오\n서부 공동 1위",
     "focus": {
       "type": "team",
       "team": "SAS"
@@ -143,8 +143,8 @@
       "teams": [
         "LAL"
       ],
-      "title": "레이커스 트레이드 마감\n앞두고 적극 검토",
-      "body": "롭 펠링카 사장이 2월 11일 마감에\n적극적으로 움직이겠다며 보강 의지 밝혀\n레이커스는 14승 3패 서부 공동 1위",
+      "title": "레이커스 트레이드 마감\n앞두고 적극 움직일 방침",
+      "body": "롭 펠링카 사장이 방송 인터뷰에서\n마감 전 적극적으로 움직이겠다고 밝혀\n레이커스는 14승 3패로 서부 공동 1위",
       "source": "Hoops Rumors · NBC Sports"
     }
   ],
@@ -340,5 +340,6 @@
     "follow_cta": "매일 전해주는 NBA 소식",
     "save_cta": "오늘의 브리핑은 저장해 두세요",
     "references": "경기 · CBS Sports · AP\n뉴스 · Hoops Rumors · NBC Sports"
-  }
+  },
+  "caption": "NOW / DAILY BRIEF · 2026.11.22\n\n웸반야마 50득점 · 샌안토니오 서부 공동 1위\n\n▸ 샌안토니오 114-91 뉴올리언스 · 웸반야마 50득점 19리바운드\n▸ 필라델피아 132-129 밀워키 · 히로 개인 최다 50득점\n▸ 뉴욕 97-96 포틀랜드 · 브리지스 버저비터 3점슛\n▸ 펠링카, 트레이드 마감 앞두고 적극적으로 움직이겠다고 밝혀 (방송 인터뷰 · 2월 11일 마감)\n\n#NBA #NBA데일리 #코티브 #COURTIVE #농구 #NBA결과 #NewOrleansPelicans #SanAntonioSpurs #MilwaukeeBucks #Philadelphia76ers #PortlandTrailBlazers #NewYorkKnicks"
 }
