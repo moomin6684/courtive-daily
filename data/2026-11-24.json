@@ -1,0 +1,409 @@
+{
+  "date_kst": "2026.11.24",
+  "us_game_date": "2026.11.23",
+  "timestamp": "auto",
+  "disclaimer": "",
+  "data_source": "CBS · AP",
+  "cover": {
+    "mode": "game_day",
+    "headline": "잉그램 복귀전\n클리퍼스 *4연패*",
+    "focus": {
+      "type": "team",
+      "team": "LAC"
+    }
+  },
+  "games": [
+    {
+      "away": {
+        "abbr": "MEM",
+        "score": 117
+      },
+      "home": {
+        "abbr": "CHA",
+        "score": 111
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "POR",
+        "score": 128
+      },
+      "home": {
+        "abbr": "PHI",
+        "score": 111
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "BKN",
+        "score": 116
+      },
+      "home": {
+        "abbr": "MIN",
+        "score": 142
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "MIL",
+        "score": 116
+      },
+      "home": {
+        "abbr": "TOR",
+        "score": 111
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "OKC",
+        "score": 120
+      },
+      "home": {
+        "abbr": "IND",
+        "score": 125
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "CLE",
+        "score": 108
+      },
+      "home": {
+        "abbr": "CHI",
+        "score": 122
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "PHX",
+        "score": 123
+      },
+      "home": {
+        "abbr": "NOP",
+        "score": 119
+      },
+      "ot": 1
+    },
+    {
+      "away": {
+        "abbr": "LAC",
+        "score": 104
+      },
+      "home": {
+        "abbr": "HOU",
+        "score": 116
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "SAS",
+        "score": 123
+      },
+      "home": {
+        "abbr": "SAC",
+        "score": 107
+      },
+      "ot": 0
+    },
+    {
+      "away": {
+        "abbr": "UTA",
+        "score": 94
+      },
+      "home": {
+        "abbr": "LAL",
+        "score": 109
+      },
+      "ot": 0
+    }
+  ],
+  "featured": [
+    {
+      "away": "PHX",
+      "home": "NOP",
+      "label": "연장 승부 · 뉴올리언스 4연패",
+      "headline": "피닉스 연장 끝에 4연승",
+      "away_leader": {
+        "name": "제일런 그린",
+        "pts": 25,
+        "reb": 3,
+        "ast": 0
+      },
+      "home_leader": {
+        "name": "조던 풀",
+        "pts": 28,
+        "reb": 0,
+        "ast": 3
+      }
+    },
+    {
+      "away": "OKC",
+      "home": "IND",
+      "label": "5점 차 접전 · OKC 2연패",
+      "headline": "길저스알렉산더 38득점 분전",
+      "away_leader": {
+        "name": "샤이 길저스알렉산더",
+        "pts": 38,
+        "reb": 5,
+        "ast": 7
+      },
+      "home_leader": {
+        "name": "파스칼 시아캄",
+        "pts": 20,
+        "reb": 8,
+        "ast": 5
+      }
+    },
+    {
+      "away": "MIL",
+      "home": "TOR",
+      "label": "5점 차 접전 · 원정 승리",
+      "headline": "밀워키 13연패 탈출",
+      "away_leader": {
+        "name": "타일러 히로",
+        "pts": 32,
+        "reb": 6,
+        "ast": 8
+      },
+      "home_leader": {
+        "name": "스코티 반스",
+        "pts": 31,
+        "reb": 5,
+        "ast": 8
+      }
+    }
+  ],
+  "news": [
+    {
+      "status": "부상 업데이트",
+      "verification": "AP 리캡 · 선발 출전",
+      "teams": [
+        "LAC"
+      ],
+      "title": "잉그램\n클리퍼스 데뷔전 선발 출전",
+      "body": "5월 오른쪽 뒤꿈치 수술 뒤 첫 경기\n16득점 7리바운드 4어시스트\n클리퍼스는 휴스턴에 104–116 패배",
+      "key": {
+        "value": "16",
+        "unit": "득점",
+        "label": "클리퍼스 데뷔전 · AP"
+      },
+      "source": "AP · NBA.com"
+    },
+    {
+      "status": "공식 발표",
+      "verification": "구단 발표 · 중간 정도 발목 염좌",
+      "teams": [
+        "MEM"
+      ],
+      "title": "멤피스 캐머런 부저\n4주 뒤 재검진",
+      "body": "전체 3순위 신인\n오른 발목 안쪽 염좌 진단\n최소 한 달 결장 전망은 AP 보도",
+      "key": {
+        "value": "4",
+        "unit": "주",
+        "label": "재검진까지 · 구단 발표"
+      },
+      "source": "Grizzlies · AP"
+    }
+  ],
+  "standings": {
+    "note": "",
+    "east": [
+      {
+        "rank": 1,
+        "abbr": "PHI",
+        "w": 14,
+        "l": 4
+      },
+      {
+        "rank": 2,
+        "abbr": "ATL",
+        "w": 11,
+        "l": 6
+      },
+      {
+        "rank": 3,
+        "abbr": "BOS",
+        "w": 11,
+        "l": 6
+      },
+      {
+        "rank": 4,
+        "abbr": "NYK",
+        "w": 11,
+        "l": 6
+      },
+      {
+        "rank": 5,
+        "abbr": "DET",
+        "w": 10,
+        "l": 6
+      },
+      {
+        "rank": 6,
+        "abbr": "MIA",
+        "w": 10,
+        "l": 6
+      },
+      {
+        "rank": 7,
+        "abbr": "CLE",
+        "w": 9,
+        "l": 9
+      },
+      {
+        "rank": 8,
+        "abbr": "ORL",
+        "w": 7,
+        "l": 9
+      },
+      {
+        "rank": 9,
+        "abbr": "WAS",
+        "w": 7,
+        "l": 11
+      },
+      {
+        "rank": 10,
+        "abbr": "TOR",
+        "w": 6,
+        "l": 11
+      },
+      {
+        "rank": 11,
+        "abbr": "IND",
+        "w": 6,
+        "l": 12
+      },
+      {
+        "rank": 12,
+        "abbr": "CHI",
+        "w": 5,
+        "l": 12
+      },
+      {
+        "rank": 13,
+        "abbr": "CHA",
+        "w": 4,
+        "l": 12
+      },
+      {
+        "rank": 14,
+        "abbr": "BKN",
+        "w": 3,
+        "l": 13
+      },
+      {
+        "rank": 15,
+        "abbr": "MIL",
+        "w": 2,
+        "l": 16
+      }
+    ],
+    "west": [
+      {
+        "rank": 1,
+        "abbr": "SAS",
+        "w": 15,
+        "l": 3
+      },
+      {
+        "rank": 2,
+        "abbr": "LAL",
+        "w": 15,
+        "l": 3
+      },
+      {
+        "rank": 3,
+        "abbr": "MIN",
+        "w": 13,
+        "l": 5
+      },
+      {
+        "rank": 4,
+        "abbr": "HOU",
+        "w": 13,
+        "l": 5
+      },
+      {
+        "rank": 5,
+        "abbr": "MEM",
+        "w": 13,
+        "l": 5
+      },
+      {
+        "rank": 6,
+        "abbr": "DEN",
+        "w": 10,
+        "l": 5
+      },
+      {
+        "rank": 7,
+        "abbr": "POR",
+        "w": 11,
+        "l": 6
+      },
+      {
+        "rank": 8,
+        "abbr": "DAL",
+        "w": 10,
+        "l": 7
+      },
+      {
+        "rank": 9,
+        "abbr": "PHX",
+        "w": 9,
+        "l": 7
+      },
+      {
+        "rank": 10,
+        "abbr": "OKC",
+        "w": 10,
+        "l": 8
+      },
+      {
+        "rank": 11,
+        "abbr": "GSW",
+        "w": 9,
+        "l": 8
+      },
+      {
+        "rank": 12,
+        "abbr": "NOP",
+        "w": 5,
+        "l": 14
+      },
+      {
+        "rank": 13,
+        "abbr": "LAC",
+        "w": 4,
+        "l": 12
+      },
+      {
+        "rank": 14,
+        "abbr": "UTA",
+        "w": 3,
+        "l": 16
+      },
+      {
+        "rank": 15,
+        "abbr": "SAC",
+        "w": 2,
+        "l": 15
+      }
+    ]
+  },
+  "closing": {
+    "title": "NBA 소식은\n코티브에서",
+    "follow_cta": "매일 전해주는 NBA 소식",
+    "save_cta": "오늘의 브리핑은 저장해 두세요",
+    "references": "경기 · CBS Sports · AP\n뉴스 · NBA.com · AP"
+  },
+  "caption": "NOW / DAILY BRIEF · 2026.11.24\n\n잉그램 복귀전 · 클리퍼스 4연패\n\n▸ 휴스턴 116-104 LA 클리퍼스 · 잉그램 클리퍼스 데뷔전 16득점 · 듀랜트 32득점\n▸ 피닉스 123-119 뉴올리언스 (OT) · 피닉스 연장 끝에 4연승\n▸ 인디애나 125-120 OKC · 길저스알렉산더 38득점 분전\n▸ 밀워키 116-111 토론토 · 밀워키 13연패 탈출\n▸ 멤피스 캐머런 부저 오른 발목 염좌 · 4주 뒤 재검진 (구단 발표 · 최소 한 달 결장 전망은 AP 보도)\n\n#NBA #NBA데일리 #코티브 #COURTIVE #농구 #NBA결과 #LAClippers #HoustonRockets #PhoenixSuns #NewOrleansPelicans #OklahomaCityThunder #IndianaPacers #MilwaukeeBucks #TorontoRaptors"
+}
