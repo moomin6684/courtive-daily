@@ -1,0 +1,398 @@
+{
+ "date_kst": "2026.11.26",
+ "us_game_date": "2026.11.25",
+ "timestamp": "auto",
+ "disclaimer": "",
+ "data_source": "CBS · AP",
+ "cover": {
+  "mode": "game_day",
+  "headline": "41세 르브론\n*최고령* 트리플더블",
+  "focus": {
+   "type": "team",
+   "team": "PHI"
+  }
+ },
+ "games": [
+  {
+   "away": {
+    "abbr": "MIA",
+    "score": 104
+   },
+   "home": {
+    "abbr": "PHI",
+    "score": 111
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "CHI",
+    "score": 107
+   },
+   "home": {
+    "abbr": "CHA",
+    "score": 105
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "CLE",
+    "score": 102
+   },
+   "home": {
+    "abbr": "NYK",
+    "score": 121
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "MIN",
+    "score": 113
+   },
+   "home": {
+    "abbr": "OKC",
+    "score": 106
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "BKN",
+    "score": 104
+   },
+   "home": {
+    "abbr": "MIL",
+    "score": 97
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "LAC",
+    "score": 97
+   },
+   "home": {
+    "abbr": "MEM",
+    "score": 115
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "PHX",
+    "score": 104
+   },
+   "home": {
+    "abbr": "HOU",
+    "score": 116
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "SAS",
+    "score": 111
+   },
+   "home": {
+    "abbr": "POR",
+    "score": 116
+   },
+   "ot": 0
+  },
+  {
+   "away": {
+    "abbr": "SAC",
+    "score": 110
+   },
+   "home": {
+    "abbr": "GSW",
+    "score": 129
+   },
+   "ot": 0
+  }
+ ],
+ "featured": [
+  {
+   "away": "SAS",
+   "home": "POR",
+   "label": "NBA컵 조별리그 · 접전",
+   "headline": "웸반야마 44득점 SAS 패배",
+   "away_leader": {
+    "name": "빅터 웸반야마",
+    "pts": 44,
+    "reb": 16,
+    "ast": 3
+   },
+   "home_leader": {
+    "name": "데니 아브디야",
+    "pts": 33,
+    "reb": 12,
+    "ast": 7
+   }
+  },
+  {
+   "away": "MIA",
+   "home": "PHI",
+   "label": "NBA컵 조별리그 · 동부 1위",
+   "headline": "르브론 이적 후 첫 트리플더블",
+   "away_leader": {
+    "name": "야니스 아데토쿤보",
+    "pts": 32,
+    "reb": 14,
+    "ast": 4
+   },
+   "home_leader": {
+    "name": "타이리스 맥시",
+    "pts": 30,
+    "reb": 4,
+    "ast": 6
+   }
+  },
+  {
+   "away": "CHI",
+   "home": "CHA",
+   "label": "NBA컵 조별리그 · 2점 차",
+   "headline": "부젤리스 24득점 시카고 승리",
+   "away_leader": {
+    "name": "마타스 부젤리스",
+    "pts": 24,
+    "reb": 5,
+    "ast": 0
+   },
+   "home_leader": {
+    "name": "브랜던 밀러",
+    "pts": 35,
+    "reb": 3,
+    "ast": 1
+   }
+  }
+ ],
+ "news": [
+  {
+   "status": "보도",
+   "verification": "AP 보도 · 통산 126번째",
+   "teams": [
+    "PHI"
+   ],
+   "title": "르브론 제임스 최고령\n트리플더블 기록 경신",
+   "body": "마이애미전 25득점 10리바운드 12어시스트\n필라델피아 이적 후 첫 트리플더블\n자신의 최고령 기록을 다시 깼다",
+   "key": {
+    "value": "126",
+    "unit": "번째",
+    "label": "통산 트리플더블 · AP"
+   },
+   "source": "AP · NBA.com"
+  },
+  {
+   "status": "보도",
+   "verification": "AP 보도 · 역대 5번째",
+   "teams": [
+    "HOU"
+   ],
+   "title": "휴스턴 케빈 듀란트\n통산 3만 3천 득점 돌파",
+   "body": "역대 5번째 기록\n피닉스전 20득점 10리바운드\n4위 코비 브라이언트와 637점 차",
+   "key": {
+    "value": "5",
+    "unit": "번째",
+    "label": "역대 3만 3천 득점"
+   },
+   "source": "NBA.com · AP"
+  }
+ ],
+ "standings": {
+  "note": "",
+  "east": [
+   {
+    "rank": 1,
+    "abbr": "PHI",
+    "w": 15,
+    "l": 4
+   },
+   {
+    "rank": 2,
+    "abbr": "BOS",
+    "w": 12,
+    "l": 6
+   },
+   {
+    "rank": 3,
+    "abbr": "NYK",
+    "w": 12,
+    "l": 6
+   },
+   {
+    "rank": 4,
+    "abbr": "DET",
+    "w": 11,
+    "l": 6
+   },
+   {
+    "rank": 5,
+    "abbr": "ATL",
+    "w": 11,
+    "l": 6
+   },
+   {
+    "rank": 6,
+    "abbr": "MIA",
+    "w": 10,
+    "l": 7
+   },
+   {
+    "rank": 7,
+    "abbr": "CLE",
+    "w": 9,
+    "l": 10
+   },
+   {
+    "rank": 8,
+    "abbr": "ORL",
+    "w": 7,
+    "l": 10
+   },
+   {
+    "rank": 9,
+    "abbr": "WAS",
+    "w": 7,
+    "l": 12
+   },
+   {
+    "rank": 10,
+    "abbr": "TOR",
+    "w": 6,
+    "l": 11
+   },
+   {
+    "rank": 11,
+    "abbr": "IND",
+    "w": 6,
+    "l": 12
+   },
+   {
+    "rank": 12,
+    "abbr": "CHI",
+    "w": 6,
+    "l": 12
+   },
+   {
+    "rank": 13,
+    "abbr": "CHA",
+    "w": 4,
+    "l": 13
+   },
+   {
+    "rank": 14,
+    "abbr": "BKN",
+    "w": 4,
+    "l": 13
+   },
+   {
+    "rank": 15,
+    "abbr": "MIL",
+    "w": 2,
+    "l": 17
+   }
+  ],
+  "west": [
+   {
+    "rank": 1,
+    "abbr": "LAL",
+    "w": 15,
+    "l": 3
+   },
+   {
+    "rank": 2,
+    "abbr": "SAS",
+    "w": 15,
+    "l": 4
+   },
+   {
+    "rank": 3,
+    "abbr": "HOU",
+    "w": 14,
+    "l": 5
+   },
+   {
+    "rank": 4,
+    "abbr": "MEM",
+    "w": 14,
+    "l": 5
+   },
+   {
+    "rank": 5,
+    "abbr": "MIN",
+    "w": 14,
+    "l": 5
+   },
+   {
+    "rank": 6,
+    "abbr": "POR",
+    "w": 12,
+    "l": 6
+   },
+   {
+    "rank": 7,
+    "abbr": "DEN",
+    "w": 10,
+    "l": 6
+   },
+   {
+    "rank": 8,
+    "abbr": "DAL",
+    "w": 11,
+    "l": 7
+   },
+   {
+    "rank": 9,
+    "abbr": "GSW",
+    "w": 10,
+    "l": 8
+   },
+   {
+    "rank": 10,
+    "abbr": "PHX",
+    "w": 9,
+    "l": 8
+   },
+   {
+    "rank": 11,
+    "abbr": "OKC",
+    "w": 10,
+    "l": 9
+   },
+   {
+    "rank": 12,
+    "abbr": "NOP",
+    "w": 5,
+    "l": 14
+   },
+   {
+    "rank": 13,
+    "abbr": "LAC",
+    "w": 4,
+    "l": 13
+   },
+   {
+    "rank": 14,
+    "abbr": "UTA",
+    "w": 3,
+    "l": 16
+   },
+   {
+    "rank": 15,
+    "abbr": "SAC",
+    "w": 2,
+    "l": 16
+   }
+  ]
+ },
+ "closing": {
+  "title": "NBA 소식은\n코티브에서",
+  "follow_cta": "매일 전해주는 NBA 소식",
+  "save_cta": "오늘의 브리핑은 저장해 두세요",
+  "references": "경기 · CBS Sports · AP\n뉴스 · AP · NBA.com"
+ },
+ "caption": "NOW / DAILY BRIEF · 2026.11.26\n\n41세 르브론 최고령 트리플더블\n\n▸ 포틀랜드 116-111 샌안토니오 · 웸반야마 44득점에도 샌안토니오 패배\n▸ 필라델피아 111-104 마이애미 · 르브론 필라델피아 이적 후 첫 트리플더블\n▸ 시카고 107-105 샬럿 · 부젤리스 24득점으로 시카고 승리 견인\n▸ 르브론 제임스 최고령 트리플더블 기록 경신 (AP 보도 · 통산 126번째)\n▸ 휴스턴 케빈 듀란트 통산 3만 3천 득점 돌파 (AP 보도 · 역대 5번째)\n\n#NBA #NBA데일리 #코티브 #COURTIVE #농구 #NBA결과 #SanAntonioSpurs #PortlandTrailBlazers #MiamiHeat #Philadelphia76ers #ChicagoBulls #CharlotteHornets"
+}
