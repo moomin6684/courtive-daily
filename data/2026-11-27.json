@@ -1,0 +1,239 @@
+{
+ "date_kst": "2026.11.27",
+ "us_game_date": "2026.11.26",
+ "timestamp": "auto",
+ "disclaimer": "",
+ "data_source": "Basketball-Reference",
+ "cover": {
+  "mode": "no_games",
+  "headline": "서부 1·2위 격돌\n하퍼·폭스\n*출전 미정*",
+  "focus": {
+   "type": "team",
+   "team": "SAS"
+  }
+ },
+ "games": [],
+ "featured": [],
+ "news": [
+  {
+   "status": "부상 업데이트",
+   "verification": "부상 보고 · 출전 미정",
+   "teams": [
+    "SAS",
+    "LAL"
+   ],
+   "title": "샌안토니오 하퍼·폭스\n레이커스전 출전 미정",
+   "body": "딜런 하퍼 왼쪽 고관절 부상 4경기 결장\n디애런 폭스 오른쪽 정강이 타박상 2경기 결장\n서부 2위 샌안토니오와 1위 레이커스 맞대결",
+   "key": {
+    "value": "4경기",
+    "label": "하퍼 연속 결장"
+   },
+   "source": "Hoops Rumors · Yahoo Sports"
+  },
+  {
+   "status": "부상 업데이트",
+   "verification": "부상 보고 · 결장 확정",
+   "teams": [
+    "PHI",
+    "IND"
+   ],
+   "title": "필라델피아 브라운 결장\nNBA컵 첫 8강 도전",
+   "body": "제일런 브라운 왼쪽 햄스트링 부상으로 결장\n조엘 엠비드는 질병으로 출전 미정\n인디애나를 이기면 NBA컵 첫 8강 진출",
+   "source": "Hoops Rumors · Yahoo Sports"
+  }
+ ],
+ "standings": {
+  "note": "",
+  "east": [
+   {
+    "rank": 1,
+    "abbr": "PHI",
+    "w": 15,
+    "l": 4
+   },
+   {
+    "rank": 2,
+    "abbr": "BOS",
+    "w": 12,
+    "l": 6
+   },
+   {
+    "rank": 3,
+    "abbr": "NYK",
+    "w": 12,
+    "l": 6
+   },
+   {
+    "rank": 4,
+    "abbr": "DET",
+    "w": 11,
+    "l": 6
+   },
+   {
+    "rank": 5,
+    "abbr": "ATL",
+    "w": 11,
+    "l": 6
+   },
+   {
+    "rank": 6,
+    "abbr": "MIA",
+    "w": 10,
+    "l": 7
+   },
+   {
+    "rank": 7,
+    "abbr": "CLE",
+    "w": 9,
+    "l": 10
+   },
+   {
+    "rank": 8,
+    "abbr": "ORL",
+    "w": 7,
+    "l": 10
+   },
+   {
+    "rank": 9,
+    "abbr": "WAS",
+    "w": 7,
+    "l": 12
+   },
+   {
+    "rank": 10,
+    "abbr": "TOR",
+    "w": 6,
+    "l": 11
+   },
+   {
+    "rank": 11,
+    "abbr": "IND",
+    "w": 6,
+    "l": 12
+   },
+   {
+    "rank": 12,
+    "abbr": "CHI",
+    "w": 6,
+    "l": 12
+   },
+   {
+    "rank": 13,
+    "abbr": "CHA",
+    "w": 4,
+    "l": 13
+   },
+   {
+    "rank": 14,
+    "abbr": "BKN",
+    "w": 4,
+    "l": 13
+   },
+   {
+    "rank": 15,
+    "abbr": "MIL",
+    "w": 2,
+    "l": 17
+   }
+  ],
+  "west": [
+   {
+    "rank": 1,
+    "abbr": "LAL",
+    "w": 15,
+    "l": 3
+   },
+   {
+    "rank": 2,
+    "abbr": "SAS",
+    "w": 15,
+    "l": 4
+   },
+   {
+    "rank": 3,
+    "abbr": "HOU",
+    "w": 14,
+    "l": 5
+   },
+   {
+    "rank": 4,
+    "abbr": "MEM",
+    "w": 14,
+    "l": 5
+   },
+   {
+    "rank": 5,
+    "abbr": "MIN",
+    "w": 14,
+    "l": 5
+   },
+   {
+    "rank": 6,
+    "abbr": "POR",
+    "w": 12,
+    "l": 6
+   },
+   {
+    "rank": 7,
+    "abbr": "DEN",
+    "w": 10,
+    "l": 6
+   },
+   {
+    "rank": 8,
+    "abbr": "DAL",
+    "w": 11,
+    "l": 7
+   },
+   {
+    "rank": 9,
+    "abbr": "GSW",
+    "w": 10,
+    "l": 8
+   },
+   {
+    "rank": 10,
+    "abbr": "PHX",
+    "w": 9,
+    "l": 8
+   },
+   {
+    "rank": 11,
+    "abbr": "OKC",
+    "w": 10,
+    "l": 9
+   },
+   {
+    "rank": 12,
+    "abbr": "NOP",
+    "w": 5,
+    "l": 14
+   },
+   {
+    "rank": 13,
+    "abbr": "LAC",
+    "w": 4,
+    "l": 13
+   },
+   {
+    "rank": 14,
+    "abbr": "UTA",
+    "w": 3,
+    "l": 16
+   },
+   {
+    "rank": 15,
+    "abbr": "SAC",
+    "w": 2,
+    "l": 16
+   }
+  ]
+ },
+ "closing": {
+  "title": "NBA 소식은\n코티브에서",
+  "follow_cta": "매일 전해주는 NBA 소식",
+  "save_cta": "오늘의 브리핑은 저장해 두세요",
+  "references": "일정 · CBS Sports\n뉴스 · Hoops Rumors · Yahoo Sports"
+ },
+ "caption": "NOW / DAILY BRIEF · 2026.11.27\n\n서부 1·2위 격돌 하퍼·폭스 출전 미정\n\n미국 현지 11월 26일은 추수감사절이라 NBA 경기가 없었어요. 현지 11월 27일 블랙프라이데이 경기를 앞두고 부상 소식을 모았습니다.\n\n▸ 샌안토니오 딜런 하퍼(왼쪽 고관절·4경기 결장)와 디애런 폭스(오른쪽 정강이 타박상·2경기 결장), 서부 1위 레이커스전 출전 미정\n▸ 필라델피아 제일런 브라운 왼쪽 햄스트링 부상으로 인디애나전 결장, 조엘 엠비드는 질병으로 출전 미정. 필라델피아가 인디애나를 이기면 NBA컵 첫 8강에 진출합니다.\n\n#NBA #NBA데일리 #코티브 #COURTIVE #농구 #NBA컵"
+}
